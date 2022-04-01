@@ -5,5 +5,5 @@ workflow "Generate PlantUML Images" {
 
 action "Generate UML" {
   uses = "lokkju/github-action-plantuml@master"
-  args = ["plantuml/use-case.puml"]
+  args = ["plantuml/use-case.plantuml"]
 }
