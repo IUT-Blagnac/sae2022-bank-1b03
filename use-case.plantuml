@@ -1,0 +1,8 @@
+@startuml use-case
+
+skinparam actorStyle awesome
+:Chef d'agence:
+:Guichetier:
+
+
+@enduml
