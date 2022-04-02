@@ -2,7 +2,7 @@ name: umltopng
 on: [push]
 jobs:
   create:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@v1 # récuprer le depo courant
