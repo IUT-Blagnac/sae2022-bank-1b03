@@ -44,7 +44,7 @@ Dans la version existante (V0), un chef d’agence peut :
 
 Diagramme des cas d'utilisation V1 : 
 
-image::UCV1.jpg[]
+image::../plantuml/use-case.svg[]
 
 ==== Problématique
 
