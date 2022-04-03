@@ -1,0 +1,118 @@
+:toc: macro
+:toclevels: 3
+:toc-title: Sommaire
+
+= Cahier des charges V1
+ESCASSUT Sean ; MABILLE Matthis ; TESTA Thomas ; WENDJANEH Hugo 
+
+toc::[]
+
+****
+Nom du Projet : **Daily Bank** +
+Date : **02/04/2022**
+****
+
+:sectnums:
+
+=== [[bookmark-a]] Présentation du projet et mise en contexte
+
+==== Contexte
+
+Le client s’attend à pouvoir régler ses problèmes à tout moment en ligne étant donné le nombre d’informations considérable auquel il a accès. Pour s’adapter aux exigences d’instantanéité de leurs clients, les banques françaises ont accentué leurs efforts de restructuration et leurs investissements dans le digital. Dans une stratégie de différenciation, il est important pour les banques d’innover et d’effectuer une veille informatique constante afin de développer un avantage concurrentiel sur le marché. C'est donc pour répondre au besoin de leurs clients qu'elles rénovent en profondeur leurs services de banque au quotidien afin de proposer des services digitaux efficaces.
+
+==== Objectifs
+
+L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+
+==== Problématique
+
+La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer plusieurs outils obsolètes. Ce développement s’inscrit dans le cadre de la restructuration de ses services bancaires et l’application sera déployée dans les 100 agences que compte son réseau. Vous travaillerez à partir d’une application existante « Daily Bank » qu’il faudra adapter aux nouveaux besoins de la banque.
+
+=== Analyse de l’existant
+
+Il existe déjà une première version de l'application. Cette version (V0) permet au guichetier d'effectuer plusieurs actions, notamment de : 
+
+* Modifier informations client (adresse, téléphone, …)
+* Créer un nouveau client
+* Consulter un compte
+* Débiter un compte (BD)
+
+Cette même version permet seulement au chef d’agence de :
+
+* Rendre inactif un client
+
+==== Diagramme des cas d'utilisation V0 : 
+
+On peut résumer l'analyse de l'existant en un diagramme UC :
+
+image::capture.jpg[]
+
+=== Analyse des besoins
+
+L'accomplissement de ce projet nécessite de réaliser une application Java qui doit permettre de répondre à des besoins. L’application doit permettre de gérer des comptes bancaires. Pour cela, l'application doit disposer des fonctionnalités listées ci-dessous, organisées en fonction du poste de l’utilisateur de l’application au sein de la banque.
+
+* Guichetier :
+
+- Créditer/débiter un compte (java et BD avec procédure stockée)
+- Créer un compte
+- Effectuer un virement de compte à compte
+- Clôturer un compte
+
+* Chef d’Agence :
+
+- Gérer (faire le « CRUD ») les employés (guichetier et chef d’agence)
+** Création d'un employé
+** Lecture du profil d'un employé
+** Modification du profil d'un employé
+** Suppression d'un employé
+
+Toutes ces fonctionnalités sont résumés à travers le diagramme des cas d'utilisation V1 : 
+
+image::../plantuml/use-case.svg[]
+
+=== Analyse des contraintes
+
+==== Contraintes techniques
+
+Pour ce projet, nous devons utiliser divers langages de programmation. L’application déjà existante utilise le langage JAVA pour le développement des fonctionalités et le langage SQL Oracle pour gérer les données de l'application dans une base de données. Il est également nécessaire de gérer l'interface de l'application en Java pour gérer l'affichage des différents éléments et menus.
+
+==== Contraintes organisationnelles
+
+Il est nécessaire d'effectuer chaque rendu en temps et en heure, des dates précises ont donc été définies avec le client. On peut retrouver ces différentes tâche dans le diagramme de GANTT.
+
+Diagramme de GANTT V1 :
+
+image::GANTTV1.jpg[]
+
+* Rendu de la semaine 13 : 
+
+- V1 du Cahier des Charges
+- V1 du diagramme de GANTT
+
+* Rendu de la semaine 16 : 
+
+- V1 du Cahier des Tests
+- V2 et V3 du cahier des charges
+- V2 et V3 du diagramme de GANTT
+
+* Rendu de la semaine 20 : 
+
+- V1 de la documentation utilisateur
+- V1 de la documentation technique
+- V2 du Cahier des Tests
+- V3 du diagramme de GANTT (__mise à jour__)
+
+* Rendu de la semaine 22 : 
+
+- V2 et V3 de la documentation utilisateur
+- V2 et V3 de la documentation technique
+- V3 du Cahier des Tests
+- V3 du diagramme de GANTT (__mise à jour__)
+- V1 de l’application
+
+* Rendu de la semaine 23 : 
+
+- V2 et V3 version de l’application
+- Chiffrage du projet
+- Bilan du projet
+- Livraison finale des documents
