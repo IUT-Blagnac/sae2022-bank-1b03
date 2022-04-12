@@ -14,7 +14,7 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 | Date    | Nom         |  Lien                             | Retour
 | 03/04   | Gantt V1    |                           | Attention à l'échelle en jour pas adaptée à une SAE. Les tâches ne sont pas affectées et ne correspondent pas aux ISSUES que j'ai dans Github.
 |         | CdC V1      |                                   |   
-|         | Suivi Projet |                                   |J'ai 3 contributeurs alors que vous êtes 4 ... attention aux pseudos, je peux identifier que Sean et Hugo.   De même je n'ai que Sean sur les tâches terminées V1 ... qu'on fait les autres ?. Penser à organiser l'arboresence de votre repository par livraison.          
+|         | Suivi Projet |                                   |J'ai 3 contributeurs alors que vous êtes 4 ... attention aux pseudos, je peux identifier que Sean et Hugo.   De même je n'ai que Sean sur les tâches terminées V1 ... qu'ont fait les autres ?. Penser à organiser l'arboresence de votre repository par livraison.          
 | 22/04  | CdC V2/V3 final|                                     |  
 |         | Gantt V2    |                               |     
 |         | Gantt V3 |         |     
