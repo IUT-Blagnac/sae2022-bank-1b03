@@ -30,7 +30,14 @@ La banque DailyBank souhaite développer une application JAVA-Oracle de gestion 
 
 === Analyse de l’existant
 
-Il existe déjà une première version de l'application. Cette version (V0) permet au guichetier d'effectuer plusieurs actions, notamment de : 
+Il existe déjà une première version de l'application. +
+Les utilisateurs actuels de l'application sont: +
+
+* Le guichetier : L'employé "de base" de l'application, autorisé à effectuer certaines opérations 
+* Le chef d'agence : dispose de toutes les propriétés du guichetier et peut réaliser des opérations supplémentaires
+
+
+Cette version (V0) permet au guichetier d'effectuer plusieurs actions, notamment de : 
 
 * Modifier informations client (adresse, téléphone, …)
 * Créer un nouveau client
@@ -39,7 +46,7 @@ Il existe déjà une première version de l'application. Cette version (V0) perm
 
 Cette même version permet seulement au chef d’agence de :
 
-* Rendre inactif un client
+* Rendre inactif un client : Figer le compte d'un client, c'est-à-dire ne pas permettre la réalisation d'opérations sur ce compte
 
 ==== Diagramme des cas d'utilisation V0 : 
 
