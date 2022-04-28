@@ -106,7 +106,23 @@ Encore une fois, nous avons créer un ordre de priorité aux différentes action
     - Effectuer un débit exceptionnel +
     - Simuler un emprunt / Simuler une assurance d’emprunt
 
-En résumé, à partir de la version 2, le guichetier peut gérer les prélèvements automatiques (créer un nouveau, modifier/voir/supprimer les existants) et générer le relevé mensuel d’un compte (format PDF). Pour ce qui est du chef d’agence, les nouvelles spécifications des fonctionnalités sont la simulation d'un emprunt, la prise en compte d'une assurance d’emprunt et la possibilité d'effectuer un débit exceptionnel sur un compte.
+En résumé, la version 2 va permettre l'apparition de nouvelles fonctionnalités. Le guichetier peut maintenant gérer les prélèvements automatiques (créer un nouveau, modifier/voir/supprimer les existants) et générer le relevé mensuel d’un compte (format PDF). Pour ce qui est du chef d’agence, les nouvelles spécifications des fonctionnalités sont la simulation d'un emprunt, la prise en compte d'une assurance d’emprunt et la possibilité d'effectuer un débit exceptionnel sur un compte.
+
+**Version 3 du diagramme des cas d'utilisation :**
+
+image::../plantuml/use-case-v3.svg[]
+
+Encore une fois, nous avons créer un ordre de priorité aux différentes actions présentes dans ce diagramme.
+
+* Le chef d’Agence +
+    - Les spécifications finalisées de la version 2 +
+    - Fonctionnalités supplémentaires (__dépend du temps__) +
+
+* Le "Batch" +
+    - Exécuter les prélèvements automatiques +
+    - Générer les relevés mensuels en PDF
+
+En résumé, la version 3 va permettre l'apparition de nouvelles fonctionnalités. Le chef d’agence peut maintenant utiliser les fonctionnalités associés aux différentes spécifications __(et peut être d'autres)__. Pour ce qui est du "batch", on retrouver l’exécution des prélèvements automatiques et la génération de relevés mensuels au format PDF.
 
 === Analyse des contraintes
 
