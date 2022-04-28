@@ -16,11 +16,11 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 | 3
 | Créditer un compte
-| Saisir une somme à créditer sur un compte bancaire. Cette somme sera ajoutée à la somme actuelle du compte.
+| La somme saisie sera ajoutée à la somme actuelle du compte.
 
 | 4
 | Débiter un compte
-| Saisir une somme à débiter sur un compte bancaire. Cette somme sera soustraite à la somme actuelle du compte.
+| la somme saisie somme sera soustraite à la somme actuelle du compte.
 
 | 6
 | Modifier les informations
