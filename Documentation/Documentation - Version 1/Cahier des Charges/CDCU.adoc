@@ -77,6 +77,10 @@ Toutes ces fonctionnalités sont résumés à travers le diagramme des cas d'uti
 
 image::../plantuml/use-case.svg[]
 
+Diagramme de GANTT V1 :
+
+image::GANTTV1.jpg[]
+
 === Analyse des contraintes
 
 ==== Contraintes techniques
@@ -86,10 +90,6 @@ Pour ce projet, nous devons utiliser divers langages de programmation. L’appli
 ==== Contraintes organisationnelles
 
 Il est nécessaire d'effectuer chaque rendu en temps et en heure, des dates précises ont donc été définies avec le client. On peut retrouver ces différentes tâche dans le diagramme de GANTT.
-
-Diagramme de GANTT V1 :
-
-image::GANTTV1.jpg[]
 
 * Rendu de la semaine 13 : 
 
