@@ -82,6 +82,20 @@ Diagramme de GANTT V1 :
 
 image::GANTTV1.jpg[]
 
+Nous avons créer un ordre de priorité aux différentes actions présentes dans ce gantt.
+
+Le guichetier : 
+1 - Le guichetier doit pouvoir créer un compte et créer un nouveau client.
+2 - Consulter le compte d'un client
+2 - Crédit d'un compte
+3 - Débit d'un compte
+4 - Modifier les informations d'un client
+5 - Cloturer le compte d'un client / effectuer un virement de compte à compte
+
+Le chef d'agence : 
+1 - Gérer les employés
+2 - Rendre inactif un client
+
 === Analyse des contraintes
 
 ==== Contraintes techniques
@@ -124,3 +138,5 @@ Il est nécessaire d'effectuer chaque rendu en temps et en heure, des dates pré
 - Chiffrage du projet
 - Bilan du projet
 - Livraison finale des documents
+
+Concernant l'organisation de l'équipe, nous utilisons discord afin d'assurer la communication du projet, github afin de communiquer tous les documents du projet et visual studio code afin de créer divers documents tel que le cahier des charges ou les différents diagramme de classe avec plantuml.
