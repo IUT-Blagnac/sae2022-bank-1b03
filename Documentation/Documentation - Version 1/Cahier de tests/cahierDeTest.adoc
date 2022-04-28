@@ -8,7 +8,7 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 | 1
 | Créer un nouveau client
-| Crée un compte client avce les information renseignées.
+| Crée un compte client avec les information renseignées.
 
 | 2
 | Consulter un compte client
