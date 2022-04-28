@@ -87,6 +87,10 @@ image::GANTTV1.jpg[]
 
 Pour ce projet, nous devons utiliser divers langages de programmation. L’application déjà existante utilise le langage JAVA pour le développement des fonctionalités et le langage SQL Oracle pour gérer les données de l'application dans une base de données. Il est également nécessaire de gérer l'interface de l'application en Java pour gérer l'affichage des différents éléments et menus.
 
+==== Contraintes Juridiques
+
+Il est nécessaire de respecter durant la mise en place de ce projet les règlementations en matière de protection des données utilisateur. Per exemple le RGPD (Règlement Général sur la Protection des Données).
+
 ==== Contraintes organisationnelles
 
 Il est nécessaire d'effectuer chaque rendu en temps et en heure, des dates précises ont donc été définies avec le client. On peut retrouver ces différentes tâche dans le diagramme de GANTT.
