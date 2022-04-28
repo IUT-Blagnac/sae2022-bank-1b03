@@ -80,7 +80,7 @@ image::../plantuml/use-case.svg[]
 
 Diagramme de GANTT V1 :
 
-image::GANTTV1.jpg[]
+image::Diagramme Gantt.jpg[]
 
 Nous avons créer un ordre de priorité aux différentes actions présentes dans ce gantt.
 
