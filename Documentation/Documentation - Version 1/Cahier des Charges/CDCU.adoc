@@ -26,7 +26,7 @@ L’application doit permettre de gérer des comptes bancaires de dépôt pour d
 
 ==== Problématique
 
-La banque DailyBank souhaite une application de gestion des comptes clients pour remplacer plusieurs outils obsolètes. Cette demande s’inscrit dans le cadre de la restructuration de ses services bancaires et l’application sera déployée dans les 100 agences que compte son réseau. Le client dispose déjà d'une application existante « Daily Bank » qu'li faudra adapter aux besoins de la banque. La problématique est donc la suivante : "Comment booster la digitalisation de l'expérience client ?"
+La banque DailyBank souhaite une application de gestion des comptes clients pour remplacer plusieurs outils obsolètes. Cette demande s’inscrit dans le cadre de la restructuration de ses services bancaires et l’application sera déployée dans les 100 agences que compte son réseau. Le client dispose déjà d'une application existante « Daily Bank » qu'il faudra adapter aux besoins de la banque pour répondre à la question suivante : "Comment booster la digitalisation de l'expérience client ?"
 
 === Analyse de l’existant
 
