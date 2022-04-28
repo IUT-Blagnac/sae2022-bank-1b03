@@ -90,9 +90,9 @@ Nous avons créer un ordre de priorité aux différentes actions présentes dans
 
 * Le chef d'agence : +
     - Gérer les employés +
-    - Rendre inactif un client
+    - Rendre inactif un client +
 
-** Version 2 du diagramme des cas d'utilisation :
+**Version 2 du diagramme des cas d'utilisation :
 
 image::../plantuml/use-case-v2.svg[]
 
