@@ -8,8 +8,8 @@ toc::[]
 
 ****
 Nom du Projet : **Daily Bank** +
-Date : **02/04/2022**
-ESCASSUT Sean ; MABILLE Matthis ; TESTA Thomas ; WENDJANEH Hugo 
+Date : **02/04/2022** +
+Equipe : **ESCASSUT Sean ; MABILLE Matthis ; TESTA Thomas ; WENDJANEH Hugo**
 ****
 
 :sectnums:
