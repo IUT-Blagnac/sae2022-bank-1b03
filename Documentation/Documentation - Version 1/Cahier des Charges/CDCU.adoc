@@ -36,7 +36,6 @@ Les utilisateurs actuels de l'application sont: +
 * Le guichetier : L'employé "de base" de l'application, autorisé à effectuer certaines opérations 
 * Le chef d'agence : dispose de toutes les propriétés du guichetier et peut réaliser des opérations supplémentaires
 
-
 Cette version (V0) permet au guichetier d'effectuer plusieurs actions, notamment de : 
 
 * Modifier informations client (adresse, téléphone, …)
@@ -53,6 +52,8 @@ Cette même version permet seulement au chef d’agence de :
 On peut résumer l'analyse de l'existant en un diagramme UC :
 
 image::capture.jpg[]
+
+Dans ce diagramme, nous voyons que le guichetier peut effectuer plusieurs actions. Le chef d'agence, qui hérite du guichetier, peut effectuer toutes les actions que le guichetier peut effectuer. De plus, comme nous l'avons rappelé ci-dessus, nous pouvons voir que le chef d'agence peut rendre inactif un client.
 
 === Analyse des besoins
 
