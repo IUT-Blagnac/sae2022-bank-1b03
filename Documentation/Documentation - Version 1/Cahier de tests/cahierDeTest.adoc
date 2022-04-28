@@ -1,0 +1,41 @@
+= Cahier des Tests - Version 1
+
+Date : 28/04/2022 +
+Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
+
+|===
+| Numéro de test | Action | Attendus
+
+| 1
+| Créer un nouveau client
+| Crée un compte client avec les information renseignées.
+
+| 2
+| Consulter un compte client
+| Permets de voir les informations d'un compte client, ainsi que les informations de ces/son compte(s) bancaire.
+
+| 3
+| Créditer un compte
+| Permets de saisir une somme à créditer d'un compte bancaire
+
+| 4
+| Débiter un compte
+| Permets de saisir une somme à débiter d'un compte bancaire
+
+| 5
+| Débiter un compte
+| Permets de saisir une somme à débiter d'un compte bancaire
+
+| 6
+| Modifier les informations d'un compte client
+| Permets de modifier les informations d'un compte client.
+
+| 7
+| Virement
+| Permets de faire un virement d'un compte bancaire à un autre.
+
+| 8
+| Cloturer un compte
+| Permets de cloturer un compte bancaire.
+
+|===
