@@ -78,11 +78,7 @@ Toutes ces fonctionnalités sont résumés à travers le diagramme des cas d'uti
 
 image::../plantuml/use-case.svg[]
 
-Diagramme de GANTT V1 :
-
-image::GANTTV1.jpg[]
-
-Nous avons créer un ordre de priorité aux différentes actions présentes dans ce gantt.
+Nous avons créer un ordre de priorité aux différentes actions présentes dans ce diagramme.
 
 * Le guichetier : +
     - Le guichetier doit pouvoir créer un compte et créer un nouveau client. +
