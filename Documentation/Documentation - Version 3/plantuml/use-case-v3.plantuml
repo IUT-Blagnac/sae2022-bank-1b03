@@ -14,11 +14,17 @@ rectangle Système {
     (Virment de compte à compte)
     (Cloturer un compte)
     (Créer un compte)
+
     (Générer un relevé mensuel d’un compte en PDF)
     (Gérer, ou faire le « CRUD » des prélèvements automatiques)
     (Effectuer un Débit exceptionnel)
     (Simuler un emprunt)
     (Simuler une assurance d’emprunt)
+
+    (fonctionnalité supplémentaire 1)
+    (fonctionnalité supplémentaire 2)
+    (Générer les relevés mensuels en PDF)
+    (Exécuter les prélèvements automatiques)
 }
 
 
@@ -31,6 +37,9 @@ left to right direction
 :Chef d'agence: --> (Simuler un emprunt)
 :Chef d'agence: --> (Simuler une assurance d’emprunt)
 
+:Chef d'agence: --> (Générer les relevés mensuels en PDF)
+:Chef d'agence: --> (Exécuter les prélèvements automatiques)
+
 
 (Guichetier) --> (Débiter un compte) 
 (Guichetier) --> (Consulter un compte) 
@@ -39,7 +48,8 @@ left to right direction
 (Guichetier) --> (Créditer compte) 
 (Guichetier) --> (Virment de compte à compte) 
 (Guichetier) --> (Cloturer un compte) 
-(Guichetier) --> (Créer un compte) 
+(Guichetier) --> (Créer un compte)
+
 (Guichetier) --> (Générer un relevé mensuel d’un compte en PDF)
 (Guichetier) --> (Gérer, ou faire le « CRUD » des prélèvements automatiques)
 
