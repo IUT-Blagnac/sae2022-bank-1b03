@@ -1,0 +1,35 @@
+@startuml use-case
+
+skinparam actorStyle awesome
+:Chef d'agence:
+:Guichetier:
+rectangle Système {
+    (Rendre inactif un client)
+    (Gérer les employés)
+    (Débiter un compte)
+    (Consulter un compte)
+    (Créer un nouveau client)
+    (Modifier infos client)
+    (Créditer compte)
+    (Virment de compte à compte)
+    (Cloturer un compte)
+    (Créer un compte)
+}
+
+
+(Guichetier) <|-right- (Chef d'agence)
+
+left to right direction
+:Chef d'agence: --> (Rendre inactif un client)
+:Chef d'agence: --> (Gérer les employés)
+(Guichetier) --> (Débiter un compte) 
+(Guichetier) --> (Consulter un compte) 
+(Guichetier) --> (Créer un nouveau client) 
+(Guichetier) --> (Modifier infos client) 
+(Guichetier) --> (Créditer compte) 
+(Guichetier) --> (Virment de compte à compte) 
+(Guichetier) --> (Cloturer un compte) 
+(Guichetier) --> (Créer un compte) 
+
+
+@enduml
