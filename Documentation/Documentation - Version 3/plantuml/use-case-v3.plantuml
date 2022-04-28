@@ -21,8 +21,7 @@ rectangle Système {
     (Simuler un emprunt)
     (Simuler une assurance d’emprunt)
 
-    (fonctionnalité supplémentaire 1)
-    (fonctionnalité supplémentaire 2)
+    (fonctionnalité supplémentaire éventuelle)
     (Générer les relevés mensuels en PDF)
     (Exécuter les prélèvements automatiques)
 }
