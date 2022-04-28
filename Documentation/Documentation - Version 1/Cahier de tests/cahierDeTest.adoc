@@ -6,35 +6,35 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 |===
 | Numéro de test | Action | Attendus
 
-| 1.0
+| 1
 | Créer un nouveau client
-| Permets de créer un compte client en renseignant ces informations.
+| Crée un compte client avce les information renseignées.
 
-| 1.0
+| 2
 | Consulter un compte client
 | Permets de voir les informations d'un compte client, ainsi que les informations de ces/son compte(s) bancaire.
 
-| 1.0
+| 3
 | Créditer un compte
 | Permets de saisir une somme à créditer d'un compte bancaire
 
-| 1.0
+| 4
 | Débiter un compte
 | Permets de saisir une somme à débiter d'un compte bancaire
 
-| 1.0
+| 5
 | Débiter un compte
 | Permets de saisir une somme à débiter d'un compte bancaire
 
-| 1.0
+| 6
 | Modifier les informations d'un compte client
 | Permets de modifier les informations d'un compte client.
 
-| 1.0
+| 7
 | Virement
 | Permets de faire un virement d'un compte bancaire à un autre.
 
-| 1.0
+| 8
 | Cloturer un compte
 | Permets de cloturer un compte bancaire.
 
