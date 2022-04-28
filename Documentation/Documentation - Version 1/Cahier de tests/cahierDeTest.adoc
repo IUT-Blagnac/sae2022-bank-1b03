@@ -20,7 +20,7 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 | 4
 | Débiter un compte
-| la somme saisie somme sera soustraite à la somme actuelle du compte.
+| La somme saisie somme sera soustraite à la somme actuelle du compte.
 
 | 6
 | Modifier les informations
