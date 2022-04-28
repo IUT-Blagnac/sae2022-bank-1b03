@@ -92,7 +92,7 @@ Nous avons créer un ordre de priorité aux différentes actions présentes dans
     - Gérer les employés +
     - Rendre inactif un client +
 
-** Version 2 du diagramme des cas d'utilisation :
+**Version 2 du diagramme des cas d'utilisation :**
 
 image::../plantuml/use-case-v2.svg[]
 
@@ -106,7 +106,7 @@ Encore une fois, nous avons créer un ordre de priorité aux différentes action
     - Effectuer un débit exceptionnel +
     - Simuler un emprunt / Simuler une assurance d’emprunt
 
-En résumé, à patir de la version 2, le guichetier peut en plus, générer le relevé mensuel d’un compte (format PDF), gérer les prélèvements automatiques (créer un nouveau, modifier/voir/supprimer les existants). Pour ce qui est du chef d’agence, les spécifications des fonctionnalités suivantes seront disponibles : effectuer un débit exceptionnel sur un compte, simuler un emprunt ainsi qu’une assurance d’emprunt.
+En résumé, à partir de la version 2, le guichetier peut gérer les prélèvements automatiques (créer un nouveau, modifier/voir/supprimer les existants) et générer le relevé mensuel d’un compte (format PDF). Pour ce qui est du chef d’agence, les nouvelles spécifications des fonctionnalités sont la simulation d'un emprunt, la prise en compte d'une assurance d’emprunt et la possibilité d'effectuer un débit exceptionnel sur un compte.
 
 === Analyse des contraintes
 
