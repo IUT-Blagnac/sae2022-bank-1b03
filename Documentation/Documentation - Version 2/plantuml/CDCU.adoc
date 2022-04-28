@@ -2,13 +2,13 @@
 :toclevels: 3
 :toc-title: Sommaire
 
-= Cahier des charges V1
+= Cahier des charges V2
 
 toc::[]
 
 ****
 Nom du Projet : **Daily Bank** +
-Date : **02/04/2022** +
+Date : **28/04/2022** +
 Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
 ****
 
