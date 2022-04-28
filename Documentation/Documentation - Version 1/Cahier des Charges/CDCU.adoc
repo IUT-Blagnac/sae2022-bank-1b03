@@ -84,7 +84,7 @@ image::GANTTV1.jpg[]
 
 Nous avons créer un ordre de priorité aux différentes actions présentes dans ce gantt.
 
-Le guichetier : +
+* Le guichetier : +
     1 - Le guichetier doit pouvoir créer un compte et créer un nouveau client. +
     2 - Consulter le compte d'un client +
     3 - Crédit d'un compte +
