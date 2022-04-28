@@ -16,22 +16,22 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 | 3
 | Créditer un compte
-| Saisir une somme à créditer sur un compte bancaire
+| La somme saisie sera ajoutée à la somme actuelle du compte.
 
 | 4
 | Débiter un compte
-| Saisir une somme à débiter sur un compte bancaire
+| La somme saisie somme sera soustraite à la somme actuelle du compte.
 
 | 6
 | Modifier les informations
-| Modifier les informations d'un compte client.
+| Modifier les informations d'un compte client. Les informations modifiées seront mises à jour (Informations de la personne).
 
 | 7
 | Virement
-| Faire un virement d'un compte bancaire à un autre.
+| Faire un virement d'un compte bancaire à un autre. Le montant du virement doit être inférieur à la somme actuelle du compte bancaire.
 
 | 8
 | Cloturer un compte
-| Cloturer un compte bancaire.
+| Cloturer un compte bancaire. Cela signifie que le compte ne sera plus disponible pour les opérations.
 
 |===
