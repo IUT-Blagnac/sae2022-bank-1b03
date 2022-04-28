@@ -3,13 +3,13 @@
 :toc-title: Sommaire
 
 = Cahier des charges V1
-ESCASSUT Sean ; MABILLE Matthis ; TESTA Thomas ; WENDJANEH Hugo 
 
 toc::[]
 
 ****
 Nom du Projet : **Daily Bank** +
 Date : **02/04/2022**
+ESCASSUT Sean ; MABILLE Matthis ; TESTA Thomas ; WENDJANEH Hugo 
 ****
 
 :sectnums:
