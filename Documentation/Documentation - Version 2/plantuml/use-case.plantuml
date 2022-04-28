@@ -14,6 +14,11 @@ rectangle Système {
     (Virment de compte à compte)
     (Cloturer un compte)
     (Créer un compte)
+    (Générer un relevé mensuel d’un compte en PDF)
+    (Gérer, ou faire le « CRUD » des prélèvements automatiques)
+    (Effectuer un Débit exceptionnel)
+    (Simuler un emprunt)
+    (Simuler une assurance d’emprunt)
 }
 
 
@@ -22,6 +27,11 @@ rectangle Système {
 left to right direction
 :Chef d'agence: --> (Rendre inactif un client)
 :Chef d'agence: --> (Gérer les employés)
+:Chef d'agence: --> (Effectuer un Débit exceptionnel)
+:Chef d'agence: --> (Simuler un emprunt)
+:Chef d'agence: --> (Simuler une assurance d’emprunt)
+
+
 (Guichetier) --> (Débiter un compte) 
 (Guichetier) --> (Consulter un compte) 
 (Guichetier) --> (Créer un nouveau client) 
@@ -30,6 +40,8 @@ left to right direction
 (Guichetier) --> (Virment de compte à compte) 
 (Guichetier) --> (Cloturer un compte) 
 (Guichetier) --> (Créer un compte) 
+(Guichetier) --> (Générer un relevé mensuel d’un compte en PDF)
+(Guichetier) --> (Gérer, ou faire le « CRUD » des prélèvements automatiques)
 
 
 @enduml
