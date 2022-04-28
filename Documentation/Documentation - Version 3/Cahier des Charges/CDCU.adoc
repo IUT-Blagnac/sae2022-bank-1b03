@@ -2,13 +2,13 @@
 :toclevels: 3
 :toc-title: Sommaire
 
-= Cahier des charges V1
+= Cahier des charges V2
 
 toc::[]
 
 ****
 Nom du Projet : **Daily Bank** +
-Date : **02/04/2022** +
+Date : **28/04/2022** +
 Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
 ****
 
@@ -90,7 +90,23 @@ Nous avons créer un ordre de priorité aux différentes actions présentes dans
 
 * Le chef d'agence : +
     - Gérer les employés +
-    - Rendre inactif un client
+    - Rendre inactif un client +
+
+**Version 2 du diagramme des cas d'utilisation :**
+
+image::../plantuml/use-case-v2.svg[]
+
+Encore une fois, nous avons créer un ordre de priorité aux différentes actions présentes dans ce diagramme.
+
+* Le guichetier : +
+    - Gérer les prélèvements automatiques +
+    - Générer un relevé mensuel d’un compte en PDF +
+
+* Le chef d’Agence (uniquement les spécifications) : +
+    - Effectuer un débit exceptionnel +
+    - Simuler un emprunt / Simuler une assurance d’emprunt
+
+En résumé, à partir de la version 2, le guichetier peut gérer les prélèvements automatiques (créer un nouveau, modifier/voir/supprimer les existants) et générer le relevé mensuel d’un compte (format PDF). Pour ce qui est du chef d’agence, les nouvelles spécifications des fonctionnalités sont la simulation d'un emprunt, la prise en compte d'une assurance d’emprunt et la possibilité d'effectuer un débit exceptionnel sur un compte.
 
 === Analyse des contraintes
 

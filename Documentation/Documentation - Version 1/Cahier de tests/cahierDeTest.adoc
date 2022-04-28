@@ -22,15 +22,15 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | Débiter un compte
 | La somme saisie somme sera soustraite à la somme actuelle du compte.
 
-| 6
+| 5
 | Modifier les informations
 | Modifier les informations d'un compte client. Les informations modifiées seront mises à jour (Informations de la personne).
 
-| 7
+| 6
 | Virement
 | Faire un virement d'un compte bancaire à un autre. Le montant du virement doit être inférieur à la somme actuelle du compte bancaire.
 
-| 8
+| 7
 | Cloturer un compte
 | Cloturer un compte bancaire. Cela signifie que le compte ne sera plus disponible pour les opérations.
 
