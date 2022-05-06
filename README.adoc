@@ -17,14 +17,14 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 |         | Suivi Projet |                                   |J'ai 3 contributeurs alors que vous êtes 4 ... attention aux pseudos, je peux identifier que Sean et Hugo.   De même je n'ai que Sean sur les tâches terminées V1 ... qu'ont fait les autres ?. Penser à organiser l'arboresence de votre repository par livraison.    EP      
 | 22/04  | CdC V2/V3 final| V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/CDCU.adoc |  Note	remarques
 	
-1,75/2	QQ fautes
+3/4	QQ fautes orthographe, manque nom du client
 
 3/4	Qui est votre client ? Présentation maladroite
 	
 3/4	Il manque qq données techniques sur l'existant
 3/4	Pour plus de clareté pensez à regrouper les cas d'Utilisation :  Gestion des comptes, gestion des emprunts, gestion des employés. Chaque Cas doit être une action :  virement à remplaçer par effectuer un virement. Expliquez les termes CRUD et BATCH
 2,75/4	Les dates de rendu ne sont pas comprises. Seul le CDCU est à livrer en semaine 16. Les autres documents sont juste en suivi jusqu'à la livraison finale. Peu d'éléments juridiques. Pas de renvoi au Gantt ou à Github.Manque règles de gestion (condititions pour effectuer un débit par ex).
- note 13,5/20	
+ note 14,5/20	
 
 |         | Gantt V2    |                               |     
 |         | Gantt V3 | V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/Gantt.png |   Les tâches sont affectées à tout le monde !! On doit clairement identifier qui fait quelle fonctionnalité dans le projet.  
