@@ -23,7 +23,7 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 	
 3/4	Il manque qq données techniques sur l'existant
 3/4	Pour plus de clareté pensez à regrouper les cas d'Utilisation :  Gestion des comptes, gestion des emprunts, gestion des employés. Chaque Cas doit être une action :  virement à remplaçer par effectuer un virement. Expliquez les termes CRUD et BATCH
-2,75/4	Les dates de rendu ne sont pas comprises. Seul le CDCU est à livrer en semaine 16. Les autres documents sont juste en suivi jusqu'à la livraison finale. Peu d'éléments juridiques. Pas de renvoi au Gantt ou à Github.Manque règles de gestion (condititions pour effectuer un débit par ex).
+2,5/4	Les dates de rendu ne sont pas comprises. Seul le CDCU est à livrer en semaine 16. Les autres documents sont juste en suivi jusqu'à la livraison finale. Peu d'éléments juridiques. Pas de renvoi au Gantt ou à Github.Manque règles de gestion (condititions pour effectuer un débit par ex).
  note 14,5/20	
 
 |         | Gantt V2    |                               |     
