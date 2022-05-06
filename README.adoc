@@ -15,7 +15,17 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 | 03/04   | Gantt V1    |                           | Attention à l'échelle en jour pas adaptée à une SAE. Les tâches ne sont pas affectées et ne correspondent pas aux ISSUES que j'ai dans Github. EP
 |         | CdC V1      |                                   | Revoir dans élément evaluation ce qu'on met dans un entête/page de garde.  Des confusions entre contexte (étude de l'environnement eco et concurrentiel qui entraine le projet), objectif (intérêt  de l'appli pour la banque) et problématique ( a quel besoin répond l'appli) à retravailler. Pour V0 présenter les USERS et leur rôle dans l'organisation. Commenter le UC V0 et notamment l'héritage. Pour V1 on peut préciser certaines fonctionnalités : ex expliquer ce qu'est rendre inactif un client, préciser "gérer". Eventuellement les prioriser. Préciser les besoins non fonctionnels, les règles de gestion (ex pour débiter un compte). Dans les contraintes :  préciser les contraintes juridiques.  Présenter l'organisation de l'équipe : outils collaboratifs ... EP
 |         | Suivi Projet |                                   |J'ai 3 contributeurs alors que vous êtes 4 ... attention aux pseudos, je peux identifier que Sean et Hugo.   De même je n'ai que Sean sur les tâches terminées V1 ... qu'ont fait les autres ?. Penser à organiser l'arboresence de votre repository par livraison.    EP      
-| 22/04  | CdC V2/V3 final| V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/CDCU.adoc |  
+| 22/04  | CdC V2/V3 final| V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/CDCU.adoc |  Note	remarques
+	
+1,75/2	QQ fautes
+
+3/4	Qui est votre client ? Présentation maladroite
+	
+3/4	Il manque qq données techniques sur l'existant
+3/4	Pour plus de clareté pensez à regrouper les cas d'Utilisation :  Gestion des comptes, gestion des emprunts, gestion des employés. Chaque Cas doit être une action :  virement à remplaçer par effectuer un virement. Expliquez les termes CRUD et BATCH
+2,75/4	Les dates de rendu ne sont pas comprises. Seul le CDCU est à livrer en semaine 16. Les autres documents sont juste en suivi jusqu'à la livraison finale. Peu d'éléments juridiques. Pas de renvoi au Gantt ou à Github.Manque règles de gestion (condititions pour effectuer un débit par ex).
+ note 13,5/20	
+
 |         | Gantt V2    |                               |     
 |         | Gantt V3 | V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/Gantt.png |     
 |         | Doc. Tec. V1 |        |    
