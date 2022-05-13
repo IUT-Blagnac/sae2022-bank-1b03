@@ -23,6 +23,10 @@ public class ClientsManagement {
 	private DailyBankState dbs;
 	private ClientsManagementController cmc;
 
+	/**
+	 * @param _parentStage
+	 * @param _dbstate
+	 */
 	public ClientsManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
@@ -48,10 +52,17 @@ public class ClientsManagement {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	public void doClientManagementDialog() {
 		this.cmc.displayDialog();
 	}
 
+	/**
+	 * @param c
+	 * @return
+	 */
 	public Client modifierClient(Client c) {
 		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
 		Client result = cep.doClientEditorDialog(c, EditionMode.MODIFICATION);
@@ -73,6 +84,9 @@ public class ClientsManagement {
 		return result;
 	}
 
+	/**
+	 * @return
+	 */
 	public Client nouveauClient() {
 		Client client;
 		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
@@ -96,11 +110,20 @@ public class ClientsManagement {
 		return client;
 	}
 
+	/**
+	 * @param c
+	 */
 	public void gererComptesClient(Client c) {
 		ComptesManagement cm = new ComptesManagement(this.primaryStage, this.dbs, c);
 		cm.doComptesManagementDialog();
 	}
 
+	/**
+	 * @param _numCompte
+	 * @param _debutNom
+	 * @param _debutPrenom
+	 * @return
+	 */
 	public ArrayList<Client> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
 		ArrayList<Client> listeCli = new ArrayList<>();
 		try {

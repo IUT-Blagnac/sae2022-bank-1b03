@@ -16,6 +16,11 @@ public class ExceptionDialog {
 	private Stage primaryStage;
 	private ExceptionDialogController edc;
 
+	/**
+	 * @param _parentStage
+	 * @param _dbstate
+	 * @param ae
+	 */
 	public ExceptionDialog(Stage _parentStage, DailyBankState _dbstate, ApplicationException ae) {
 
 		try {
@@ -41,6 +46,9 @@ public class ExceptionDialog {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	public void doExceptionDialog() {
 		this.edc.displayDialog();
 	}

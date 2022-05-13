@@ -29,6 +29,12 @@ public class OperationsManagement {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 
+	/**
+	 * @param _parentStage
+	 * @param _dbstate
+	 * @param client
+	 * @param compte
+	 */
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
 		this.clientDuCompte = client;
@@ -58,10 +64,16 @@ public class OperationsManagement {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	public void doOperationsManagementDialog() {
 		this.omc.displayDialog();
 	}
 
+	/**
+	 * @return
+	 */
 	public Operation enregistrerDebit() {
 
 		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
@@ -86,6 +98,9 @@ public class OperationsManagement {
 		return op;
 	}
 
+	/**
+	 * @return
+	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
 

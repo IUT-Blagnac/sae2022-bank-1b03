@@ -18,6 +18,10 @@ public class CompteEditorPane {
 	private Stage primaryStage;
 	private CompteEditorPaneController cepc;
 
+	/**
+	 * @param _parentStage
+	 * @param _dbstate
+	 */
 	public CompteEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
@@ -43,6 +47,12 @@ public class CompteEditorPane {
 		}
 	}
 
+	/**
+	 * @param client
+	 * @param cpte
+	 * @param em
+	 * @return
+	 */
 	public CompteCourant doCompteEditorDialog(Client client, CompteCourant cpte, EditionMode em) {
 		return this.cepc.displayDialog(client, cpte, em);
 	}

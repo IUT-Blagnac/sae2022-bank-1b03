@@ -20,6 +20,10 @@ public class LoginDialog {
 	private DailyBankState dbs;
 	private LoginDialogController ldc;
 
+	/**
+	 * @param _parentStage
+	 * @param _dbstate
+	 */
 	public LoginDialog(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
@@ -45,10 +49,18 @@ public class LoginDialog {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	public void doLoginDialog() {
 		this.ldc.displayDialog();
 	}
 
+	/**
+	 * @param login
+	 * @param password
+	 * @return
+	 */
 	public Employe chercherParLogin(String login, String password) {
 		Employe employe = null;
 		try {

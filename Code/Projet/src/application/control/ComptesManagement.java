@@ -29,6 +29,11 @@ public class ComptesManagement {
 	private DailyBankState dbs;
 	private Client clientDesComptes;
 
+	/**
+	 * @param _parentStage
+	 * @param _dbstate
+	 * @param client
+	 */
 	public ComptesManagement(Stage _parentStage, DailyBankState _dbstate, Client client) {
 
 		this.clientDesComptes = client;
@@ -56,15 +61,24 @@ public class ComptesManagement {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	public void doComptesManagementDialog() {
 		this.cmc.displayDialog();
 	}
 
+	/**
+	 * @param cpt
+	 */
 	public void gererOperations(CompteCourant cpt) {
 		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dbs, this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
+	/**
+	 * @return
+	 */
 	public CompteCourant creerCompte() {
 		CompteCourant compte;
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dbs);
@@ -96,6 +110,9 @@ public class ComptesManagement {
 		return compte;
 	}
 
+	/**
+	 * @return
+	 */
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 
