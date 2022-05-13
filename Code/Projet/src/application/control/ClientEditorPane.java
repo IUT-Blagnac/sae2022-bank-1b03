@@ -19,6 +19,7 @@ public class ClientEditorPane {
 	private ClientEditorPaneController cepc;
 
 	/**
+	 * Sonstruit le Stage java FX de la fenêtre et charge le fichier fxml de la vue et son contrôleur 
 	 * @param _parentStage
 	 * @param _dbstate
 	 */
