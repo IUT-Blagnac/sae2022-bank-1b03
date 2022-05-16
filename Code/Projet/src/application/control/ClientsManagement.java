@@ -60,6 +60,7 @@ public class ClientsManagement {
 	}
 
 	/**
+	 * Modifie un client, en vérifiant si c'est possible de le modifier (les informations du client ne sont pas vide)
 	 * @param c
 	 * @return
 	 */
