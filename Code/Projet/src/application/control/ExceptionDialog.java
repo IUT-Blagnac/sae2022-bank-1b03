@@ -17,9 +17,9 @@ public class ExceptionDialog {
 	private ExceptionDialogController edc;
 
 	/**
-	 * @param _parentStage
-	 * @param _dbstate
-	 * @param ae
+	 * @param _parentStage	fenêtre
+	 * @param _dbstate	statu de la banque
+	 * @param ae		les exceptions de l'application
 	 */
 	public ExceptionDialog(Stage _parentStage, DailyBankState _dbstate, ApplicationException ae) {
 
