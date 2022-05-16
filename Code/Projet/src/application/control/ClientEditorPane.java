@@ -52,6 +52,7 @@ public class ClientEditorPane {
 	 * Construit un editeur de dialog
 	 * @param client
 	 * @param em
+	 * @return
 	 */
 	public Client doClientEditorDialog(Client client, EditionMode em) {
 		return this.cepc.displayDialog(client, em);
