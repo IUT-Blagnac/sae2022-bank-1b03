@@ -96,14 +96,14 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * 
+	 * Lance l'application
 	 */
 	public static void runApp() {
 		Application.launch();
 	}
 
 	/**
-	 * 
+	 * Se déconnecter
 	 */
 	public void disconnect() {
 		this.dbs.setAgAct(null);
@@ -118,7 +118,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * 
+	 * Ouvre la page pour se connecter
 	 */
 	public void login() {
 		LoginDialog ld = new LoginDialog(this.primaryStage, this.dbs);
@@ -149,7 +149,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * 
+	 * Ouvre le gestionnaire de client
 	 */
 	public void gestionClients() {
 		ClientsManagement cm = new ClientsManagement(this.primaryStage, this.dbs);
