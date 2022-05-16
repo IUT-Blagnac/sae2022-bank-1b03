@@ -29,11 +29,11 @@ public class OperationsManagement {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 
-	/**
-	 * @param _parentStage
-	 * @param _dbstate
-	 * @param client
-	 * @param compte
+	/**Construit une fenêtre o`est répertorié les informations suivantes
+	 * @param _parentStage	fenêtre
+	 * @param _dbstate	statu de la banque
+	 * @param client	client
+	 * @param compte	compte courant du client
 	 */
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
@@ -72,7 +72,7 @@ public class OperationsManagement {
 	}
 
 	/**
-	 * @return
+	 * @return	
 	 */
 	public Operation enregistrerDebit() {
 
@@ -99,7 +99,7 @@ public class OperationsManagement {
 	}
 
 	/**
-	 * @return
+	 * @return	
 	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
