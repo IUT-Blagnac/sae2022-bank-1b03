@@ -19,6 +19,7 @@ public class CompteEditorPane {
 	private CompteEditorPaneController cepc;
 
 	/**
+	 * Construit une fenêtre
 	 * @param _parentStage
 	 * @param _dbstate
 	 */
@@ -47,7 +48,7 @@ public class CompteEditorPane {
 		}
 	}
 
-	/**
+	/** Créer un compte courant
 	 * @param client
 	 * @param cpte
 	 * @param em
