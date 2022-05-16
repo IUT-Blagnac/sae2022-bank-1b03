@@ -19,7 +19,7 @@ public class ClientEditorPane {
 	private ClientEditorPaneController cepc;
 
 	/**
-	 * Sonstruit le Stage java FX de la fenêtre et charge le fichier fxml de la vue et son contrôleur 
+	 * Construit le Stage java FX de la fenêtre et charge le fichier fxml de la vue et son contrôleur 
 	 * @param _parentStage
 	 * @param _dbstate
 	 */
@@ -49,9 +49,10 @@ public class ClientEditorPane {
 	}
 
 	/**
+	 * Construit un editeur de dialog
 	 * @param client
 	 * @param em
-	 * @return
+	 * @return this.cepc.displayDialog(client, em)
 	 */
 	public Client doClientEditorDialog(Client client, EditionMode em) {
 		return this.cepc.displayDialog(client, em);
