@@ -23,7 +23,7 @@ public class ClientsManagement {
 	private DailyBankState dbs;
 	private ClientsManagementController cmc;
 
-	/**
+	/**Ouvre les informations du client sur la page
 	 * @param _parentStage
 	 * @param _dbstate
 	 */
@@ -85,7 +85,7 @@ public class ClientsManagement {
 		return result;
 	}
 
-	/**
+	/** Créer un nouveau client
 	 * @return
 	 */
 	public Client nouveauClient() {
@@ -111,7 +111,7 @@ public class ClientsManagement {
 		return client;
 	}
 
-	/**
+	/**Affiche les informations du client
 	 * @param c
 	 */
 	public void gererComptesClient(Client c) {
@@ -119,7 +119,7 @@ public class ClientsManagement {
 		cm.doComptesManagementDialog();
 	}
 
-	/**
+	/**Créer une liste de comptes
 	 * @param _numCompte
 	 * @param _debutNom
 	 * @param _debutPrenom
