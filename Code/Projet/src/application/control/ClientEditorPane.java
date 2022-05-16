@@ -20,8 +20,8 @@ public class ClientEditorPane {
 
 	/**
 	 * Construit le Stage java FX de la fenêtre et charge le fichier fxml de la vue et son contrôleur 
-	 * @param _parentStage Stage 
-	 * @param _dbstate DailyBankState
+	 * @param _parentStage fenêtre 
+	 * @param _dbstate statu de la banque
 	 */
 	public ClientEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
@@ -50,8 +50,8 @@ public class ClientEditorPane {
 
 	/**
 	 * Construit un editeur de dialog
-	 * @param client
-	 * @param em
+	 * @param client 
+	 * @param em	mode éditeur
 	 * @return
 	 */
 	public Client doClientEditorDialog(Client client, EditionMode em) {
