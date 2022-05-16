@@ -20,8 +20,8 @@ public class CompteEditorPane {
 
 	/**
 	 * Construit une fenêtre
-	 * @param _parentStage
-	 * @param _dbstate
+	 * @param _parentStage	fenêtre
+	 * @param _dbstate	statu de la banque
 	 */
 	public CompteEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
@@ -49,10 +49,10 @@ public class CompteEditorPane {
 	}
 
 	/** Créer un compte courant
-	 * @param client
-	 * @param cpte
-	 * @param em
-	 * @return
+	 * @param client	
+	 * @param cpte		compte
+	 * @param em		mode éditeur
+	 * @return		compte courant
 	 */
 	public CompteCourant doCompteEditorDialog(Client client, CompteCourant cpte, EditionMode em) {
 		return this.cepc.displayDialog(client, cpte, em);
