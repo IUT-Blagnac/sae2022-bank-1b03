@@ -24,8 +24,8 @@ public class ClientsManagement {
 	private ClientsManagementController cmc;
 
 	/**Ouvre les informations du client sur la page
-	 * @param _parentStage
-	 * @param _dbstate
+	 * @param _parentStage c'est la fenêtre
+	 * @param _dbstate statu de la banque
 	 */
 	public ClientsManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
@@ -53,7 +53,7 @@ public class ClientsManagement {
 	}
 
 	/**
-	 * 
+	 * @return
 	 */
 	public void doClientManagementDialog() {
 		this.cmc.displayDialog();
@@ -61,7 +61,7 @@ public class ClientsManagement {
 
 	/**
 	 * Modifie un client, en vérifiant si c'est possible de le modifier (les informations du client ne sont pas vide)
-	 * @param c
+	 * @param c	est le client
 	 * @return
 	 */
 	public Client modifierClient(Client c) {
@@ -112,7 +112,7 @@ public class ClientsManagement {
 	}
 
 	/**Affiche les informations du client
-	 * @param c
+	 * @param c	est le client
 	 */
 	public void gererComptesClient(Client c) {
 		ComptesManagement cm = new ComptesManagement(this.primaryStage, this.dbs, c);
@@ -120,9 +120,9 @@ public class ClientsManagement {
 	}
 
 	/**Créer une liste de comptes
-	 * @param _numCompte
-	 * @param _debutNom
-	 * @param _debutPrenom
+	 * @param _numCompte	numéro de compte
+	 * @param _debutNom	nom
+	 * @param _debutPrenom	prenom
 	 * @return
 	 */
 	public ArrayList<Client> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
