@@ -5,3 +5,50 @@
 = Documentation utilisateur V0
 
 toc::[]
+
+:sectnums:
+
+=== Présentation de l’application
+
+==== Expliquer le Use Case global (types d’utilisateurs, spécificités, …)
+
+==== Expliquer le diagramme de classe des données global (base de données), surtout les éléments particuliers (par exemple chef Agence, client inactif, …) qui servent et concernent le code développé.
+
+=== Architecture
+
+==== Architecture générale (poste client, serveurs, …) et rôle de chaque élément
+
+==== Ressources externes (.jar, …) utilisées et rôles
+
+==== Structuration en packages de l’application documentée. Principes retenus pour cette structuration
+
+==== Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
+
+=== Fonctionnalités 
+
+==== Modifier les informations d'un client
+
+    Partie de use case réalisé - scénarios éventuels
+
+    Partie du diagramme de classes données nécessaires : en lecture, en mise à jour
+
+    Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
+
+    Classes impliquées dans chaque package
+
+    Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
+
+    Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants
+
+==== Modifier les informations d'un client
+
+
+==== Créer un nouveau client
+
+==== Consulter un compte
+
+==== Débiter un compte
+
+==== Rendre inactif un client
+
+
