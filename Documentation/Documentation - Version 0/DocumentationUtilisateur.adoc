@@ -1,2 +1,14 @@
 // documentation utilisateur
+:toc-title: Sommaire
+:toc: macro
+:toclevels: 3
+
 = Documentation Utilisateur
+Hugo Wendjaneh | Thomas Testa
+v1.0, 2018-06-11
+toc::[Sommaire]
+== Comment ce connecter ?
+
+== Comment ce déconnecter ?
+
+== Comment accéder au gestionnaire des clients ?
