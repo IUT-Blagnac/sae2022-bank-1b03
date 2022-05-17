@@ -8,25 +8,40 @@ toc::[]
 
 :sectnums:
 
-=== Présentation de l’application
+== Présentation de l’application
 
-==== Expliquer le Use Case global (types d’utilisateurs, spécificités, …)
+=== Use Case global de l'application 
 
-==== Expliquer le diagramme de classe des données global (base de données), surtout les éléments particuliers (par exemple chef Agence, client inactif, …) qui servent et concernent le code développé.
+image::capture.jpg[]
+Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux types d'utilisateurs présents dans l'application, le guichetier et le chef d'agence. +
 
-=== Architecture
+Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
 
-==== Architecture générale (poste client, serveurs, …) et rôle de chaque élément
+* Modifier informations client (adresse, téléphone, …)
+* Créer un nouveau client
+* Consulter un compte
+* Débiter un compte (BD)
 
-==== Ressources externes (.jar, …) utilisées et rôles
+Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effectuer toutes les opérations de celui-ci en plus de pouvoir rendre inactif un client.
 
-==== Structuration en packages de l’application documentée. Principes retenus pour cette structuration
 
-==== Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
+=== Explication du diagramme de classe des données global (base de données), surtout les éléments particuliers (par exemple chef Agence, client inactif, …) qui servent et concernent le code développé.
 
-=== Fonctionnalités 
+== Architecture
 
-==== Modifier les informations d'un client
+=== Architecture générale (poste client, serveurs, …) et rôle de chaque élément
+
+=== Ressources externes (.jar, …) utilisées et rôles
+
+L'application utilise la librairie externe ojdbc6.jar pour interagir avec la base de données du système des agences bancaires et exécuter des instructions SQL avec Java. 
+
+=== Structuration en packages de l’application documentée. Principes retenus pour cette structuration
+
+=== Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
+
+== Fonctionnalités 
+
+=== Modifier les informations d'un client
 
     Partie de use case réalisé - scénarios éventuels
 
@@ -40,15 +55,15 @@ toc::[]
 
     Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants
 
-==== Modifier les informations d'un client
+=== Modifier les informations d'un client
 
 
-==== Créer un nouveau client
+=== Créer un nouveau client
 
-==== Consulter un compte
+=== Consulter un compte
 
-==== Débiter un compte
+=== Débiter un compte
 
-==== Rendre inactif un client
+=== Rendre inactif un client
 
 
