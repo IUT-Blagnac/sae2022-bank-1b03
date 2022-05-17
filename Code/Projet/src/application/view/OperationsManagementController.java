@@ -37,6 +37,15 @@ public class OperationsManagementController implements Initializable {
 	private ObservableList<Operation> olOperation;
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _om
+	 * @param _dbstate
+	 * @param client
+	 * @param compte
+	 */
 	public void initContext(Stage _primaryStage, OperationsManagement _om, DailyBankState _dbstate, Client client, CompteCourant compte) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
@@ -46,6 +55,9 @@ public class OperationsManagementController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -56,11 +68,20 @@ public class OperationsManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Affiche la fenêtre
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -79,15 +100,24 @@ public class OperationsManagementController implements Initializable {
 	@FXML
 	private Button btnCredit;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre client
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Enregistrement d'une opération de type Débit
+	 */
 	@FXML
 	private void doDebit() {
 
@@ -98,20 +128,32 @@ public class OperationsManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Enregistrement d'une opération de type Crédit
+	 */
 	@FXML
 	private void doCredit() {
 	}
 
+	/**
+	 * Enregistrement d'une opération réalisée par l'utilisateur
+	 */
 	@FXML
 	private void doAutre() {
 	}
 
+	/**
+	 * Modifie le statut des boutons en fonction d'une validation
+	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnCredit.setDisable(true);
 		this.btnDebit.setDisable(false);
 	}
 
+	/**
+	 * Met à jour les informations d'un compte client
+	 */
 	private void updateInfoCompteClient() {
 
 		PairsOfValue<CompteCourant, ArrayList<Operation>> opesEtCompte;

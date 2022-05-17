@@ -38,16 +38,32 @@ public class ClientEditorPaneController implements Initializable {
 	private Client clientResult;
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _dbstate
+	 */
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
+	/**
+	 * Affiche la fenêtre et initialise les différents fonctionnalités/modes de l'application
+	 * 
+	 * @param client
+	 * @param mode
+	 * @return
+	 */
 	public Client displayDialog(Client client, EditionMode mode) {
 
 		this.em = mode;
@@ -132,6 +148,12 @@ public class ClientEditorPaneController implements Initializable {
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -164,16 +186,25 @@ public class ClientEditorPaneController implements Initializable {
 	@FXML
 	private Button butCancel;
 
+	/**
+	 * Initalise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre client
+	 */
 	@FXML
 	private void doCancel() {
 		this.clientResult = null;
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Ajoute, modifie ou supprime un client (ou non) selon le résultat de la saisie (true/false)
+	 */
 	@FXML
 	private void doAjouter() {
 		switch (this.em) {
@@ -197,6 +228,11 @@ public class ClientEditorPaneController implements Initializable {
 
 	}
 
+	/**
+	 * Vérifie si la saisie est valide
+	 * 
+	 * @return la validité de la saisie (true/false)
+	 */
 	private boolean isSaisieValide() {
 		this.clientEdite.nom = this.txtNom.getText().trim();
 		this.clientEdite.prenom = this.txtPrenom.getText().trim();

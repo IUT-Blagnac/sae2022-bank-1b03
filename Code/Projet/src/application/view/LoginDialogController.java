@@ -26,6 +26,13 @@ public class LoginDialogController implements Initializable {
 	// Données de la fenêtre
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _ld
+	 * @param _dbstate
+	 */
 	public void initContext(Stage _primaryStage, LoginDialog _ld, DailyBankState _dbstate) {
 		this.primaryStage = _primaryStage;
 		this.ld = _ld;
@@ -33,15 +40,27 @@ public class LoginDialogController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
+	/**
+	 * Affiche la fenêtre
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -56,16 +75,25 @@ public class LoginDialogController implements Initializable {
 	@FXML
 	private Label lblMessage;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre login
+	 */
 	@FXML
 	private void doCancel() {
 		this.dbs.setEmpAct(null);
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Vérifie si les identifiants rentrés par l'utilisateur sont corrects
+	 */
 	@FXML
 	private void doOK() {
 		String login = this.txtLogin.getText().trim();
@@ -84,6 +112,11 @@ public class LoginDialogController implements Initializable {
 		}
 	}
 
+	/**
+	 * Paramètre l'affichage d'un message d'erreur
+	 * 
+	 * @param texte
+	 */
 	private void afficheErreur(String texte) {
 		this.lblMessage.setText(texte);
 		this.lblMessage.setStyle("-fx-text-fill:red; -fx-font-weight: bold;");

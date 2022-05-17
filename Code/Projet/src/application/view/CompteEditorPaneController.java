@@ -35,12 +35,21 @@ public class CompteEditorPaneController implements Initializable {
 	private CompteCourant compteResult;
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _dbstate
+	 */
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -48,6 +57,14 @@ public class CompteEditorPaneController implements Initializable {
 		this.txtSolde.focusedProperty().addListener((t, o, n) -> this.focusSolde(t, o, n));
 	}
 
+	/**
+	 * Affiche la fenêtre et initialise les différents fonctionnalités/modes de l'application
+	 * 
+	 * @param client
+	 * @param cpte
+	 * @param mode
+	 * @return
+	 */
 	public CompteCourant displayDialog(Client client, CompteCourant cpte, EditionMode mode) {
 		this.clientDuCompte = client;
 		this.em = mode;
@@ -101,12 +118,26 @@ public class CompteEditorPaneController implements Initializable {
 	}
 
 	// Gestion du stage
+	/***
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
 		return null;
 	}
 
+	/**
+	 * Vérification du découvert autorisé
+	 * 
+	 * @param txtField
+	 * @param oldPropertyValue
+	 * @param newPropertyValue
+	 * @return
+	 */
 	private Object focusDecouvert(ObservableValue<? extends Boolean> txtField, boolean oldPropertyValue,
 			boolean newPropertyValue) {
 		if (oldPropertyValue) {
@@ -124,6 +155,14 @@ public class CompteEditorPaneController implements Initializable {
 		return null;
 	}
 
+	/**
+	 * Vérification du solde du compte 
+	 * 
+	 * @param txtField
+	 * @param oldPropertyValue
+	 * @param newPropertyValue
+	 * @return
+	 */
 	private Object focusSolde(ObservableValue<? extends Boolean> txtField, boolean oldPropertyValue,
 			boolean newPropertyValue) {
 		if (oldPropertyValue) {
@@ -162,16 +201,25 @@ public class CompteEditorPaneController implements Initializable {
 	@FXML
 	private Button btnCancel;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre client 
+	 */
 	@FXML
 	private void doCancel() {
 		this.compteResult = null;
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Ajoute, modifie ou supprime un client (ou non) selon le résultat de la saisie (true/false)
+	 */
 	@FXML
 	private void doAjouter() {
 		switch (this.em) {
@@ -195,6 +243,11 @@ public class CompteEditorPaneController implements Initializable {
 
 	}
 
+	/**
+	 * Vérifie si la saisie est valide
+	 * 
+	 * @return la validité de la saisie
+	 */
 	private boolean isSaisieValide() {
 
 		return true;

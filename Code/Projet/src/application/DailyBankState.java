@@ -8,36 +8,36 @@ public class DailyBankState {
 	private Employe empAct;
 	private AgenceBancaire agAct;
 	private boolean isChefDAgence;
-	
+
 	/**
-	 * Donne un employé
+	 * Renvoie l'employÃ© empAct
 	 * 
-	 * @return this.empAct
+	 * @return l'employÃ© actuel
 	 */
 	public Employe getEmpAct() {
 		return this.empAct;
 	}
 
 	/**
-	 * Défini un employé
+	 * Initialise un employÃ© dit actif
 	 * 
 	 * @param employeActif
 	 */
 	public void setEmpAct(Employe employeActif) {
 		this.empAct = employeActif;
 	}
-	
+
 	/**
-	 * Donne l'agence bancaire
+	 * Retourne l'agence actuelle
 	 * 
-	 * @return this.agAct
+	 * @return l'agence courante
 	 */
 	public AgenceBancaire getAgAct() {
 		return this.agAct;
 	}
-
+	
 	/**
-	 * Défini l'agence bancaire
+	 * Initialise l'agence bancaire
 	 * 
 	 * @param agenceActive
 	 */
@@ -46,16 +46,16 @@ public class DailyBankState {
 	}
 
 	/**
-	 * Retourne si l'employé est le chef de l'agence
+	 * Retourne le chef d'agence
 	 * 
-	 * @return this.isChefDAgence
+	 * @return le chef d'agence
 	 */
 	public boolean isChefDAgence() {
 		return this.isChefDAgence;
 	}
 
 	/**
-	 * Défini l'employé comme chef d'agence
+	 * Initialise le chef d'agence
 	 * 
 	 * @param isChefDAgence
 	 */
@@ -64,8 +64,7 @@ public class DailyBankState {
 	}
 
 	/**
-	 * Si l'employé a les mêmes droits d'accès qu'un chef d'agence
-	 * Alors il est défini comme chef d'agence
+	 * Initialise les droits d'accÃ¨s du chef d'agence
 	 * 
 	 * @param droitsAccess
 	 */
