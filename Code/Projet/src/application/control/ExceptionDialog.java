@@ -16,7 +16,7 @@ public class ExceptionDialog {
 	private Stage primaryStage;
 	private ExceptionDialogController edc;
 
-	/**
+	/**Page d'erreur
 	 * @param _parentStage	fenêtre
 	 * @param _dbstate	statu de la banque
 	 * @param ae		les exceptions de l'application
@@ -47,7 +47,7 @@ public class ExceptionDialog {
 	}
 
 	/**
-	 * 
+	 * exception
 	 */
 	public void doExceptionDialog() {
 		this.edc.displayDialog();

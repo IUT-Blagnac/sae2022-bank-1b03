@@ -29,10 +29,10 @@ public class ComptesManagement {
 	private DailyBankState dbs;
 	private Client clientDesComptes;
 
-	/**
-	 * @param _parentStage
-	 * @param _dbstate
-	 * @param client
+	/**Fenetre des comptes
+	 * @param _parentStage	fentre
+	 * @param _dbstate		banquier
+	 * @param client		client
 	 */
 	public ComptesManagement(Stage _parentStage, DailyBankState _dbstate, Client client) {
 
@@ -62,22 +62,22 @@ public class ComptesManagement {
 	}
 
 	/**
-	 * 
+	 * compte client
 	 */
 	public void doComptesManagementDialog() {
 		this.cmc.displayDialog();
 	}
 
-	/**
-	 * @param cpt
+	/**Ouvre la fentre des operations du compte courant
+	 * @param cpt	compte courant
 	 */
 	public void gererOperations(CompteCourant cpt) {
 		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dbs, this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
-	/**
-	 * @return
+	/**Creer un compte courant
+	 * @return	compte	un compte courant
 	 */
 	public CompteCourant creerCompte() {
 		CompteCourant compte;
@@ -110,8 +110,8 @@ public class ComptesManagement {
 		return compte;
 	}
 
-	/**
-	 * @return
+	/**Liste des comptes d'un client
+	 * @return	la liste des comptes
 	 */
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();

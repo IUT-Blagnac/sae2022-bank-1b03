@@ -49,7 +49,7 @@ public class CompteEditorPane {
 	}
 
 	/** Créer un compte courant
-	 * @param client	
+	 * @param client	client
 	 * @param cpte		compte
 	 * @param em		mode éditeur
 	 * @return		compte courant

@@ -29,8 +29,8 @@ public class OperationsManagement {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 
-	/**Construit une fenêtre o`est répertorié les informations suivantes
-	 * @param _parentStage	fenêtre
+	/**Construit une fenetre qui repertorie les informations suivantes
+	 * @param _parentStage	fenetre
 	 * @param _dbstate	statu de la banque
 	 * @param client	client
 	 * @param compte	compte courant du client
@@ -65,14 +65,14 @@ public class OperationsManagement {
 	}
 
 	/**
-	 * 
+	 * la page des operations
 	 */
 	public void doOperationsManagementDialog() {
 		this.omc.displayDialog();
 	}
 
-	/**
-	 * @return	
+	/**Enregistre le debit
+	 * @return	l'operation
 	 */
 	public Operation enregistrerDebit() {
 
@@ -98,8 +98,8 @@ public class OperationsManagement {
 		return op;
 	}
 
-	/**
-	 * @return	
+	/**Verifie si l'operation est possible en fonction du solde des commptes
+	 * @return	la liste d'operation
 	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
@@ -109,7 +109,7 @@ public class OperationsManagement {
 			AccessCompteCourant acc = new AccessCompteCourant();
 			this.compteConcerne = acc.getCompteCourant(this.compteConcerne.idNumCompte);
 
-			// lecture BD de la liste des opérations du compte de l'utilisateur
+			// lecture BD de la liste des operations du compte de l'utilisateur
 			AccessOperation ao = new AccessOperation();
 			listeOP = ao.getOperations(this.compteConcerne.idNumCompte);
 

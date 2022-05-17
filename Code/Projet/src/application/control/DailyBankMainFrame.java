@@ -20,7 +20,7 @@ public class DailyBankMainFrame extends Application {
 	private Stage primaryStage;
 
 	/**
-	 *
+	 *Ouvre la page de demarrage
 	 */
 	@Override
 	public void start(Stage primaryStage) {
@@ -103,7 +103,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * Se déconnecter
+	 * Se deconnecter
 	 */
 	public void disconnect() {
 		this.dbs.setAgAct(null);

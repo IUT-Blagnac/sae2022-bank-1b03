@@ -68,10 +68,10 @@ public class ClientsManagementController implements Initializable {
 
 	// Gestion du stage
 	/**
-	 * Paramètre la fermeture de la fenêtre
+	 * Parametre la fermeture de la fenetre
 	 * 
-	 * @param e
-	 * @return
+	 * @param e	fenetre
+	 * @return	null
 	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
@@ -97,13 +97,15 @@ public class ClientsManagementController implements Initializable {
 
 	/**
 	 * Initialise le controleur
+	 * @param location		un URL
+	 * @param resources		ressources Bundle
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
 	/**
-	 * Quitte le fenêtre client
+	 * Quitte le fenetre client
 	 */
 	@FXML
 	private void doCancel() {
@@ -188,7 +190,7 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/**
-	 * Désactive un client actif 
+	 * Desactive un client actif 
 	 */
 	@FXML
 	private void doDesactiverClient() {
@@ -207,7 +209,7 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/**
-	 * Modifie le statut des boutons en fonction de la sélection correspondante
+	 * Modifie le statut des boutons en fonction de la selection correspondante
 	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
