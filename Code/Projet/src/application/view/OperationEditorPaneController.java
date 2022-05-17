@@ -36,16 +36,32 @@ public class OperationEditorPaneController implements Initializable {
 	private Operation operationResultat;
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _dbstate
+	 */
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
+	/**
+	 * Affiche la fenêtre et initialise les différents fonctionnalités de l'application
+	 * 
+	 * @param cpte
+	 * @param mode
+	 * @return
+	 */
 	public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
 		this.categorieOperation = mode;
 		this.compteEdite = cpte;
@@ -90,6 +106,12 @@ public class OperationEditorPaneController implements Initializable {
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -110,16 +132,25 @@ public class OperationEditorPaneController implements Initializable {
 	@FXML
 	private Button btnCancel;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre Opération
+	 */
 	@FXML
 	private void doCancel() {
 		this.operationResultat = null;
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Ajoute une opération (débit/crédit)
+	 */
 	@FXML
 	private void doAjouter() {
 		switch (this.categorieOperation) {

@@ -18,6 +18,11 @@ public class CompteEditorPane {
 	private Stage primaryStage;
 	private CompteEditorPaneController cepc;
 
+	/**
+	 * Construit une fenêtre
+	 * @param _parentStage	fenêtre
+	 * @param _dbstate	statu de la banque
+	 */
 	public CompteEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
@@ -43,6 +48,12 @@ public class CompteEditorPane {
 		}
 	}
 
+	/** Créer un compte courant
+	 * @param client	client
+	 * @param cpte		compte
+	 * @param em		mode éditeur
+	 * @return		compte courant
+	 */
 	public CompteCourant doCompteEditorDialog(Client client, CompteCourant cpte, EditionMode em) {
 		return this.cepc.displayDialog(client, cpte, em);
 	}

@@ -27,6 +27,13 @@ public class ExceptionDialogController implements Initializable {
 	private ApplicationException ae;
 	// Manipulation de la fenêtre
 
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _dbstate
+	 * @param _ae
+	 */
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate, ApplicationException _ae) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
@@ -34,6 +41,9 @@ public class ExceptionDialogController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 		this.lblTitre.setText(this.ae.getMessage());
@@ -46,11 +56,20 @@ public class ExceptionDialogController implements Initializable {
 		this.txtDetails.setText(sw.toString());
 	}
 
+	/**
+	 * Affiche la fenêtre
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		return null;
 	}
@@ -67,10 +86,16 @@ public class ExceptionDialogController implements Initializable {
 	@FXML
 	private TextArea txtDetails;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre
+	 */
 	@FXML
 	private void doOK() {
 		this.primaryStage.close();

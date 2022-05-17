@@ -31,6 +31,13 @@ public class ClientsManagementController implements Initializable {
 	private ObservableList<Client> olc;
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _cm
+	 * @param _dbstate
+	 */
 	public void initContext(Stage _primaryStage, ClientsManagement _cm, DailyBankState _dbstate) {
 		this.cm = _cm;
 		this.primaryStage = _primaryStage;
@@ -38,6 +45,9 @@ public class ClientsManagementController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de l'application
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -49,11 +59,20 @@ public class ClientsManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Affiche la fenêtre de l'application
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
 	// Gestion du stage
+	/**
+	 * Parametre la fermeture de la fenetre
+	 * 
+	 * @param e	fenetre
+	 * @return	null
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -76,15 +95,26 @@ public class ClientsManagementController implements Initializable {
 	@FXML
 	private Button btnComptesClient;
 
+	/**
+	 * Initialise le controleur
+	 * @param location		un URL
+	 * @param resources		ressources Bundle
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte le fenetre client
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Recherche un client dans la base de données
+	 */
 	@FXML
 	private void doRechercher() {
 		int numCompte;
@@ -131,6 +161,9 @@ public class ClientsManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Entre dans le menu de modification d'un compte client
+	 */
 	@FXML
 	private void doComptesClient() {
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
@@ -140,6 +173,9 @@ public class ClientsManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Valide la modification d'un compte client
+	 */
 	@FXML
 	private void doModifierClient() {
 
@@ -153,10 +189,16 @@ public class ClientsManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Desactive un client actif 
+	 */
 	@FXML
 	private void doDesactiverClient() {
 	}
 
+	/**
+	 * Ajout d'un nouveau client
+	 */
 	@FXML
 	private void doNouveauClient() {
 		Client client;
@@ -166,6 +208,9 @@ public class ClientsManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Modifie le statut des boutons en fonction de la selection correspondante
+	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnDesactClient.setDisable(true);

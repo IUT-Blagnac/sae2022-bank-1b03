@@ -29,6 +29,13 @@ public class DailyBankMainFrameController implements Initializable {
 	// Données de la fenêtre
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initialise la fenêtre de l'application
+	 * 
+	 * @param _containingStage
+	 * @param _dbmf
+	 * @param _dbstate
+	 */
 	public void initContext(Stage _containingStage, DailyBankMainFrame _dbmf, DailyBankState _dbstate) {
 		this.dbmf = _dbmf;
 		this.dbs = _dbstate;
@@ -37,10 +44,16 @@ public class DailyBankMainFrameController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Affiche la fenêtre principale
+	 */
 	public void displayDialog() {
 		this.primaryStage.show();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 		this.btnConn.managedProperty().bind(this.btnConn.visibleProperty());
@@ -48,6 +61,12 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doQuit();
 		e.consume();
@@ -78,10 +97,16 @@ public class DailyBankMainFrameController implements Initializable {
 	@FXML
 	private Button btnDeconn;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Confirmation lors de la fermeture de l'application
+	 */
 	@FXML
 	private void doQuit() {
 
@@ -93,12 +118,18 @@ public class DailyBankMainFrameController implements Initializable {
 		}
 	}
 
+	/**
+	 * Affiche le menu Aide de l'application
+	 */
 	@FXML
 	private void doActionAide() {
 		String contenu = "DailyBank v1.01\nSAE 2.01 Développement\nIUT-Blagnac";
 		AlertUtilities.showAlert(this.primaryStage, "Aide", null, contenu, AlertType.INFORMATION);
 	}
 
+	/**
+	 * Connexion à l'application
+	 */
 	@FXML
 	private void doLogin() {
 
@@ -106,12 +137,18 @@ public class DailyBankMainFrameController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Déconnexion de l'application
+	 */
 	@FXML
 	private void doDisconnect() {
 		this.dbmf.disconnect();
 		this.validateComponentState();
 	}
 
+	/**
+	 * Modifie le statut des boutons en fonction de la sélection correspondante
+	 */
 	private void validateComponentState() {
 		Employe e = this.dbs.getEmpAct();
 		AgenceBancaire a = this.dbs.getAgAct();
@@ -145,17 +182,26 @@ public class DailyBankMainFrameController implements Initializable {
 		}
 	}
 
+	/**
+	 * Ouvre le menu de gestion des clients
+	 */
 	@FXML
 	private void doClientOption() {
 		this.dbmf.gestionClients();
 	}
 
+	/**
+	 * Ouvre le menu de gestion des employés
+	 */
 	@FXML
 	private void doEmployeOption() {
 		AlertUtilities.showAlert(this.primaryStage, "Gestion des Employé", "En cours de développement",
 				"Livraison prévue\nEn juin 2022", AlertType.INFORMATION);
 	}
 
+	/**
+	 * Déconnexion de la base de données
+	 */
 	private void actionQuitterBD() {
 		this.dbmf.disconnect();
 	}

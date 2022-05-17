@@ -23,6 +23,10 @@ public class ClientsManagement {
 	private DailyBankState dbs;
 	private ClientsManagementController cmc;
 
+	/**Ouvre les informations du client sur la page
+	 * @param _parentStage c'est la fenêtre
+	 * @param _dbstate statu de la banque
+	 */
 	public ClientsManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
@@ -48,10 +52,18 @@ public class ClientsManagement {
 		}
 	}
 
+	/**
+	 * @return
+	 */
 	public void doClientManagementDialog() {
 		this.cmc.displayDialog();
 	}
 
+	/**
+	 * Modifie un client, en vérifiant si c'est possible de le modifier (les informations du client ne sont pas vide)
+	 * @param c	est le client
+	 * @return
+	 */
 	public Client modifierClient(Client c) {
 		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
 		Client result = cep.doClientEditorDialog(c, EditionMode.MODIFICATION);
@@ -73,6 +85,9 @@ public class ClientsManagement {
 		return result;
 	}
 
+	/** Créer un nouveau client
+	 * @return
+	 */
 	public Client nouveauClient() {
 		Client client;
 		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
@@ -96,11 +111,20 @@ public class ClientsManagement {
 		return client;
 	}
 
+	/**Affiche les informations du client
+	 * @param c	est le client
+	 */
 	public void gererComptesClient(Client c) {
 		ComptesManagement cm = new ComptesManagement(this.primaryStage, this.dbs, c);
 		cm.doComptesManagementDialog();
 	}
 
+	/**Créer une liste de comptes
+	 * @param _numCompte	numéro de compte
+	 * @param _debutNom	nom
+	 * @param _debutPrenom	prenom
+	 * @return
+	 */
 	public ArrayList<Client> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
 		ArrayList<Client> listeCli = new ArrayList<>();
 		try {
