@@ -23,7 +23,7 @@ import model.orm.exception.DatabaseConnexionException;
 
 public class OperationsManagement {
 
-	private Stage primaryStage;
+	private Stage primaryStage; 
 	private DailyBankState dbs;
 	private OperationsManagementController omc;
 	private Client clientDuCompte;
