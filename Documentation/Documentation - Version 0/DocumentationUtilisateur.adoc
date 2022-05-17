@@ -1,2 +1,26 @@
 // documentation utilisateur
 = Documentation Utilisateur
+
+= Comment ajouter un client?
+_Tout d'abord commencer par aller au gestionnaire des clients_
+
+image::gestionnaireClient.png[]
+
+Appuyer sur le bouton "Nouveau client"
+
+Puis rentrer les informations du client dans la fenêtre qui s'est ouverte
+
+image::clientAjouter.png[]
+
+Pour finir il ne vous reste plus qu'à appuyer sur le bouton "Ajouter"
+
+image::resultatClientAjouter.png[]
+
+
+= Comment rechercher un client?
+
+_Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)_
+
+image::gestionnaireClientChercher.png[]
+
+
