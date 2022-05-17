@@ -33,6 +33,14 @@ public class ComptesManagementController implements Initializable {
 	private ObservableList<CompteCourant> olCompteCourant;
 
 	// Manipulation de la fenêtre
+	/**
+	 * Initalise la fenêtre de l'application
+	 * 
+	 * @param _primaryStage
+	 * @param _cm
+	 * @param _dbstate
+	 * @param client
+	 */
 	public void initContext(Stage _primaryStage, ComptesManagement _cm, DailyBankState _dbstate, Client client) {
 		this.cm = _cm;
 		this.primaryStage = _primaryStage;
@@ -41,6 +49,9 @@ public class ComptesManagementController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Configure la fermeture de la fenêtre
+	 */
 	private void configure() {
 		String info;
 
@@ -60,11 +71,20 @@ public class ComptesManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Affiche la fenêtre
+	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
 	// Gestion du stage
+	/**
+	 * Paramètre la fermeture de la fenêtre
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -83,15 +103,24 @@ public class ComptesManagementController implements Initializable {
 	@FXML
 	private Button btnSupprCompte;
 
+	/**
+	 * Initialise le controleur
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Quitte la fenêtre Compte
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Affiche la liste des opérations effectués
+	 */
 	@FXML
 	private void doVoirOperations() {
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
@@ -103,14 +132,23 @@ public class ComptesManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	/**
+	 * Modifie les caractéristiques d'un compte client
+	 */
 	@FXML
 	private void doModifierCompte() {
 	}
 
+	/**
+	 * Cloture le compte d'un client
+	 */
 	@FXML
 	private void doSupprimerCompte() {
 	}
 
+	/**
+	 * Ajoute un nouveau compte client
+	 */
 	@FXML
 	private void doNouveauCompte() {
 		CompteCourant compte;
@@ -120,6 +158,9 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Récupère la liste de tout les comptes client
+	 */
 	private void loadList () {
 		ArrayList<CompteCourant> listeCpt;
 		listeCpt = this.cm.getComptesDunClient();
@@ -129,6 +170,9 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
+	/**
+	 * Modifie le statut des boutons en fonction de la sélection correspondante
+	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnModifierCompte.setDisable(true);
