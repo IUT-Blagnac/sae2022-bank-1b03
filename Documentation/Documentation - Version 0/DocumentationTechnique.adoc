@@ -89,7 +89,6 @@ Extraits de code significatifs commentés si nécessaires pour des points partic
 
 === Modifier les informations d'un client
 
-
 === Créer un nouveau client
 
 === Consulter un compte
