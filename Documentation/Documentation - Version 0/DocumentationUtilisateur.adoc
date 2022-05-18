@@ -8,6 +8,15 @@ Hugo Wendjaneh | Thomas Testa
 v1.0, 2018-06-11
 toc::[Sommaire]
 == Comment ce connecter ?
+Pour ce connecter sur l'application il y à deux possiblité. Avec le boutton de connexion.
+
+image::connexion1.png[]
+
+Ou avec le menu déroulant.
+
+image::connexion2.png[]
+
+
 
 == Comment ce déconnecter ?
 
@@ -15,7 +24,7 @@ toc::[Sommaire]
 
 == Comment ajouter un client?
 
-_Tout d'abord commencer par aller au gestionnaire des clients_
+Tout d'abord commencer par aller au gestionnaire des clients
 
 image::gestionnaireClient.png[]
 
@@ -32,7 +41,7 @@ image::resultatClientAjouter.png[]
 
 == Comment rechercher un client?
 
-_Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)_
+Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)
 
 image::gestionnaireClientChercher.png[]
 
