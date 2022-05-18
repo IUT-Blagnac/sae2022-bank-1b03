@@ -24,9 +24,7 @@ Le guichetier est l'employé "de base" du système. Il peut réaliser certaines 
 
 Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effectuer toutes les opérations de celui-ci en plus de pouvoir rendre inactif un client.
 
-
 === Diagramme de classe de la base de données
-Explication du diagramme de classe des données global (base de données), surtout les éléments particuliers (par exemple chef Agence, client inactif, …) qui servent et concernent le code développé.
 
 image::DiagrammeUML.png[]
 
@@ -41,6 +39,8 @@ image::DiagrammeUML.png[]
 * Un client peut avoir plusieurs comptes.
 * Un emprunt peut être assuré.
 
+Pour l'instant l'application ne possède que certaines fonctionnalités. 
+
 == Architecture
 
 === Architecture générale (poste client, serveurs, …) et rôle de chaque élément
@@ -53,7 +53,23 @@ L'application utilise la librairie JavaFX pour permettre de disposer d'une inter
 Elle utilise également la librairie externe ojdbc6.jar pour interagir avec la base de données du système des agences bancaires et exécuter des instructions SQL avec Java. 
 
 === Structuration en packages de l’application documentée. Principes retenus pour cette structuration
-L'application est structurée en plusieurs packages.
+L'application est structurée en plusieurs packages. Le modèle retenu est le modèle est le modèle MVC (modèle, view, controller). De plus on regroupe les packages en deux catégories: +
+
+Application:
+
+* Package tools
+* Package view
+* Package controller
+
+Cette catégorie contient les données des différentes classes pour pouvoir utiliser les différentes fonctionnalités de l'application. 
+
+Model :
+
+* Package data
+* Package orm
+* Package orm.exception
+
+Il contient des classes de base de données correpondant à certaines tables de la base de données. Il permet également de manipuler les données de la base de données (classe orm).
 
 === Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
 
