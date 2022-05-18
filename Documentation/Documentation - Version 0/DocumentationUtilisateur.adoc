@@ -1,0 +1,155 @@
+// documentation utilisateur
+:toc-title: Sommaire
+:toc: macro
+:toclevels: 3
+
+= Documentation Utilisateur
+Hugo Wendjaneh | Thomas Testa
+v1.0, 2018-06-11
+toc::[Sommaire]
+== Comment ce connecter ?
+Pour ce connecter sur l'application il y à deux possiblité. Avec le boutton de connexion.
+
+image::images/connexion1.png[]
+
+Ou avec le menu déroulant, Il suffit de cliquer sur "Utilisateur", puis "Connexion".
+
+image::images/connexion2.png[]
+
+Un écrant d'identification s'affiche. Vous devrez rentrer par la suite vos identifiant et cliquer sur le boutton "Valider".
+
+image::images/identification.png[]
+
+== Comment ce déconnecter ?
+
+Pour ce déconnecter il suffit de ce rendre sur les fenêtre principal, puis reproduire les même actions que la connexion. Mais en cliquant sur le boutton "Déconnexion".
+
+image::images/deconnexion1.png[]
+
+image::images/deconnexion2.png[]
+
+== Comment accéder au gestionnaire des clients ?
+
+Pour accéder au gestionnaire des clients il faut tout d'abord ce connecter. Une fois connecté. Par la suite, sur la fenêtre principale cliquer sur le menu déroulant "Gestion", puis cliquer sur "Clients".
+
+image::images/gestionClients.png[]
+
+== Comment quitter l'application ?
+
+Il existe trois façon de quitter l'application dont une [red]*FORTEMENT DECONSEILLEE*.
+Pour fermer l'application il faut que toute les fenêtres soivent fermées, sauf la fenêtre principal.
+
+Par la suite il vous faut vous déconnecter.
+
+Première façon: Cliquer sur la croix en au a gauche de la fenêtre principal.
+
+image::images/quitter1.png[]
+
+Un message de confirmation va s'afficher. Cliquer ensuite sur "Ok" pour fermer l'application.
+
+image::images/quitter2.png[]
+
+La deuxième façon est d'utiliser le menu déroulant.
+Cliquer sur "Utilisateur" puis "Quitter".
+
+image::images/quitter3.png[]
+
+Un message de confirmation va s'afficher. Cliquer ensuite sur "Ok" pour fermer l'application.
+
+WARNING: [red]*Cette solution est fortement déconseillée.*
+
+Vous pouvez appuyer sur ALT+F4 pour fermer l'application.
+Une confirmation est quand même demandée.
+
+== Comment ajouter un client ?
+
+_Tout d'abord commencer par aller au gestionnaire des clients._
+
+image::images/gestionnaireClient.PNG[]
+
+Appuyer sur le bouton "Nouveau client"
+
+Puis rentrer les informations du client dans la fenêtre qui s'est ouverte
+
+image::images/clientAjouter.PNG[]
+
+Pour finir il ne vous reste plus qu'à appuyer sur le bouton "Ajouter"
+
+image::images/resultatClientAjouter.PNG[]
+
+
+== Comment rechercher un client ?
+
+_Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
+
+image::images/gestionnaireClientChercher.PNG[]
+
+La barre de recherche se trouve en haut de la page :
+
+image::images/barreRecherche.PNG[]
+
+Vous pouvez rechercher un client en fonction de son numéro d'identifaint (Numéro), de son nom (Nom) ou de son prénom (Prénom).
+
+Vous pouvez chercher en entrant les 3 informations complet, ou en ne remplissant que certaines cases et non toute.
+
+A noter, si vous décider ne pas remplir toutes les cases, il est possible que vous tombiez sur plusieurs clients. De ce fait si vous voulez chercher la famille d'un client alors il est facile de retrouver en ne remplissant que son nom (à la condition qu'ils ont tous le même nom et qu'il n'ya pas d'autres clients avec le même nom).
+
+== Comment modifier les informations personelles d'un client?
+
+_Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
+
+image::images/gestionnaireClientChercher.PNG[]
+
+Cliquer sur un client et vous aurez accès aux différentes options à droite.
+
+image::images/gestionnaireCompteClient.PNG[]
+
+Appuyer sur le bouton "Modifier client".
+
+image::images/modifierClient.PNG[]
+
+Il ne vous plus qu'à modifier les informations personelles du client. Quand vous avez fini, appuyer sur le bouton "Modifier" pour enregistrer les modifications.
+
+A noter, vous ne pouvez pas modifier le numéro d'indentité du client ("ID").
+
+== Comment accéder aux comptes d'un client?
+
+_Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
+
+image::images/gestionnaireClientChercher.PNG[]
+
+Cliquer sur un client et vous aurez accès aux différentes options à droite.
+
+image::images/gestionnaireCompteClient.PNG[]
+
+Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
+
+image::images/compteClient.PNG[]
+
+== Comment voir les opérations du compte d'un client?
+
+_Tout d'abord commencer par aller au gestionnaire des comptes d'un client._
+
+image::images/compteClient.PNG[]
+
+Cliquer sur un des comptes affichés, vous aurez accès aux options à droite.
+
+image::images/compteDuClient.PNG[]
+
+Cliquer sur "Voir opérations".
+
+image::images/operationsCompte.PNG[]
+
+== Comment enregistrer un débit manuellement?
+
+_Tout d'abord commencer par aller au gestionnaire des opérations d'un compte client._
+
+image::images/operationsCompte.PNG[]
+
+Cliquer sur le bouton "Enregistrer Débit".
+
+image::images/operationDebit.PNG[]
+
+Entrer le montant du retrait. Quand vous avez fini, appuyer sur le bouton "Effectuer Débit".
+
+A noter, si cela ne fonctionne pas, alors vérifier si il est possible de retirer le montant que vous avez écrit.
