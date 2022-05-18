@@ -46,12 +46,15 @@ Plusieurs types d'opérations peuvent être effectuées sur un compte.
 == Architecture
 
 === Architecture générale (poste client, serveurs, …) et rôle de chaque élément
+image::schéma-client-serv.png[]
+Les postes client exécutant l'application sont connectés à la base de données, permettant de manipuler les données des clients et des employés. 
 
 === Ressources externes (.jar, …) utilisées et rôles
 
 L'application utilise la librairie externe ojdbc6.jar pour interagir avec la base de données du système des agences bancaires et exécuter des instructions SQL avec Java. 
 
 === Structuration en packages de l’application documentée. Principes retenus pour cette structuration
+L'application est structurée en plusieurs packages.
 
 === Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
 
