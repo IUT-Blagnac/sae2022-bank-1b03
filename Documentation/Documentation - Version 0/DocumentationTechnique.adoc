@@ -12,7 +12,7 @@ toc::[]
 
 === Use Case global de l'application 
 
-image::capture.jpg[]
+image::images/capture.jpg[]
 Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux types d'utilisateurs présents dans l'application, le guichetier et le chef d'agence. +
 
 Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
@@ -26,7 +26,7 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 
 === Diagramme de classe de la base de données
 
-image::DiagrammeUML.png[]
+image::images/DiagrammeUML.png[]
 
 * Une agence bancaire est composée de plusieurs employés.
 * Un employé peut être chef d'agence de une ou plusieurs agences.
@@ -44,7 +44,7 @@ Pour l'instant l'application ne possède que certaines fonctionnalités.
 == Architecture
 
 === Architecture générale (poste client, serveurs, …) et rôle de chaque élément
-image::schéma-client-serv.png[]
+image::images/schéma-client-serv.png[]
 Les postes client exécutant l'application sont connectés à la base de données, permettant de manipuler les données des clients et des employés. 
 
 === Ressources externes (.jar, …) utilisées et rôles
