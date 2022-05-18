@@ -89,7 +89,6 @@ Il contient des classes de base de données correpondant à certaines tables de 
 
 === Modifier les informations d'un client
 
-
 === Créer un nouveau client
 
 === Consulter un compte
