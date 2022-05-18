@@ -34,7 +34,18 @@ Pour accéder au gestionnaire des clients il faut tout d'abord ce connecter. Une
 
 image::gestionClients.png[]
 
-== Comment ajouter un client?
+== Comment quitter l'application ?
+
+Il existe trois façon de quitter l'application dont une [red]*FORTEMENT DECONSEILLEE*.
+Pour fermer l'application il faut que toute les fenêtres soivent fermées, sauf la fenêtre principal.
+
+Par la suite il vous faut vous déconnecter.
+
+Première façon: Cliquer sur la croix en au a gauche de la fenêtre principal.
+
+image::quitter1.png[]
+
+== Comment ajouter un client ?
 
 Tout d'abord commencer par aller au gestionnaire des clients
 
@@ -51,7 +62,7 @@ Pour finir il ne vous reste plus qu'à appuyer sur le bouton "Ajouter"
 image::resultatClientAjouter.png[]
 
 
-== Comment rechercher un client?
+== Comment rechercher un client ?
 
 Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)
 
