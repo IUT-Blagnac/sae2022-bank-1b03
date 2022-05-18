@@ -65,28 +65,28 @@ Une confirmation est quand même demandée.
 
 _Tout d'abord commencer par aller au gestionnaire des clients._
 
-image::images/gestionnaireClient.png[]
+image::images/gestionnaireClient.PNG[]
 
 Appuyer sur le bouton "Nouveau client"
 
 Puis rentrer les informations du client dans la fenêtre qui s'est ouverte
 
-image::images/clientAjouter.png[]
+image::images/clientAjouter.PNG[]
 
 Pour finir il ne vous reste plus qu'à appuyer sur le bouton "Ajouter"
 
-image::images/resultatClientAjouter.png[]
+image::images/resultatClientAjouter.PNG[]
 
 
 == Comment rechercher un client ?
 
 _Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
 
-image::images/gestionnaireClientChercher.png[]
+image::images/gestionnaireClientChercher.PNG[]
 
 La barre de recherche se trouve en haut de la page :
 
-image::images/barreRecherche.png[]
+image::images/barreRecherche.PNG[]
 
 Vous pouvez rechercher un client en fonction de son numéro d'identifaint (Numéro), de son nom (Nom) ou de son prénom (Prénom).
 
@@ -98,15 +98,15 @@ A noter, si vous décider ne pas remplir toutes les cases, il est possible que v
 
 _Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
 
-image::images/gestionnaireClientChercher.png[]
+image::images/gestionnaireClientChercher.PNG[]
 
 Cliquer sur un client et vous aurez accès aux différentes options à droite.
 
-image::images/gestionnaireCompteClient.png[]
+image::images/gestionnaireCompteClient.PNG[]
 
 Appuyer sur le bouton "Modifier client".
 
-image::images/modifierClient.png[]
+image::images/modifierClient.PNG[]
 
 Il ne vous plus qu'à modifier les informations personelles du client. Quand vous avez fini, appuyer sur le bouton "Modifier" pour enregistrer les modifications.
 
@@ -116,39 +116,39 @@ A noter, vous ne pouvez pas modifier le numéro d'indentité du client ("ID").
 
 _Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
 
-image::images/gestionnaireClientChercher.png[]
+image::images/gestionnaireClientChercher.PNG[]
 
 Cliquer sur un client et vous aurez accès aux différentes options à droite.
 
-image::images/gestionnaireCompteClient.png[]
+image::images/gestionnaireCompteClient.PNG[]
 
 Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
-image::images/compteClient.png[]
+image::images/compteClient.PNG[]
 
 == Comment voir les opérations du compte d'un client?
 
 _Tout d'abord commencer par aller au gestionnaire des comptes d'un client._
 
-image::images/compteClient.png[]
+image::images/compteClient.PNG[]
 
 Cliquer sur un des comptes affichés, vous aurez accès aux options à droite.
 
-image::images/compteDuClient.png[]
+image::images/compteDuClient.PNG[]
 
 Cliquer sur "Voir opérations".
 
-image::images/operationsCompte.png[]
+image::images/operationsCompte.PNG[]
 
 == Comment enregistrer un débit manuellement?
 
 _Tout d'abord commencer par aller au gestionnaire des opérations d'un compte client._
 
-image::images/operationsCompte.png[]
+image::images/operationsCompte.PNG[]
 
 Cliquer sur le bouton "Enregistrer Débit".
 
-image::images/operationDebit.png[]
+image::images/operationDebit.PNG[]
 
 Entrer le montant du retrait. Quand vous avez fini, appuyer sur le bouton "Effectuer Débit".
 
