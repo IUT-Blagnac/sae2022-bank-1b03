@@ -44,7 +44,7 @@ Pour l'instant l'application ne possède que certaines fonctionnalités.
 == Architecture
 
 === Architecture générale (poste client, serveurs, …) et rôle de chaque élément
-image::schéma-client-serv.png[]
+image::images/schéma-client-serv.png[]
 Les postes client exécutent l'application faite en javaFX et se connectent à la base de données oracle, permettant de manipuler les données des clients et des employés. 
 
 === Ressources externes (.jar, …) utilisées et rôles
