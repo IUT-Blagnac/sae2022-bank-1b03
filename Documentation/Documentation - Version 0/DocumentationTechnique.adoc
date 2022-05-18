@@ -25,7 +25,23 @@ Le guichetier est l'employé "de base" du système. Il peut réaliser certaines 
 Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effectuer toutes les opérations de celui-ci en plus de pouvoir rendre inactif un client.
 
 
-=== Explication du diagramme de classe des données global (base de données), surtout les éléments particuliers (par exemple chef Agence, client inactif, …) qui servent et concernent le code développé.
+=== Diagramme de classe de la base de données
+Explication du diagramme de classe des données global (base de données), surtout les éléments particuliers (par exemple chef Agence, client inactif, …) qui servent et concernent le code développé.
+
+image::DiagrammeUML.png[]
+
+Une agence bancaire est composée de plusieurs employés.
+Un employé peut être chef d'agence de une ou plusieurs agences.
+Un employé peut être un chef d'agence, un guichetier ou un employé de l'agence selon les droits d'accès qu'il possède.
+Une agence bancaire est composée de plusieurs clients.
+Un client possède des informations qu'il est possible de modifier.
+Un client peut devenir inactif.
+Un client peut effectuer des opérations sur un compte.
+Un compte contient des informations auxquelles il est possible d'accéder.
+Un client peut avoir plusieurs comptes.
+Un client peut effectuer un emprunt et peut, pour cet emprunt posséder plusieurs assurances d'emprunt.
+Plusieurs types d'opérations peuvent être effectuées sur un compte.
+
 
 == Architecture
 
