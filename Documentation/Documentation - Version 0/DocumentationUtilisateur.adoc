@@ -45,6 +45,22 @@ Première façon: Cliquer sur la croix en au a gauche de la fenêtre principal.
 
 image::quitter1.png[]
 
+Un message de confirmation va s'afficher. Cliquer ensuite sur "Ok" pour fermer l'application.
+
+image::quitter2.png[]
+
+La deuxième façon est d'utiliser le menu déroulant.
+Cliquer sur "Utilisateur" puis "Quitter".
+
+image::quitter3.png[]
+
+Un message de confirmation va s'afficher. Cliquer ensuite sur "Ok" pour fermer l'application.
+
+WARNING: [red]*Cette solution est fortement déconseillée.*
+
+Vous pouvez appuyer sur ALT+F4 pour fermer l'application.
+Une confirmation est quand même demandée.
+
 == Comment ajouter un client ?
 
 _Tout d'abord commencer par aller au gestionnaire des clients._
@@ -78,7 +94,7 @@ Vous pouvez chercher en entrant les 3 informations complet, ou en ne remplissant
 
 A noter, si vous décider ne pas remplir toutes les cases, il est possible que vous tombiez sur plusieurs clients. De ce fait si vous voulez chercher la famille d'un client alors il est facile de retrouver en ne remplissant que son nom (à la condition qu'ils ont tous le même nom et qu'il n'ya pas d'autres clients avec le même nom).
 
-= Comment modifier les informations personelles d'un client?
+== Comment modifier les informations personelles d'un client?
 
 _Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
 
@@ -96,7 +112,7 @@ Il ne vous plus qu'à modifier les informations personelles du client. Quand vou
 
 A noter, vous ne pouvez pas modifier le numéro d'indentité du client ("ID").
 
-= Comment accéder aux comptes d'un client?
+== Comment accéder aux comptes d'un client?
 
 _Tout d'abord commencer par aller au gestionnaire des clients (après avoir ajouter des clients si il n'y a aucun clients)._
 
@@ -110,7 +126,7 @@ Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
 image::compteClient.png[]
 
-= Comment voir les opérations du compte d'un client?
+== Comment voir les opérations du compte d'un client?
 
 _Tout d'abord commencer par aller au gestionnaire des comptes d'un client._
 
@@ -124,7 +140,7 @@ Cliquer sur "Voir opérations".
 
 image::operationsCompte.png[]
 
-= Comment enregistrer un débit manuellement?
+== Comment enregistrer un débit manuellement?
 
 _Tout d'abord commencer par aller au gestionnaire des opérations d'un compte client._
 
