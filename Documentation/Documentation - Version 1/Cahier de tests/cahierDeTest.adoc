@@ -8,29 +8,33 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 | 1
 | Créer un nouveau client
-| Crée un compte client avec les information renseignées.
+| Créer un client avec les informations renseignées
 
 | 2
-| Consulter un compte client
-| Affiche les informations d'un compte client, ainsi que les informations de ces/son compte(s) bancaire.
+| Créer un compte client
+| Crée un compte client avec les informations renseignées.
 
 | 3
+| Consulter un compte client
+| Affiche les informations d'un compte client, ainsi que les informations de son/ses compte(s) bancaires.
+
+| 4
 | Créditer un compte
 | La somme saisie est ajoutée à la somme actuelle du compte.
 
-| 4
+| 5
 | Débiter un compte
 | La somme saisie est soustraite à la somme actuelle du compte.
 
-| 5
+| 6
 | Modifier les informations
 | Les informations du compte seront mises à jour avec les informations saisies/ supprimées.
 
-| 6
-| Virement
+| 7
+| Virement de compte à compte
 | Fait un virement d'un compte bancaire à un autre. Le montant du virement est soustrait du compte débiteur et ajouté au compte créditeur.
 
-| 7
+| 8
 | Cloturer un compte
 | Cloture un compte bancaire. Le compte n'est plus disponible pour effectuer des opérations.
 
