@@ -9,7 +9,7 @@ Hugo Wendjaneh | Thomas Testa
 toc::[Sommaire]
 
 == Introduction
-DailyBank est une application de gestion d'agence bancaire, elle à était restructuré pour permettre de gérer les comptes bancaires de dépôt pour des clients au sein de l'entreprise. Elle permet de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts. Le chef d'agence, via cette application, peut aussi rendre inactif un client.
+DailyBank à besoin d'une application bancaire pour s'intégrer dans une stratégie de différenciation entre les autres banque et pour répondre aux nouveau besoin clients. Cette application de gestion d'agence bancaire à était restructuré pour permettre de gérer les comptes bancaires de dépôt pour des clients au sein de l'entreprise. Elle permet de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts. Le chef d'agence, via cette application, peut aussi rendre inactif un client.
 
 == Comment ce connecter ?
 Pour ce connecter sur l'application il y à deux possiblité. Avec le boutton de connexion.
