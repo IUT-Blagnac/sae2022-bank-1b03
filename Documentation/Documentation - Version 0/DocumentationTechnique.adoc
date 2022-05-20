@@ -45,7 +45,7 @@ Pour l'instant l'application ne possède que certaines fonctionnalités.
 
 === Architecture générale (poste client, serveurs, …) et rôle de chaque élément
 image::images/schéma-client-serv.png[]
-Les postes client exécutant l'application sont connectés à la base de données, permettant de manipuler les données des clients et des employés. 
+Les postes client exécutent l'application faite en javaFX et se connectent à la base de données oracle, permettant de manipuler les données des clients et des employés. 
 
 === Ressources externes (.jar, …) utilisées et rôles
 L'application utilise la librairie JavaFX pour permettre de disposer d'une interface graphique.
@@ -75,20 +75,19 @@ Il contient des classes de base de données correpondant à certaines tables de 
 
 === Modifier les informations d'un client
 
-    Partie de use case réalisé - scénarios éventuels
+Partie "modifier infos client" du diagramme des use case
 
-    Partie du diagramme de classes données nécessaires : en lecture, en mise à jour
+Partie du diagramme de classes données nécessaires : en lecture, en mise à jour
 
-    Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
+Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
 
-    Classes impliquées dans chaque package
+Classes impliquées dans chaque package
 
-    Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
+Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
 
-    Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants
+Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants
 
 === Modifier les informations d'un client
-
 
 === Créer un nouveau client
 
