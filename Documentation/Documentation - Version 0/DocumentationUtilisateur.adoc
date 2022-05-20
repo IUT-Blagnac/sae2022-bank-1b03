@@ -5,7 +5,7 @@
 
 = Documentation Utilisateur
 Hugo Wendjaneh | Thomas Testa
-v1.0, 2018-06-11
+
 toc::[Sommaire]
 == Comment ce connecter ?
 Pour ce connecter sur l'application il y à deux possiblité. Avec le boutton de connexion.
