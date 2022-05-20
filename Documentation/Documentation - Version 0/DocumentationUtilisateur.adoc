@@ -3,8 +3,15 @@
 :toc: macro
 :toclevels: 3
 
+= Daily Bank
+
 = Documentation Utilisateur
-Hugo Wendjaneh | Thomas Testa
+
+*Groupe :* 1B3
+
+*Membre :* WENDJANEH Hugo - TESTA Thomas - ESCASSUT Sean - MABILLE Matthis
+
+image::images/blagnac.png[]
 
 toc::[Sommaire]
 
