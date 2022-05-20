@@ -11,7 +11,7 @@ toc::[Sommaire]
 == Introduction
 DailyBank à besoin d'une application bancaire pour s'intégrer dans une stratégie de différenciation entre les autres banque et pour répondre aux nouveau besoin clients. Cette application de gestion d'agence bancaire à était restructuré pour permettre de gérer les comptes bancaires de dépôt pour des clients au sein de l'entreprise. Elle permet de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts. Le chef d'agence, via cette application, peut aussi rendre inactif un client.
 
-== Comment ce connecter ?
+== Comment se connecter ?
 Pour ce connecter sur l'application il y à deux possiblité. Avec le boutton de connexion.
 
 image::images/connexion1.png[]
@@ -24,7 +24,7 @@ Un écrant d'identification s'affiche. Vous devrez rentrer par la suite vos iden
 
 image::images/identification.png[]
 
-== Comment ce déconnecter ?
+== Comment se déconnecter ?
 
 Pour ce déconnecter il suffit de ce rendre sur les fenêtre principal, puis reproduire les même actions que la connexion. Mais en cliquant sur le boutton "Déconnexion".
 
