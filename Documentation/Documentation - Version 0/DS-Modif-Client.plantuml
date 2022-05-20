@@ -1,3 +1,7 @@
 @startuml
-ClientsManagement -> 
+ClientsManagementController -> ClientsManagement : doModifierClient()
+    ClientsManagement -> AccessClient : modifierClient()
+        AccessClient -> AccessClient : updateClient()
+    AccessClient --> ClientsManagement
+ClientsManagement --> ClientsManagementController
 @enduml
