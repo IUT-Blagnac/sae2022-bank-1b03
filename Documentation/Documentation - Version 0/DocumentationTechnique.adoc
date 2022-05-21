@@ -81,13 +81,22 @@ Partie du diagramme de classes données nécessaires : en lecture, en mise à jo
 
 Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
 
-Diagramme de séquence: +
-image::images/DS-Modif-Client.png
+image::images/dsmodifclient.png
 
 
 === Modifier les informations d'un client
 
 === Créer un nouveau client
+Partie "créer un nouveau client" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* en lecture : 
+* en mise à jour : Client
+
+Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
+
+image::images/dsmodifclient.png
 
 === Consulter un compte
 
