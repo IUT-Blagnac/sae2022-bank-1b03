@@ -81,11 +81,9 @@ Partie du diagramme de classes données nécessaires : en lecture, en mise à jo
 
 Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
 
-Classes impliquées dans chaque package
+Diagramme de séquence: +
+image::images/DS-Modif-Client.png
 
-Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Cette partie peut être illustrée par un diagramme de séquence
-
-Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants
 
 === Modifier les informations d'un client
 
