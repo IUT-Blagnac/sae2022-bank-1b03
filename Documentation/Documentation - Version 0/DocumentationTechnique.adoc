@@ -84,7 +84,9 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment modifier les informations personelles d’un client?"
 
-image::images/dsmodifclient.png
+Diagramme de séquence:
+
+image::images/DS-Modifier-Client.png[]
 
 === Créer un nouveau client
 Partie "créer un nouveau client" du diagramme des use case
@@ -96,6 +98,10 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment ajouter un client ?"
 
+Diagramme de séquence :
+
+image::images/DS-Creer-Client.png[]
+
 === Consulter un compte
 Partie "consulter un compte" du diagramme des UC
 
@@ -104,6 +110,10 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : Client, Compte Courant, Opération, Type Opération
 
 cf. doc. utilisateur "Comment accéder aux comptes d’un client?"
+
+Diagramme de séquence : 
+
+image::images/DS-Consulter-Comptes.png[]
 
 === Débiter un compte
 
