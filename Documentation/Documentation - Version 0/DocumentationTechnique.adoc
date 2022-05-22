@@ -77,31 +77,55 @@ Il contient des classes de base de données correpondant à certaines tables de 
 
 Partie "modifier infos client" du diagramme des use case
 
-Partie du diagramme de classes données nécessaires : en lecture, en mise à jour
+Partie du diagramme de classes données nécessaires : 
 
-Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
+* En lecture : client
+* En mise à jour : client
 
-image::images/dsmodifclient.png
+cf. doc. utilisateur "Comment modifier les informations personelles d’un client?"
 
+Diagramme de séquence:
 
-=== Modifier les informations d'un client
+image::images/DS-Modifier-Client.png[]
 
 === Créer un nouveau client
 Partie "créer un nouveau client" du diagramme des use case
 
 Partie du diagramme de classes données nécessaires : 
 
-* en lecture : 
-* en mise à jour : Client
+* En lecture : Client
+* En mise à jour : Client
 
-Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
+cf. doc. utilisateur "Comment ajouter un client ?"
 
-image::images/dsmodifclient.png
+Diagramme de séquence :
+
+image::images/DS-Creer-Client.png[]
 
 === Consulter un compte
+Partie "consulter un compte" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Client, Compte Courant, Opération, Type Opération
+
+cf. doc. utilisateur "Comment accéder aux comptes d’un client?"
+
+Diagramme de séquence : 
+
+image::images/DS-Consulter-Comptes.png[]
 
 === Débiter un compte
 
+
 === Rendre inactif un client
+Partie "rendre inactif un client" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Client
+* En mise à jour : Client
+
+cf. doc. utilisateur "Comment modifier les informations personelles d’un client?"
 
 
