@@ -125,6 +125,10 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment enregistrer un débit manuellement ?"
 
+Diagramme de séquence : 
+
+image::images/DS-Debiter-Compte.png[]
+
 === Rendre inactif un client
 Partie "rendre inactif un client" du diagramme des UC
 
@@ -135,4 +139,7 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment modifier les informations personelles d’un client ?"
 
+Diagramme de séquence : 
+
+image::images/DS-Rendre-Inactif.png[]
 
