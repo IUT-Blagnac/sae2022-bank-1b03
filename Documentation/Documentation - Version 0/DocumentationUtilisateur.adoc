@@ -138,7 +138,7 @@ image::images/compteClient.PNG[]
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
-image::images/compteDuClient.PNG[]
+image::images/CompteClient.PNG[]
 
 Vous pouvez cliquer sur un le compte d'un client afin d'accéder aux différentes options à droite de la fenêtre qui vient de s'ouvrir.
 
