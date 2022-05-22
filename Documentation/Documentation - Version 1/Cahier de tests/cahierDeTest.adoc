@@ -3,6 +3,7 @@
 Date : 28/04/2022 +
 Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
+Le Guichetier
 |===
 | Numéro de test | Action | Attendus
 
@@ -37,5 +38,19 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | 8
 | Cloturer un compte
 | Cloture un compte bancaire. Le compte n'est plus disponible pour effectuer des opérations.
+
+|===
+
+Le Chef d'agence
+|===
+| Numéro de test | Action | Attendus
+
+| 1
+| Rendre inactif un client
+| Rends inactif un client ainsi que son/ses compte(s) bancaires.
+
+| 2
+| Gérer les employés
+| Peut afficher les informations des différents employés et modifier leurs informations.
 
 |===
