@@ -116,7 +116,14 @@ Diagramme de séquence :
 image::images/DS-Consulter-Comptes.png[]
 
 === Débiter un compte
+Partie "Débiter un compte" du diagramme des UC
 
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Client, Compte Courant, Opération, Type Opération
+* En mise à jour : Opération
+
+cf. doc. utilisateur "Comment enregistrer un débit manuellement?"
 
 === Rendre inactif un client
 Partie "rendre inactif un client" du diagramme des UC
