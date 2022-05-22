@@ -35,6 +35,8 @@ Pour se déconnecter, il faut se rendre sur la fenêtre principale, et cliquer s
 
 image::images/deconnexion1.png[]
 
+Vous pouvez également vous rendre dans le menu déroulant "Utilisateur" et cliquer sur l'option "Déconnexion".
+
 image::images/deconnexion2.png[]
 
 == Comment accéder au gestionnaire des clients ?
