@@ -132,7 +132,7 @@ image::images/gestionnaireCompteClient.PNG[]
 
 Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
-image::images/compteClient.PNG[]
+image::images/CompteClient.PNG[]
 
 == Comment voir les opérations du compte d'un client ?
 
