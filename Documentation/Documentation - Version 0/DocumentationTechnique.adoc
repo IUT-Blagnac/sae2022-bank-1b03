@@ -17,7 +17,7 @@ Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux t
 
 Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
 
-* Modifier informations client (adresse, téléphone, …)
+* Modifier les informations client (adresse, téléphone, …)
 * Créer un nouveau client
 * Consulter un compte
 * Débiter un compte (BD)
@@ -29,7 +29,7 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 image::images/DiagrammeUML.png[]
 
 * Une agence bancaire est composée de plusieurs employés.
-* Un employé peut être chef d'agence de une ou plusieurs agences.
+* Un employé peut être chef d'agence d'une ou plusieurs agences.
 * Un employé peut être un chef d'agence ou un guichetier selon les droits d'accès qu'il possède
 * Une agence bancaire est composée de plusieurs clients.
 * Un client possède des informations qu'il est possible de modifier.
@@ -39,7 +39,7 @@ image::images/DiagrammeUML.png[]
 * Un client peut avoir plusieurs comptes.
 * Un emprunt peut être assuré.
 
-Pour l'instant l'application ne possède que certaines fonctionnalités. 
+Pour l'instant l'application ne possède que certaines des fonctionnalités du diagramme ci-dessus. 
 
 == Architecture
 
@@ -82,7 +82,7 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : client
 * En mise à jour : client
 
-cf. doc. utilisateur "Comment modifier les informations personelles d’un client?"
+cf. doc. utilisateur "Comment modifier les informations personnelles d’un client ?"
 
 Diagramme de séquence:
 
@@ -109,7 +109,7 @@ Partie du diagramme de classes données nécessaires :
 
 * En lecture : Client, Compte Courant, Opération, Type Opération
 
-cf. doc. utilisateur "Comment accéder aux comptes d’un client?"
+cf. doc. utilisateur "Comment accéder aux comptes d’un client ?"
 
 Diagramme de séquence : 
 
@@ -123,7 +123,7 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : Client, Compte Courant, Opération, Type Opération
 * En mise à jour : Opération
 
-cf. doc. utilisateur "Comment enregistrer un débit manuellement?"
+cf. doc. utilisateur "Comment enregistrer un débit manuellement ?"
 
 === Rendre inactif un client
 Partie "rendre inactif un client" du diagramme des UC
@@ -133,6 +133,6 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : Client
 * En mise à jour : Client
 
-cf. doc. utilisateur "Comment modifier les informations personelles d’un client?"
+cf. doc. utilisateur "Comment modifier les informations personelles d’un client ?"
 
 
