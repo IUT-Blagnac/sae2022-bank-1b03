@@ -2,7 +2,7 @@
 :toclevels: 3
 :toc-title: Sommaire
 
-= Documentation utilisateur V0
+= Documentation Technique V0
 
 toc::[]
 
@@ -30,7 +30,7 @@ image::images/DiagrammeUML.png[]
 
 * Une agence bancaire est composée de plusieurs employés.
 * Un employé peut être chef d'agence de une ou plusieurs agences.
-* Un employé peut être un chef d'agence oy un guichetier selon les droits d'accès qu'il possède
+* Un employé peut être un chef d'agence ou un guichetier selon les droits d'accès qu'il possède
 * Une agence bancaire est composée de plusieurs clients.
 * Un client possède des informations qu'il est possible de modifier.
 * Un client peut devenir inactif.
