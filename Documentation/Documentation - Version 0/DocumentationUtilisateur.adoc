@@ -32,7 +32,7 @@ Installation de l'application :
 
 * Ouvrir l'application "Powershell"
 * Vérifier votre version de Java installée à l'aide de la commande suivante :
-_java -version_
+_java -version_ +
 Remarque : _Si la version installée est Java 1.8.*, vous devriez pouvoir double cliquer sur le .jar que vous venez de télécharger_
 
 * Se déplacer dans le workspace de l'application avec la commandes suivantes :
