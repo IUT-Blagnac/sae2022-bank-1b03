@@ -157,4 +157,25 @@ public class AccessCompteCourant {
 			throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
 		}
 	}
+
+	/**
+	 * Permet d'insérer un compte.
+	 *
+	 * @param compte le compte à ajouter dans la BD
+	 */
+	public void créerCompte(CompteCourant compte) {
+		compte = null;
+		//Implémentation à venir
+	}
+
+	/**
+	 * Permet de clôturer un compte.
+	 *
+	 * @param compte le compte à cloturer
+	 */
+	public void cloturerCompte (CompteCourant compte){
+		compte = null;
+		//Implémentation à venir
+	}
+
 }

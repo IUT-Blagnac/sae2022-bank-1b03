@@ -29,10 +29,10 @@ public class ComptesManagement {
 	private DailyBankState dbs;
 	private Client clientDesComptes;
 
-	/**Fenetre des comptes
-	 * @param _parentStage	fentre
-	 * @param _dbstate		banquier
-	 * @param client		client
+	/** Constructeur de la classe qui permet de paramétrer la fenetre
+	 * @param _parentStage la scène parente
+	 * @param _dbstate la session de l'utilisateur
+	 * @param client le client
 	 */
 	public ComptesManagement(Stage _parentStage, DailyBankState _dbstate, Client client) {
 
@@ -62,22 +62,22 @@ public class ComptesManagement {
 	}
 
 	/**
-	 * compte client
+	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur
 	 */
 	public void doComptesManagementDialog() {
 		this.cmc.displayDialog();
 	}
 
-	/**Ouvre la fentre des operations du compte courant
-	 * @param cpt	compte courant
+	/** Permet de gérer les opérations d'un compte
+	 * @param cpt Le compte courant du client dont on souhaite gérer les opérations
 	 */
 	public void gererOperations(CompteCourant cpt) {
 		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dbs, this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
-	/**Creer un compte courant
-	 * @return	compte	un compte courant
+	/** Permet de créer un compte courant
+	 * @return le compte courant créé
 	 */
 	public CompteCourant creerCompte() {
 		CompteCourant compte;
@@ -85,13 +85,9 @@ public class ComptesManagement {
 		compte = cep.doCompteEditorDialog(this.clientDesComptes, null, EditionMode.CREATION);
 		if (compte != null) {
 			try {
-				// Temporaire jusqu'à implémentation
-				compte = null;
-				AlertUtilities.showAlert(this.primaryStage, "En cours de développement", "Non implémenté",
-						"Enregistrement réel en BDD du compe non effectué\nEn cours de développement", AlertType.ERROR);
-
-				// TODO : enregistrement du nouveau compte en BDD (la BDD donne de nouvel id
-				// dans "compte")
+				// Implémentation à venir
+				//AccessCompteCourant acc = new AccessCompteCourant();				
+				//acc.ajouterCompte(compte);
 
 				// if JAMAIS vrai
 				// existe pour compiler les catchs dessous
@@ -110,8 +106,18 @@ public class ComptesManagement {
 		return compte;
 	}
 
-	/**Liste des comptes d'un client
-	 * @return	la liste des comptes
+	/** Permet de cloturer un compte courant
+	 * @return le compte courant cloturé
+	 */
+	public CompteCourant cloturerCompte() {
+		CompteCourant compteCloture;
+		compteCloture = null;
+		return compteCloture;
+		//Implémentation à venir
+	}
+
+	/** Permet d'obtenir la Liste des comptes courants d'un client
+	 * @return	la liste des comptes courants
 	 */
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();

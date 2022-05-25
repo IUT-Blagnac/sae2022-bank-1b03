@@ -23,9 +23,9 @@ public class ClientsManagement {
 	private DailyBankState dbs;
 	private ClientsManagementController cmc;
 
-	/** Constructeur de la classe qui permet de paramétrer la fenetre
-	 * @param _parentStage scène parente
-	 * @param _dbstate session de l'utilisateur
+	/** Constructeur de la classe qui permet de paramétrer la fenêtre
+	 * @param _parentStage la scène parente
+	 * @param _dbstate la session de l'utilisateur
 	 */
 	public ClientsManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;

@@ -19,9 +19,9 @@ public class CompteEditorPane {
 	private CompteEditorPaneController cepc;
 
 	/**
-	 * Construit une fenêtre
-	 * @param _parentStage	fenêtre
-	 * @param _dbstate	statu de la banque
+	 * Constructeur de la classe qui permet de paramétrer la fenêtre
+	 * @param _parentStage	la scène parente
+	 * @param _dbstate	la session de l'utilisateur
 	 */
 	public CompteEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
@@ -48,11 +48,11 @@ public class CompteEditorPane {
 		}
 	}
 
-	/** Créer un compte courant
-	 * @param client	client
-	 * @param cpte		compte
-	 * @param em		mode éditeur
-	 * @return		compte courant
+	/** Permet d'afficher la scène grâce à l'appel de la fonction du controleur
+	 * @param client le client possédant ce compte
+	 * @param cpte le compte sélectionné
+	 * @param em le mode d'édition
+	 * @return les modifications sur le client
 	 */
 	public CompteCourant doCompteEditorDialog(Client client, CompteCourant cpte, EditionMode em) {
 		return this.cepc.displayDialog(client, cpte, em);
