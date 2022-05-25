@@ -36,13 +36,13 @@ _java -version_
 Remarque : _Si la version installée est Java 1.8.*, vous devriez pouvoir double cliquer sur le .jar que vous venez de télécharger_
 
 * Se déplacer dans le workspace de l'application avec la commandes suivantes :
-_cd .\Téléchargements\_
-Si la version installée est Java 1.8.*, vous pouvez ignorer les trois étapes suivantes.
+_cd .\Téléchargements\_ +
+Remarque : _Si la version installée est Java 1.8.*, vous pouvez ignorer les trois étapes suivantes._
 
 Sinon :
 
 * Exécuter ensuite la commande suivante : +
-_cd setenv-powershell.ps1 ou .\setenv-powershell.ps1_
+_cd setenv-powershell.ps1 ou cd .\setenv-powershell.ps1_
 * Tapez ensuite la commande : +
 _cmd_
 * Et vérifier maintenant votre version de Java : +
