@@ -24,7 +24,7 @@ Le but est de partir d’une application existante et d’y rajouter des fonctio
 Pré-requis :
 
 * La version 1.8 de https://www.allwebsoft.fr/ihm2022/logiciels/jdk-8u321-windows-x64.exe[Java]
-* Les deux fichiers suivants : https://www.allwebsoft.fr/ihm2022/fichiers/setenv-cmd.bat[Fichier 1] et https://www.allwebsoft.fr/ihm2022/fichiers/setenv-powershell.ps1[Fichier 2]
+* Les deux fichiers suivants : https://www.allwebsoft.fr/ihm2022/fichiers/setenv-cmd.bat[Fichier 1] et https://drive.google.com/uc?export=download&id=1S2rfpdQ6XPKfU-Gt57UkdALyCFiZM8jq[Fichier 2]
 * L'application en .jar : https://drive.google.com/uc?export=download&id=1QGhUSPPWU4erVOsFe6FiBaxiUISYKFLm[lien] +
 __Remarque : les deux éléments ci-dessus doivent se trouver dans le même dossier pour plus de simplicité__
 
