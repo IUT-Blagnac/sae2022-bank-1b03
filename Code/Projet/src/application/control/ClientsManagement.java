@@ -53,7 +53,7 @@ public class ClientsManagement {
 	}
 
 	/**
-	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur
+	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur pour la gestion de clients
 	 */
 	public void doClientManagementDialog() {
 		this.cmc.displayDialog();

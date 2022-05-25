@@ -20,9 +20,9 @@ public class LoginDialog {
 	private DailyBankState dbs;
 	private LoginDialogController ldc;
 
-	/**Page de connexion
-	 * @param _parentStage
-	 * @param _dbstate
+	/** Constructeur de la classe qui permet de paramétrer la fenêtre
+	 * @param _parentStage la scène parente
+	 * @param _dbstate	la session de l'utilisateur
 	 */
 	public LoginDialog(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
@@ -50,16 +50,16 @@ public class LoginDialog {
 	}
 
 	/**
-	 * la page de connexion
+	 * Affiche la scène grâce à l'appel de la fonction du controleur de connexion
 	 */
 	public void doLoginDialog() {
 		this.ldc.displayDialog();
 	}
 
-	/**Chercher un employe a l'aide de son nom d'utilisateur et son mot de passe
-	 * @param login
-	 * @param password
-	 * @return un employe si il en trouve un, sinon rien
+	/** Permet de chercher un employé a l'aide du nom d'utilisateur et du mot de passe inqiqué par l'utilisateur
+	 * @param login le login de l'employé
+	 * @param password le mot de passe de l'employé
+	 * @return un employe si il en trouve un, sinon null
 	 */
 	public Employe chercherParLogin(String login, String password) {
 		Employe employe = null;

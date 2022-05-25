@@ -48,7 +48,7 @@ public class CompteEditorPane {
 		}
 	}
 
-	/** Permet d'afficher la scène grâce à l'appel de la fonction du controleur
+	/** Permet d'afficher la scène grâce à l'appel de la fonction du controleur d'édition de comptes
 	 * @param client le client possédant ce compte
 	 * @param cpte le compte sélectionné
 	 * @param em le mode d'édition

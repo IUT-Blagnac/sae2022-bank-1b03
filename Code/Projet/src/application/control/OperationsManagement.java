@@ -29,11 +29,11 @@ public class OperationsManagement {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 
-	/**Construit une fenetre qui repertorie les informations suivantes
-	 * @param _parentStage	fenetre
-	 * @param _dbstate	statu de la banque
-	 * @param client	client
-	 * @param compte	compte courant du client
+	/** Constructeur de la classe qui permet de paramétrer la fenêtre
+	 * @param _parentStage	la scène parente
+	 * @param _dbstate	la session de l'utilisateur
+	 * @param client le client sélectionné sur lequel on gère les opérations
+	 * @param compte le compte courant du client
 	 */
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
@@ -65,14 +65,14 @@ public class OperationsManagement {
 	}
 
 	/**
-	 * la page des operations
+	 * Affiche la scène grâce à l'appel de la fonction du controleur de gestion des opérations
 	 */
 	public void doOperationsManagementDialog() {
 		this.omc.displayDialog();
 	}
 
-	/**Enregistre le debit
-	 * @return	l'operation
+	/** Permet d'enregistrer un nouveau débit sur le compte d'un client
+	 * @return l'opération effectuée (un débit)
 	 */
 	public Operation enregistrerDebit() {
 
@@ -98,8 +98,8 @@ public class OperationsManagement {
 		return op;
 	}
 
-	/**Verifie si l'operation est possible en fonction du solde des commptes
-	 * @return	la liste d'operation
+	/** Permet d'obtenir la liste des opérations par compte courant
+	 * @return un duo de valeur avec le compte et les différentes opérations
 	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();

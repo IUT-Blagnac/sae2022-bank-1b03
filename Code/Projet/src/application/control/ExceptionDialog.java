@@ -16,10 +16,10 @@ public class ExceptionDialog {
 	private Stage primaryStage;
 	private ExceptionDialogController edc;
 
-	/**Page d'erreur
-	 * @param _parentStage	fenêtre
-	 * @param _dbstate	statu de la banque
-	 * @param ae		les exceptions de l'application
+	/** Constructeur de la classe qui permet de paramétrer la fenêtre
+	 * @param _parentStage	la scène parente
+	 * @param _dbstate	la session de l'utilisateur
+	 * @param ae l'exception survenu qui a créée l'appel de cette fonction
 	 */
 	public ExceptionDialog(Stage _parentStage, DailyBankState _dbstate, ApplicationException ae) {
 
@@ -47,7 +47,7 @@ public class ExceptionDialog {
 	}
 
 	/**
-	 * exception
+	 * Affiche la scène grâce a l'appel de la fonction du controleur qui gère les exceptions
 	 */
 	public void doExceptionDialog() {
 		this.edc.displayDialog();

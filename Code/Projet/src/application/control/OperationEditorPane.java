@@ -18,9 +18,9 @@ public class OperationEditorPane {
 	private Stage primaryStage;
 	private OperationEditorPaneController oepc;
 
-	/**Ouvre la page des operations
-	 * @param _parentStage	fenetre
-	 * @param _dbstate	statu de la banque
+	/** Constructeur de la classe qui permet de paramétrer la fenêtre
+	 * @param _parentStage la scène parente
+	 * @param _dbstate	la session de l'utilisateur
 	 */
 	public OperationEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
@@ -48,10 +48,10 @@ public class OperationEditorPane {
 		}
 	}
 
-	/**Applique l'operation
-	 * @param cpte	compte
-	 * @param cm	categorie d'operation
-	 * @return	l'operation faite sur le compte
+	/** Affiche la scène grâce à l'appel de la fonction du controleur de l'enregistrement d'une opération
+	 * @param cpte le compte sur lequel sera effectuée l'opération
+	 * @param cm le type de l'opération
+	 * @return le type de l'opération effectuée
 	 */
 	public Operation doOperationEditorDialog(CompteCourant cpte, CategorieOperation cm) {
 		return this.oepc.displayDialog(cpte, cm);

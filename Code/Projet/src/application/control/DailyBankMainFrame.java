@@ -19,8 +19,8 @@ public class DailyBankMainFrame extends Application {
 	private DailyBankState dbs;
 	private Stage primaryStage;
 
-	/**
-	 *Ouvre la page de demarrage
+	/** Permet de lancer l'application (fonction redéfinie)
+	 * @param primaryStage la fenetre principale
 	 */
 	@Override
 	public void start(Stage primaryStage) {
@@ -96,14 +96,14 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * Lance l'application
+	 * Permet de lancer l'application
 	 */
 	public static void runApp() {
 		Application.launch();
 	}
 
 	/**
-	 * Se deconnecter
+	 * Permet de se déconnecter
 	 */
 	public void disconnect() {
 		this.dbs.setAgAct(null);
@@ -118,7 +118,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * Ouvre la page pour se connecter
+	 * Ouvre la fenêtre pour se connecter
 	 */
 	public void login() {
 		LoginDialog ld = new LoginDialog(this.primaryStage, this.dbs);
@@ -149,7 +149,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/**
-	 * Ouvre le gestionnaire de client
+	 * Ouvre la fenêtre de gestion des clients
 	 */
 	public void gestionClients() {
 		ClientsManagement cm = new ClientsManagement(this.primaryStage, this.dbs);

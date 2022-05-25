@@ -29,7 +29,7 @@ public class ComptesManagement {
 	private DailyBankState dbs;
 	private Client clientDesComptes;
 
-	/** Constructeur de la classe qui permet de paramétrer la fenetre
+	/** Constructeur de la classe qui permet de paramétrer la fenêtre
 	 * @param _parentStage la scène parente
 	 * @param _dbstate la session de l'utilisateur
 	 * @param client le client
@@ -62,7 +62,7 @@ public class ComptesManagement {
 	}
 
 	/**
-	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur
+	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur de gestion de comptes
 	 */
 	public void doComptesManagementDialog() {
 		this.cmc.displayDialog();
