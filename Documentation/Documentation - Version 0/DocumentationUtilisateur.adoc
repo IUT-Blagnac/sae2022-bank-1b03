@@ -13,8 +13,11 @@ Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
 
 toc::[Sommaire]
 
-== Introduction
-DailyBank a besoin d'une application bancaire pour s'intégrer dans une stratégie de différenciation entre les autres banques et pour répondre aux nouveaux besoins client. Cette application de gestion d'agence bancaire a été restructuré pour permettre de gérer les comptes bancaires de dépôt pour des clients au sein de l'entreprise. Elle permet de débiter, créditer un compte et effectuer un virement, c’est à dire un échange d’argent entre deux comptes distincts. Le chef d'agence, via cette application, peut aussi rendre inactif un client.
+== Contexte du projet
+Daily Bank est un réseau français de 100 agences bancaires. Il est nécessaire pour eux de restructurer leur réseau afin de s’intégrer dans une stratégie de différenciation. Ils possèdent plusieurs outils qui deviennent obsolètes et une première version d’application qui nécessite une refonte. Les besoins de la banque ont évolués, tout comme ceux de leurs clients, il faut donc développer plusieurs fonctinnalités pour répondre à ces nouveaux besoins.
+
+== Objectifs du projet
+Le but est de partir d’une application existante et d’y rajouter des fonctionnalités. Il y a deux types d’utilisateurs dans l’application : le guichetier et le chef d’agence. Les guichetiers pourront créer de nouveaux clients et faire les opérations courantes (CRUD). Les chefs d’agences pourront gérer les employés et les opérations exeptionnelles. 
 
 == Comment se connecter ?
 Pour se connecter sur l'application vous avez deux possiblités. Avec le bouton de connexion :
