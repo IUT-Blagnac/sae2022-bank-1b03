@@ -148,13 +148,24 @@ cf. doc. utilisateur "Comment modifier les informations personelles d’un clien
 
 === Créditer un compte
 
+__En cours de développement__
+
 === Cloturer un compte
+
+__En cours de développement__
 
 === Créer un compte
 
+__En cours de développement__
+
 === Effectuer des virements compte à compte
 
-=== Gérer les employés, ou faire le CRUD (Create Read Update Delete)
+__En cours de développement__
+
+=== Gérer les employés, ou faire le CRUD (Create Read Update Delete) :
+
+__En cours de développement__
+
 ==== Créer un employé
 ==== Consulter un employé
 ==== Modifier un employé
