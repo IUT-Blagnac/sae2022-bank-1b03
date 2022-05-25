@@ -23,9 +23,9 @@ public class ClientsManagement {
 	private DailyBankState dbs;
 	private ClientsManagementController cmc;
 
-	/**Ouvre les informations du client sur la page
-	 * @param _parentStage c'est la fenêtre
-	 * @param _dbstate statu de la banque
+	/** Constructeur de la classe qui permet de paramétrer la fenetre
+	 * @param _parentStage scène parente
+	 * @param _dbstate session de l'utilisateur
 	 */
 	public ClientsManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
@@ -53,16 +53,16 @@ public class ClientsManagement {
 	}
 
 	/**
-	 * @return
+	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur
 	 */
 	public void doClientManagementDialog() {
 		this.cmc.displayDialog();
 	}
 
 	/**
-	 * Modifie un client, en vérifiant si c'est possible de le modifier (les informations du client ne sont pas vide)
-	 * @param c	est le client
-	 * @return
+	 * Permet de modifier les informations d'un client
+	 * @param c	le client sélectionné
+	 * @return le client avec les informations modifiées
 	 */
 	public Client modifierClient(Client c) {
 		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
@@ -85,8 +85,8 @@ public class ClientsManagement {
 		return result;
 	}
 
-	/** Créer un nouveau client
-	 * @return
+	/** Permet de créer un nouveau client
+	 * @return le client créée
 	 */
 	public Client nouveauClient() {
 		Client client;
@@ -111,19 +111,19 @@ public class ClientsManagement {
 		return client;
 	}
 
-	/**Affiche les informations du client
-	 * @param c	est le client
+	/** Permet de gérer le compte d'un client
+	 * @param c	le client sélectionné
 	 */
 	public void gererComptesClient(Client c) {
 		ComptesManagement cm = new ComptesManagement(this.primaryStage, this.dbs, c);
 		cm.doComptesManagementDialog();
 	}
 
-	/**Créer une liste de comptes
-	 * @param _numCompte	numéro de compte
-	 * @param _debutNom	nom
-	 * @param _debutPrenom	prenom
-	 * @return
+	/** Permet de rechercher la liste des comptes clients en fonction des paramètres
+	 * @param _numCompte numéro de compte recherché
+	 * @param _debutNom	nom du client recherché
+	 * @param _debutPrenom	prenom du client recherché
+	 * @return une liste de compte client selon les paramètres de recherche
 	 */
 	public ArrayList<Client> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
 		ArrayList<Client> listeCli = new ArrayList<>();
