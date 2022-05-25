@@ -32,10 +32,11 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 |         | Doc User V1    |        |
 |         | Recette V1  |                      | 
 |         | Suivi projet|   | 
-| 22/05   | Gantt V2/V3  à jour    |       | 
+| 22/05   | Gantt V2/V3  à jour    | Mise à jour en cours | 
 |         | Doc. Util. V0 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%200/DocumentationUtilisateur.adoc |   
 |         | Doc. Tec. V0 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%200/DocumentationTechnique.adoc |     
-|         | Code V1     |                     | 
+|         | Code V1     | En cours d'implémentation                    | 
+|	  | Cahier des tests V2 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%202/Cahier%20de%20tests/cahierDeTest.adoc |
 |         | Recette V1 |                      | 
 |         | Gantt V3 à jour   |                      | 
 |         | `jar` projet |    | 
