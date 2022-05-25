@@ -28,7 +28,7 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 
 |         | Gantt V2    |                               |     
 |         | Gantt V3 | V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/Gantt.png |   Les tâches sont affectées à tout le monde !! On doit clairement identifier qui fait quelle fonctionnalité dans le projet.  
-|         | Doc. Tec. V1 |        |    
+|         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%201/DocumentationTechniqueV1.adoc       |    
 |         | Doc User V1    |        |
 |         | Recette V1  |                      | 
 |         | Suivi projet|   | 
