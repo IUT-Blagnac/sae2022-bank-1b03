@@ -25,7 +25,30 @@ Pré-requis :
 
 * La version 1.8 de https://www.allwebsoft.fr/ihm2022/logiciels/jdk-8u321-windows-x64.exe[Java]
 * Les deux fichiers suivants : https://www.allwebsoft.fr/ihm2022/fichiers/setenv-cmd.bat[Fichier 1] et https://www.allwebsoft.fr/ihm2022/fichiers/setenv-powershell.ps1[Fichier 2]
+* L'application en .jar : https://drive.google.com/uc?export=download&id=1QGhUSPPWU4erVOsFe6FiBaxiUISYKFLm[lien]
+__Remarque : les deux éléments ci-dessus doivent se trouver dans le même dossier pour plus de simplicité__
 
+Installation de l'application :
+
+* Ouvrir l'application "Powershell"
+* Vérifier votre version de Java installée à l'aide de la commande suivante :
+_java -version_
+Remarque : _Si la version installée est Java 1.8.*, vous devriez pouvoir double cliquer sur le .jar que vous venez de télécharger_
+
+* Se déplacer dans le workspace de l'application avec la commandes suivantes :
+_cd .\Téléchargements\_
+Si la version installée est Java 1.8.*, vous pouvez ignorer les trois étapes suivantes.
+
+Sinon :
+* Exécuter ensuite la commande suivante :
+_cd setenv-powershell.ps1 ou .\setenv-powershell.ps1_
+* Tapez ensuite la commande :
+_cmd_
+* Et vérifier maintenant votre version de Java :
+_java -version_
+
+Vous pouvez maintenant lancer l'application à l'aide de la commande suivante :
+_java -jar DailyBankV0.jar_
 
 == Comment se connecter ?
 Pour se connecter sur l'application vous avez deux possiblités. Avec le bouton de connexion :
