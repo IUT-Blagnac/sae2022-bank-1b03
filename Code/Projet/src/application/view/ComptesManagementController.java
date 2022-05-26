@@ -170,9 +170,6 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
-	/**
-	 * Modifie le statut des boutons en fonction de la sélection correspondante
-	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnModifierCompte.setDisable(true);
@@ -180,9 +177,14 @@ public class ComptesManagementController implements Initializable {
 
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			this.btnVoirOpes.setDisable(false);
+			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
+			boolean estCloture = cpt.estCloture.equals("O");
+			
+			this.btnVoirOpes.setDisable(estCloture);
+			this.btnSupprCompte.setDisable(estCloture);
 		} else {
 			this.btnVoirOpes.setDisable(true);
+			this.btnSupprCompte.setDisable(true);
 		}
 	}
 }
