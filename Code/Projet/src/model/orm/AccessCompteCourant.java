@@ -1,5 +1,6 @@
 package model.orm;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -159,23 +160,74 @@ public class AccessCompteCourant {
 	}
 
 	/**
-	 * Permet d'insérer un compte.
+	 * Insertion d'un compte.
 	 *
-	 * @param compte le compte à ajouter dans la BD
+	 * @param compte IN/OUT le compte
+	 * @throws RowNotFoundOrTooManyRowsException
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
 	 */
-	public void créerCompte(CompteCourant compte) {
-		compte = null;
-		//Implémentation à venir
+	public void créerCompte(CompteCourant compte)
+			throws ManagementRuleViolation, DatabaseConnexionException, DataAccessException {
+		try {
+
+			Connection con = LogToDatabase.getConnexion();
+
+			compte.debitAutorise = -compte.debitAutorise;
+
+			CallableStatement call;
+
+			String q = "{call CreerCompte (?, ?, ?, ?)}";
+			call = con.prepareCall(q);
+			call.setInt(1, compte.debitAutorise);
+			call.setDouble(2, compte.solde);
+			call.setInt(3, compte.idNumCli);
+			call.registerOutParameter(4, java.sql.Types.INTEGER);
+
+			call.execute();
+
+			int res = call.getInt(4);
+			
+			if (res == -1)
+				throw new ManagementRuleViolation(Table.Operation, Order.INSERT, "Erreur : le solde doit être supérieur à 50", null);
+			
+			compte.idNumCompte = res;
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accès", e);
+		}
 	}
 
 	/**
-	 * Permet de clôturer un compte.
+	 * Cloture d'un compte.
 	 *
-	 * @param compte le compte à cloturer
+	 * @param compte IN/OUT le compte à cloturer
+	 * @throws RowNotFoundOrTooManyRowsException
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
 	 */
-	public void cloturerCompte (CompteCourant compte){
-		compte = null;
-		//Implémentation à venir
+	public void cloturerCompte(CompteCourant compte) throws RowNotFoundOrTooManyRowsException, DataAccessException,
+	DatabaseConnexionException, ManagementRuleViolation {
+		try {
+			Connection con = LogToDatabase.getConnexion();
+		
+			String query = "UPDATE CompteCourant SET estCloture = 'O', solde = 0 WHERE idNumCompte = ?";
+		
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setInt(1, compte.idNumCompte);
+		
+			System.err.println(query);
+		
+			int result = pst.executeUpdate();
+			pst.close();
+			if (result != 1) {
+				con.rollback();
+				throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.UPDATE,
+						"Update anormal (update de moins ou plus d'une ligne)", null, result);
+			}
+			con.commit();
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
+		}
 	}
 
 }
