@@ -139,12 +139,22 @@ public class ComptesManagementController implements Initializable {
 	private void doModifierCompte() {
 	}
 
-	/**
-	 * Cloture le compte d'un client
-	 */
 	@FXML
-	private void doSupprimerCompte() {
-	}
+    private void doSupprimerCompte() {
+        int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+
+        if (selectedIndice >= 0) {
+            CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
+            CompteCourant nvCompte = this.cm.cloturerCompte(cpt);
+
+            if(nvCompte != null)
+                cpt.estCloture = "O";
+
+            this.olCompteCourant.set(selectedIndice, cpt);
+        }
+
+        this.validateComponentState();
+    }
 
 	/**
 	 * Ajoute un nouveau compte client

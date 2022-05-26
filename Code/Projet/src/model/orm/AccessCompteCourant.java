@@ -173,8 +173,6 @@ public class AccessCompteCourant {
 
 			Connection con = LogToDatabase.getConnexion();
 
-			compte.debitAutorise = -compte.debitAutorise;
-
 			CallableStatement call;
 
 			String q = "{call CreerCompte (?, ?, ?, ?)}";
