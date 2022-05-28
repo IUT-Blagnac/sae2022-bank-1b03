@@ -175,13 +175,13 @@ public class AccessOperation {
 			Connection con = LogToDatabase.getConnexion();
 			CallableStatement call;
 			
-			String q = "{call Crediter (?, ?, ?, ?)}";
+			String q = "{call Debiter (?, ?, ?, ?)}";
 			// les ? correspondent aux paramètres : cf. déf procédure (4 paramètres)
 			call = con.prepareCall(q);
 			// Paramètres in
 			call.setInt(1, idNumCompte);
 			// 1 -> valeur du premier paramètre, cf. déf procédure
-			call.setDouble(2, montant);
+			call.setDouble(2, montant * -1.00);
 			call.setString(3, typeOp);
 			// Paramètres out
 			call.registerOutParameter(4, java.sql.Types.INTEGER);
@@ -191,9 +191,12 @@ public class AccessOperation {
 			
 			int res = call.getInt(4);
 			
-			if(res != 0) {
-				throw new ManagementRuleViolation(Table.Operation, Order.INSERT, "Erreur de règle de gestion (A REVOIR)", null); 
-			}
+			//DEBUG
+			System.out.println("(Debug) Res : " + res);
+			
+//			if(res != 0) {
+//				throw new ManagementRuleViolation(Table.Operation, Order.INSERT, "Erreur de règle de gestion (A REVOIR)", null); 
+//			}
 			
 		} catch (SQLException e) {
 			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);

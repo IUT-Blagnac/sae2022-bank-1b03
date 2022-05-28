@@ -109,7 +109,7 @@ public class OperationsManagement {
 			try {
 			AccessOperation ao = new AccessOperation();
 			
-			ao.insertCredit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp); //DéFINIR CETTE FONCTION
+			ao.insertCredit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
 			
 			}catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
