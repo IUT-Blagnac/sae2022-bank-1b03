@@ -1,21 +1,29 @@
 package application.view;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import application.DailyBankApp;
 import application.DailyBankState;
+import application.control.ClientsManagement;
+import application.control.ComptesManagement;
 import application.control.OperationsManagement;
 import application.tools.NoSelectionModel;
 import application.tools.PairsOfValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
@@ -99,6 +107,8 @@ public class OperationsManagementController implements Initializable {
 	private Button btnDebit;
 	@FXML
 	private Button btnCredit;
+	@FXML
+	private Button btnVirement;
 
 	/**
 	 * Initialise le controleur
@@ -139,7 +149,48 @@ public class OperationsManagementController implements Initializable {
 	 * Enregistrement d'une opération réalisée par l'utilisateur
 	 */
 	@FXML
-	private void doAutre() {
+	private void doAutre() {		
+		ListView<CompteCourant> comptesListView = new ListView<CompteCourant>();
+		comptesListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+		comptesListView.getFocusModel().focus(-1);
+		// compte
+		ClientsManagement clientManagement;
+		ArrayList<Client> clients;
+		ObservableList<CompteCourant> comptes = FXCollections.observableArrayList();
+		
+		clientManagement =  new ClientsManagement(this.primaryStage, this.dbs);
+		clients = clientManagement.getlisteComptes(-1, "", "");
+		
+		for (Client client : clients) {
+			ComptesManagement comptesManagement = new ComptesManagement(this.primaryStage, this.dbs, client);
+			for ( CompteCourant compte : comptesManagement.getComptesDunClient()) {
+				comptes.add(compte);
+			}
+		}
+		
+		try {
+			System.out.println(this.getClass().getResource("virementPane.fxml"));
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(this.getClass().getResource("virementPane.fxml"));
+			BorderPane pane = loader.load();
+			VirementController ctrl = loader.getController();
+			ctrl.setDataListView(comptes);
+			ctrl.setCompteConcerne(compteConcerne);
+			
+			Scene scene = new Scene(pane);
+			Stage stage = new Stage();
+			stage.setTitle("Virement");
+			stage.initOwner(this.primaryStage);
+			stage.setScene(scene);
+			
+			stage.showAndWait();
+			
+		} catch (IOException e) {
+			System.out.println("Erreur : " + e);
+		}
+		
+		
+		
 	}
 
 	/**
@@ -149,6 +200,7 @@ public class OperationsManagementController implements Initializable {
 		// Non implémenté => désactivé
 		this.btnCredit.setDisable(true);
 		this.btnDebit.setDisable(false);
+		this.btnVirement.setDisable(false);
 	}
 
 	/**
