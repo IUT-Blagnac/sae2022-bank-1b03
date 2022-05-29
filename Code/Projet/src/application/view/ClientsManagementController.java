@@ -43,6 +43,7 @@ public class ClientsManagementController implements Initializable {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
+		this.doRechercher();
 	}
 
 	/**

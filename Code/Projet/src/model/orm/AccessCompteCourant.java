@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import model.data.CompteCourant;
 import model.orm.exception.DataAccessException;
@@ -21,6 +22,7 @@ public class AccessCompteCourant {
 
 	/**
 	 * Recherche des CompteCourant d'un client à partir de son id.
+	 * Si l'id du client est égal à -1 alors on recherche tous les compteCourant
 	 *
 	 * @param idNumCli id du client dont on cherche les comptes
 	 * @return Tous les CompteCourant de idNumCli (ou liste vide)
@@ -33,11 +35,17 @@ public class AccessCompteCourant {
 
 		try {
 			Connection con = LogToDatabase.getConnexion();
-			String query = "SELECT * FROM CompteCourant where idNumCli = ?";
+			String query = "SELECT * FROM CompteCourant";
+			if (idNumCli != -1) {
+				query += " WHERE idNumCli = ?";
+			}
 			query += " ORDER BY idNumCompte";
 
+			System.out.println(query);
 			PreparedStatement pst = con.prepareStatement(query);
-			pst.setInt(1, idNumCli);
+			if (idNumCli != -1) {
+				pst.setInt(1, idNumCli);
+			}
 			System.err.println(query);
 
 			ResultSet rs = pst.executeQuery();

@@ -1,26 +1,38 @@
 package application.view;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import application.DailyBankApp;
 import application.DailyBankState;
+import application.control.ClientsManagement;
+import application.control.ComptesManagement;
+import application.control.ExceptionDialog;
 import application.control.OperationsManagement;
 import application.tools.NoSelectionModel;
 import application.tools.PairsOfValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
 import model.data.Operation;
+import model.orm.AccessCompteCourant;
+import model.orm.exception.ApplicationException;
+import model.orm.exception.DatabaseConnexionException;
 
 public class OperationsManagementController implements Initializable {
 
@@ -99,6 +111,8 @@ public class OperationsManagementController implements Initializable {
 	private Button btnDebit;
 	@FXML
 	private Button btnCredit;
+	@FXML
+	private Button btnVirement;
 
 	/**
 	 * Initialise le controleur
@@ -142,10 +156,43 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	/**
-	 * Enregistrement d'une opération réalisée par l'utilisateur
+	 * Faire un virement d'un compte à un autre
 	 */
 	@FXML
-	private void doAutre() {
+	private void doVirement() {
+		// affichage
+		ListView<CompteCourant> comptesListView = new ListView<CompteCourant>();
+		comptesListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+		comptesListView.getFocusModel().focus(-1);
+		// compte
+		ObservableList<CompteCourant> comptes;
+		comptes = FXCollections.observableArrayList(this.getAllCompteCourant());
+		
+		// affiche la vue
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(this.getClass().getResource("virementPane.fxml"));
+			BorderPane pane = loader.load();
+			VirementController ctrl = loader.getController();
+			ctrl.setDataListView(comptes);
+			ctrl.setCompteConcerne(compteConcerne);
+			ctrl.setPrimaryStage(primaryStage);
+			ctrl.setDataBase(dbs);
+			ctrl.setOperationManagement(this);
+			
+			Scene scene = new Scene(pane);
+			Stage stage = new Stage();
+			stage.setTitle("Virement");
+			stage.initOwner(this.primaryStage);
+			stage.setScene(scene);
+			ctrl.setStage(stage);
+			
+			stage.showAndWait();
+			
+		} catch (IOException e) {
+			System.out.println("Erreur : " + e);
+		}
+		
 	}
 
 	/**
@@ -155,12 +202,13 @@ public class OperationsManagementController implements Initializable {
 		// Non implémenté => désactivé
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
+		this.btnVirement.setDisable(false);
 	}
 
 	/**
 	 * Met à jour les informations d'un compte client
 	 */
-	private void updateInfoCompteClient() {
+	public void updateInfoCompteClient() {
 
 		PairsOfValue<CompteCourant, ArrayList<Operation>> opesEtCompte;
 
@@ -187,4 +235,26 @@ public class OperationsManagementController implements Initializable {
 
 		this.validateComponentState();
 	}
+	
+	/** Permet d'obtenir la Liste des comptes courants
+	 * @return	la liste des comptes courants
+	 */
+	private ArrayList<CompteCourant> getAllCompteCourant () {
+		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
+		try {
+			AccessCompteCourant acc = new AccessCompteCourant();
+			listeCpt = acc.getCompteCourants(-1);
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			this.primaryStage.close();
+			listeCpt = new ArrayList<>();
+		} catch (ApplicationException ae) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+			ed.doExceptionDialog();
+			listeCpt = new ArrayList<>();
+		}
+		return listeCpt;
+	}
+	
 }
