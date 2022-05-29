@@ -76,44 +76,68 @@ public class ComptesManagement {
 		om.doOperationsManagementDialog();
 	}
 
-	/** Permet de créer un compte courant
-	 * @return le compte courant créé
+	/**
+	 * Permet de créer un compte
+	 * @return : le compte courant créé
 	 */
 	public CompteCourant creerCompte() {
 		CompteCourant compte;
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dbs);
-		compte = cep.doCompteEditorDialog(this.clientDesComptes, null, EditionMode.CREATION);
-		if (compte != null) {
-			try {
-				// Implémentation à venir
-				//AccessCompteCourant acc = new AccessCompteCourant();				
-				//acc.ajouterCompte(compte);
+		compte = cep.doCompteEditorDialog(this.clientDesComptes, null, EditionMode.CREATION);		
 
-				// if JAMAIS vrai
-				// existe pour compiler les catchs dessous
-				if (Math.random() < -1) {
-					throw new ApplicationException(Table.CompteCourant, Order.INSERT, "todo : test exceptions", null);
-				}
-			} catch (DatabaseConnexionException e) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
-				ed.doExceptionDialog();
-				this.primaryStage.close();
-			} catch (ApplicationException ae) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
-				ed.doExceptionDialog();
-			}
+		if(compte == null)
+			return compte;
+		
+		if(compte.solde < 50)
+			return null;
+		
+		if(compte.debitAutorise < 0)
+			return null;
+		
+		try {
+			AccessCompteCourant acc = new AccessCompteCourant();				
+			acc.créerCompte(compte);
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			this.primaryStage.close();
+			return null;
+		} catch (ApplicationException ae) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+			ed.doExceptionDialog();
+			return null;
 		}
+		
 		return compte;
 	}
 
-	/** Permet de cloturer un compte courant
-	 * @return le compte courant cloturé
+	/**
+	 * Permet de cloturer un compte
+	 * @return : le compte courant clôturé
 	 */
-	public CompteCourant cloturerCompte() {
-		CompteCourant compteCloture;
-		compteCloture = null;
-		return compteCloture;
-		//Implémentation à venir
+	public CompteCourant cloturerCompte(CompteCourant compte) {
+		if(compte == null)
+			return compte;
+		
+		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dbs);
+		CompteCourant nvCompte = cep.doCompteEditorDialog(this.clientDesComptes, compte, EditionMode.SUPPRESSION);
+		
+		if(nvCompte == null)
+			return null;
+		
+		try {
+			AccessCompteCourant acc = new AccessCompteCourant();				
+			acc.cloturerCompte(compte);
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			this.primaryStage.close();
+		} catch (ApplicationException ae) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+			ed.doExceptionDialog();
+		}
+		
+		return compte;
 	}
 
 	/** Permet d'obtenir la Liste des comptes courants d'un client

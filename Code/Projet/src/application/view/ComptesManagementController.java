@@ -139,12 +139,22 @@ public class ComptesManagementController implements Initializable {
 	private void doModifierCompte() {
 	}
 
-	/**
-	 * Cloture le compte d'un client
-	 */
 	@FXML
-	private void doSupprimerCompte() {
-	}
+    private void doSupprimerCompte() {
+        int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+
+        if (selectedIndice >= 0) {
+            CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
+            CompteCourant nvCompte = this.cm.cloturerCompte(cpt);
+
+            if(nvCompte != null)
+                cpt.estCloture = "O";
+
+            this.olCompteCourant.set(selectedIndice, cpt);
+        }
+
+        this.validateComponentState();
+    }
 
 	/**
 	 * Ajoute un nouveau compte client
@@ -170,9 +180,6 @@ public class ComptesManagementController implements Initializable {
 		}
 	}
 
-	/**
-	 * Modifie le statut des boutons en fonction de la sélection correspondante
-	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnModifierCompte.setDisable(true);
@@ -180,9 +187,14 @@ public class ComptesManagementController implements Initializable {
 
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			this.btnVoirOpes.setDisable(false);
+			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
+			boolean estCloture = cpt.estCloture.equals("O");
+			
+			this.btnVoirOpes.setDisable(estCloture);
+			this.btnSupprCompte.setDisable(estCloture);
 		} else {
 			this.btnVoirOpes.setDisable(true);
+			this.btnSupprCompte.setDisable(true);
 		}
 	}
 }
