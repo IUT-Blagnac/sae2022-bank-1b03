@@ -227,7 +227,7 @@ image::images/SelectionCompteClient.png[]
 
 Sélectionnez ensuite un compte et cliquez sur le bouton "Comptes client".
 
-image::/images/SuppressionCompteClient.png[]
+image::images/SuppressionCompteClient.png[]
 
 Une nouvelle page s'affiche référençant les différents comptes du client. +
 Cliquez sur le compte que vous souhaitez cloturer et appuyez sur "Supprimer Compte". 
