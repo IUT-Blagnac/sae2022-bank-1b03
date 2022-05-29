@@ -1,0 +1,10 @@
+@startuml
+OperationsManagementController -> OperationsManagement : doCredit()
+    OperationsManagement -> OperationEditorPane : doOperationEditorDialog()
+        OperationEditorPane -> OperationEditorPaneController : displayDialog()
+        OperationEditorPaneController -> OperationEditorPaneController : doAjouter()
+        OperationEditorPane <-- OperationEditorPaneController
+    OperationsManagement <-- OperationEditorPane
+        OperationsManagement -> AccessOperation : insertCredit()
+        OperationsManagement <-- AccessOperation
+@enduml

@@ -159,6 +159,8 @@ Partie du diagramme de classes données nécessaires :
 
 Diagramme de séquence:
 
+image::images/DS-Crediter.svg[]
+
 
 cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
 
