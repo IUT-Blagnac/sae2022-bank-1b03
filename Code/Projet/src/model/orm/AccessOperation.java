@@ -156,6 +156,52 @@ public class AccessOperation {
 			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
 		}
 	}
+	
+	/**
+	 * Enregistrement d'un crédit
+	 * 
+	 * Se fait par procédure stockée: Enregistre l'opération - Met à jour le solde du compte.
+	 * 
+	 * @param idNumCompte
+	 * @param montant
+	 * @param typeOp
+	 * @throws DatabaseConnexionException
+	 * @throws ManagementRuleViolation
+	 * @throws DataAccessException
+	 */
+	public void insertCredit(int idNumCompte, double montant, String typeOp)
+			throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException {
+		try {
+			Connection con = LogToDatabase.getConnexion();
+			CallableStatement call;
+			
+			String q = "{call Crediter (?, ?, ?, ?)}";
+			// les ? correspondent aux paramètres : cf. déf procédure (4 paramètres)
+			call = con.prepareCall(q);
+			// Paramètres in
+			call.setInt(1, idNumCompte);
+			// 1 -> valeur du premier paramètre, cf. déf procédure
+			call.setDouble(2, montant);
+			call.setString(3, typeOp);
+			// Paramètres out
+			call.registerOutParameter(4, java.sql.Types.INTEGER);
+			// 4 type du quatrième paramètre qui est déclaré en OUT, cf. déf procédure
+			
+			call.execute();
+			
+			int res = call.getInt(4);
+			
+			//DEBUG
+			System.out.println("(Debug) Res : " + res);
+			
+//			if(res != 0) {
+//				throw new ManagementRuleViolation(Table.Operation, Order.INSERT, "Erreur de règle de gestion (A REVOIR)", null); 
+//			}
+			
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
+		}
+	}
 
 	/**
 	 * Fonction utilitaire qui retourne un ordre sql "to_date" pour mettre une date
