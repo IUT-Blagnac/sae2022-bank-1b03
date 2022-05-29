@@ -203,15 +203,26 @@ _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparav
 
 Commencez par vous rendre sur la fenêtre gestionnaire des clients.
 
+image::images/RechercheListeClients.png[]
+
 Cliquez ensuite sur le bouton "Rechercher" afin d'afficher la liste des clients.
 
-Sélectionnez ensuite un compte et cliquez sur le bouton "Comptes client".
+image::images/SelectionCompteClient.png[]
 
-Une nouvelle page s'affiche référençant les différents comptes du client.
+Sélectionnez ensuite un compte et cliquez sur le bouton "Comptes client"
 
+image::images/CompteClientModifié.png[]
+
+Une nouvelle page s'affiche référençant les différents comptes du client. +
 Vous pouvez cliquez sur le bouton "Nouveau compte" afin de créer un nouveau compte en entrant le solde du compte initial (*_supérieur à 50 !_*) et le découvert autorisé.
 
-Quand vous avez fini, appuyez sur le bouton "Ajouter". Un nouveau compte a été créé !
+image::images/AjoutCompteClient.png[]
+
+Quand vous avez fini, appuyez sur le bouton "Ajouter".
+
+image::images/CompteClientModifié.png[]
+
+Un nouveau compte a été créé !
 
 == Comment cloturer un compte client déjà existant ?
 
