@@ -203,10 +203,7 @@ Partie du diagramme de classes données nécessaires :
 
 Diagramme de séquence:
 
-image::images/DS-Crediter.svg[]
-
-
-cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
+image::images/DS-Virement.svg[]
 
 === Gérer les employés, ou faire le CRUD (Create Read Update Delete) :
 
