@@ -209,7 +209,7 @@ Sélectionnez ensuite un compte et cliquez sur le bouton "Comptes client".
 
 Une nouvelle page s'affiche référençant les différents comptes du client.
 
-Vous pouvez cliquez sur le bouton "Nouveau compte" afin de créer un nouveau compte en entrant le solde du compte initial (_*supérieur à 50 !*_) et le découvert autorisé.
+Vous pouvez cliquez sur le bouton "Nouveau compte" afin de créer un nouveau compte en entrant le solde du compte initial (*_supérieur à 50 !_*) et le découvert autorisé.
 
 Quand vous avez fini, appuyez sur le bouton "Ajouter". Un nouveau compte a été créé !
 
