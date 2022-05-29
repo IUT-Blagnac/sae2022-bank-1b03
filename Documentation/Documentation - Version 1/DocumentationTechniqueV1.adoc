@@ -150,6 +150,18 @@ cf. doc. utilisateur "Comment modifier les informations personelles d’un clien
 
 __En cours de développement__
 
+Partie "Créditer un compte" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires :
+
+* En lecture : Client, Compte Courant, Opération, Type Opération
+* En mise à jour : Opération
+
+Diagramme de séquence:
+
+
+cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
+
 === Cloturer un compte
 
 __En cours de développement__
