@@ -185,7 +185,9 @@ image::images/OpérationCompteVisualisation.PNG[]
 
 == Comment enregistrer un débit manuellement ?
 
-_Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
+_Tout d'abord commencez par vous rendre sur la fenêtre du compte d'un client et visionnez les opérations de celui-ci._
+
+
 
 image::images/operationsCompte.PNG[]
 
@@ -196,6 +198,22 @@ image::images/operationDebit.PNG[]
 Entrez le montant du retrait. Quand vous avez fini, appuyez sur le bouton "Effectuer Débit".
 
 A noter : Si cela ne fonctionne pas, alors vérifiez qu'il soit possible de retirer le montant que vous souhaitez.
+
+== Comment enregistrer un crédit manuellement ?
+
+_Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
+
+image::images/crediter-enregistrer-credit.png[]
+
+Cliquez sur "Enregistrer Crédit" pour commencer l'enregistrement un nouveau crédit.
+
+image::images/crediter-entrer-infos.png[]
+
+Choisissez le type d'opération, saisissez le montant et cliquez sur "Effectuer Crédit" pour finaliser l'opération.
+
+image::images/crediter-nouvelle-op.png[]
+
+Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
 == Comment créer un nouveau compte client ?
 
