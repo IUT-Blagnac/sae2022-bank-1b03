@@ -196,7 +196,17 @@ image::images/DS-Creer-Comptes.png[]
 
 === Effectuer des virements compte à compte
 
-__En cours de développement__
+Partie du diagramme de classes données nécessaires :
+
+* En lecture : Client, Compte Courant, Opération, Type Opération
+* En mise à jour : Opération
+
+Diagramme de séquence:
+
+image::images/DS-Crediter.svg[]
+
+
+cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
 
 === Gérer les employés, ou faire le CRUD (Create Read Update Delete) :
 
