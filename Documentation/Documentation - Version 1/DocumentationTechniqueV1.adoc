@@ -152,11 +152,33 @@ __En cours de développement__
 
 === Cloturer un compte
 
-__En cours de développement__
+Partie "cloturer un compte" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Client, Compte Courant
+* En mise à jour : Client, Compte Courant
+
+cf. doc. utilisateur "Comment cloturer un compte client déjà existant ?"
+
+Diagramme de séquence : 
+
+image::images/DS-Cloturer-Compte.png[]
 
 === Créer un compte
 
-__En cours de développement__
+Partie "créer un compte" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Client, Compte Courant
+* En mise à jour : Client, Compte Courant
+
+cf. doc. utilisateur "Comment créer un nouveau compte client ?"
+
+Diagramme de séquence : 
+
+image::images/DS-Creer-Comptes.png[]
 
 === Effectuer des virements compte à compte
 
