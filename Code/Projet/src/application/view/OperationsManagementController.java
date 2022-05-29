@@ -10,6 +10,7 @@ import application.DailyBankApp;
 import application.DailyBankState;
 import application.control.ClientsManagement;
 import application.control.ComptesManagement;
+import application.control.ExceptionDialog;
 import application.control.OperationsManagement;
 import application.tools.NoSelectionModel;
 import application.tools.PairsOfValue;
@@ -29,6 +30,9 @@ import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
 import model.data.Operation;
+import model.orm.AccessCompteCourant;
+import model.orm.exception.ApplicationException;
+import model.orm.exception.DatabaseConnexionException;
 
 public class OperationsManagementController implements Initializable {
 
@@ -146,30 +150,20 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	/**
-	 * Enregistrement d'une opération réalisée par l'utilisateur
+	 * Faire un virement d'un compte à un autre
 	 */
 	@FXML
-	private void doAutre() {		
+	private void doVirement() {
+		// affichage
 		ListView<CompteCourant> comptesListView = new ListView<CompteCourant>();
 		comptesListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 		comptesListView.getFocusModel().focus(-1);
 		// compte
-		ClientsManagement clientManagement;
-		ArrayList<Client> clients;
-		ObservableList<CompteCourant> comptes = FXCollections.observableArrayList();
+		ObservableList<CompteCourant> comptes;
+		comptes = FXCollections.observableArrayList(this.getAllCompteCourant());
 		
-		clientManagement =  new ClientsManagement(this.primaryStage, this.dbs);
-		clients = clientManagement.getlisteComptes(-1, "", "");
-		
-		for (Client client : clients) {
-			ComptesManagement comptesManagement = new ComptesManagement(this.primaryStage, this.dbs, client);
-			for ( CompteCourant compte : comptesManagement.getComptesDunClient()) {
-				comptes.add(compte);
-			}
-		}
-		
+		// affiche la vue
 		try {
-			System.out.println(this.getClass().getResource("virementPane.fxml"));
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(this.getClass().getResource("virementPane.fxml"));
 			BorderPane pane = loader.load();
@@ -188,8 +182,6 @@ public class OperationsManagementController implements Initializable {
 		} catch (IOException e) {
 			System.out.println("Erreur : " + e);
 		}
-		
-		
 		
 	}
 
@@ -233,4 +225,26 @@ public class OperationsManagementController implements Initializable {
 
 		this.validateComponentState();
 	}
+	
+	/** Permet d'obtenir la Liste des comptes courants
+	 * @return	la liste des comptes courants
+	 */
+	private ArrayList<CompteCourant> getAllCompteCourant () {
+		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
+		try {
+			AccessCompteCourant acc = new AccessCompteCourant();
+			listeCpt = acc.getCompteCourants(-1);
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			this.primaryStage.close();
+			listeCpt = new ArrayList<>();
+		} catch (ApplicationException ae) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+			ed.doExceptionDialog();
+			listeCpt = new ArrayList<>();
+		}
+		return listeCpt;
+	}
+	
 }
