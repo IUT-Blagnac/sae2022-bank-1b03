@@ -175,13 +175,13 @@ public class AccessOperation {
 			Connection con = LogToDatabase.getConnexion();
 			CallableStatement call;
 			
-			String q = "{call Debiter (?, ?, ?, ?)}";
+			String q = "{call Crediter (?, ?, ?, ?)}";
 			// les ? correspondent aux paramètres : cf. déf procédure (4 paramètres)
 			call = con.prepareCall(q);
 			// Paramètres in
 			call.setInt(1, idNumCompte);
 			// 1 -> valeur du premier paramètre, cf. déf procédure
-			call.setDouble(2, montant * -1.00);
+			call.setDouble(2, montant);
 			call.setString(3, typeOp);
 			// Paramètres out
 			call.registerOutParameter(4, java.sql.Types.INTEGER);
