@@ -170,12 +170,16 @@ public class OperationsManagementController implements Initializable {
 			VirementController ctrl = loader.getController();
 			ctrl.setDataListView(comptes);
 			ctrl.setCompteConcerne(compteConcerne);
+			ctrl.setPrimaryStage(primaryStage);
+			ctrl.setDataBase(dbs);
+			ctrl.setOperationManagement(this);
 			
 			Scene scene = new Scene(pane);
 			Stage stage = new Stage();
 			stage.setTitle("Virement");
 			stage.initOwner(this.primaryStage);
 			stage.setScene(scene);
+			ctrl.setStage(stage);
 			
 			stage.showAndWait();
 			
@@ -198,7 +202,7 @@ public class OperationsManagementController implements Initializable {
 	/**
 	 * Met à jour les informations d'un compte client
 	 */
-	private void updateInfoCompteClient() {
+	public void updateInfoCompteClient() {
 
 		PairsOfValue<CompteCourant, ArrayList<Operation>> opesEtCompte;
 
