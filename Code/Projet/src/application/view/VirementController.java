@@ -69,7 +69,7 @@ public class VirementController implements Initializable {
 					try {
 						AccessOperation ao = new AccessOperation();
 						ao.insertDebit(this.compteConcerne.idNumCompte, montant, "Virement Compte à Compte");
-						ao.insertCredit(this.listComptes.get(selectedIndice), montant, "Virement Compte à Compte");
+						ao.insertCredit(this.listComptes.get(selectedIndice).idNumCompte, montant, "Virement Compte à Compte");
 						this.stage.close();
 						this.operationManagement.updateInfoCompteClient();
 					} catch (DatabaseConnexionException e) {
