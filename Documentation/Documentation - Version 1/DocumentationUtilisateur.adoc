@@ -219,14 +219,23 @@ _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparav
 
 Commencez par vous rendre sur la fenêtre gestionnaire des clients.
 
+image::images/RechercheListeClients.PNG[]
+
 Cliquez ensuite sur le bouton "Rechercher" afin d'afficher la liste des clients.
+
+image::images/SelectionCompteClient.PNG[]
 
 Sélectionnez ensuite un compte et cliquez sur le bouton "Comptes client".
 
-Une nouvelle page s'affiche référençant les différents comptes du client.
+image::/images/SuppressionCompteClient.PNG[]
 
+Une nouvelle page s'affiche référençant les différents comptes du client. +
 Cliquez sur le compte que vous souhaitez cloturer et appuyez sur "Supprimer Compte". 
 
+image::images/GestionSuppressionCompte.PNG[]
+
 Appuyez ensuite sur le bouton de validation "Supprimer".
+
+image::images/CompteSupprimé.PNG[]
 
 Le compte est maintenant cloturé ! Il n'est plus possible de le modifier, ni de voir les opérations de celui-ci.
