@@ -215,6 +215,23 @@ image::images/crediter-nouvelle-op.png[]
 
 Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
+== Comment effectuer un virement ?
+_Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
+
+image::images/effectuerVirement.png[]
+
+Puis cliquez sur "Effectuer un virement".
+
+image::images/virement.png[]
+
+Par la suite vous pouvez voir le solde du compte en haut de l'écrant.
+Vous devez rentrer un montant supérieur à 0 et inférieur au solde du compte.
+Puis selectionner le compte destinataire du virment et clicker sur "Envoyer".
+
+image::images/virementFin.png[]
+
+Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
+
 == Comment créer un nouveau compte client ?
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
