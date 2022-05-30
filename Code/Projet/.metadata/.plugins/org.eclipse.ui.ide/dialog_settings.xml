@@ -16,6 +16,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Etudiant\Documents\sae2022-bank-1b03\Code\Projet"/>
 			<item value="D:\Documents\GitHub\sae2022-bank-1b03\Code"/>
 			<item value="D:\Documents\GitHub\sae2022-bank-1b03\Code\Projet"/>
 		</list>
