@@ -86,6 +86,24 @@ public class OperationEditorPaneController implements Initializable {
 			this.cbTypeOpe.setItems(list);
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
+		case DEBITEXC:
+
+			String infoExc = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde);
+			this.lblMessage.setText(infoExc);
+
+			this.btnOk.setText("Effectuer Débit Exceptionnel");
+			this.btnCancel.setText("Annuler Débit Exceptionnel");
+
+			ObservableList<String> listExc = FXCollections.observableArrayList();
+
+			for (String tyOp : ConstantesIHM.OPERATIONS_DEBIT_GUICHET) {
+				listExc.add(tyOp);
+			}
+
+			this.cbTypeOpe.setItems(listExc);
+			this.cbTypeOpe.getSelectionModel().select(0);
+			break;	
 		case CREDIT:
 			
 			String infoC = "Cpt. : " + this.compteEdite.idNumCompte + "  "
