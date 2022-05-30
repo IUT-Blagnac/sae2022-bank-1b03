@@ -28,9 +28,16 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 
 |         | Gantt V2    |                               |     
 |         | Gantt V3 | V2 et V3 : https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%203/Cahier%20des%20Charges/Gantt.png |   Les tâches sont affectées à tout le monde !! On doit clairement identifier qui fait quelle fonctionnalité dans le projet.  
-|         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%201/DocumentationTechniqueV1.adoc       |    
-|         | Doc User V1    |        |
-|         | Recette V1  |                      | 
+|         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%201/DocumentationTechniqueV1.adoc       |   Il manque la page de garde, la présentation de l'appli, la répartition de qui fait quoi (voir doc sur moodle documentation technique) - Toutes les figures doivent avoir un numéro et un titre et un commentaire - Dans la partie ressources externes,  Il faut indiquer , l’utilisation de java fx … Il faut donc s’assurer que les postes de travail des employés possèdent une JRE 1.8 pour pouvoir faire fonctionner le .jar sans encombre. Voir comment lancer dans le bon environnement → IHM Comment installer l’application pour pouvoir la maintenir : accès à la base  … Arch de l'appli :il manque la BD et un peu plus de détails sur les accès et les utilisations - Description de l'appli, bien vérifier que vous avez mis tous les pts mentionnés : Pour chaque fonctionnalité : en les expliquant
+      Dans chaque partie : qui est le développeur responsable
+      ◦  Partie de use case réalisé - scénarios éventuels
+      ◦ Partie du diagramme de classes données nécessaires : en lecture, en mise à jour
+      ◦ Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
+      ◦ Classes impliquées dans chaque package
+      ◦  Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants avec spéc. ddées
+      ◦ Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement.
+|         | Doc User V1    |        |OK
+|         | Recette V1  |                      | Manque le CRUD guchetier. La mise en page n'est pas bonne pour l'employé (tableau). Inspirez vous du cahier exemple donné par Esther Pendaries sur discord.
 |         | Suivi projet|   | 
 | 22/05   | Gantt V2/V3  à jour    | Mise à jour en cours | 
 |         | Doc. Util. V0 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%200/DocumentationUtilisateur.adoc |   
