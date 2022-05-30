@@ -19,6 +19,7 @@
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <buttons>
           <Button fx:id="buttonEnvoyer" mnemonicParsing="false" text="Envoyer" />
+            <Button fx:id="buttonAnnuler" mnemonicParsing="false" text="Annuler" />
         </buttons>
          <padding>
             <Insets left="15.0" right="15.0" />
