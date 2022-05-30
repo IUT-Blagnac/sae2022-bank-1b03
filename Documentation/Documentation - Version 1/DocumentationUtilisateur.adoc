@@ -187,8 +187,6 @@ image::images/OpérationCompteVisualisation.PNG[]
 
 _Tout d'abord commencez par vous rendre sur la fenêtre du compte d'un client et visionnez les opérations de celui-ci._
 
-
-
 image::images/operationsCompte.PNG[]
 
 Cliquez sur le bouton "Enregistrer Débit".
@@ -205,7 +203,7 @@ _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
 image::images/crediter-enregistrer-credit.png[]
 
-Cliquez sur "Enregistrer Crédit" pour commencer l'enregistrement un nouveau crédit.
+Cliquez sur "Enregistrer Crédit" pour commencer l'enregistrement d'un nouveau crédit.
 
 image::images/crediter-entrer-infos.png[]
 
@@ -224,9 +222,9 @@ Puis cliquez sur "Effectuer un virement".
 
 image::images/virement.png[]
 
-Par la suite vous pouvez voir le solde du compte en haut de l'écrant.
-Vous devez rentrer un montant supérieur à 0 et inférieur au solde du compte.
-Puis selectionner le compte destinataire du virment et clicker sur "Envoyer".
+Par la suite vous pouvez voir le solde du compte en haut de l'écran. +
+Vous devez rentrer un montant supérieur à 0 et inférieur au solde du compte. +
+Puis selectionnez le compte destinataire du virement et cliquer sur "Envoyer".
 
 image::images/virementFin.png[]
 
