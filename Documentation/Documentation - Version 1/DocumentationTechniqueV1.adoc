@@ -196,6 +196,8 @@ image::images/DS-Creer-Comptes.png[]
 
 === Effectuer des virements compte à compte
 
+Partie "Virement de compte à compte" du diagramme des UC
+
 Partie du diagramme de classes données nécessaires :
 
 * En lecture : Client, Compte Courant, Opération, Type Opération
@@ -204,6 +206,8 @@ Partie du diagramme de classes données nécessaires :
 Diagramme de séquence:
 
 image::images/DS-Virement.svg[]
+
+cf. doc. utilisateur "Comment effectuer un virement ?"
 
 === Gérer les employés, ou faire le CRUD (Create Read Update Delete) :
 
