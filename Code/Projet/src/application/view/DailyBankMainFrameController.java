@@ -147,7 +147,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/**
-	 * Modifie le statut des boutons en fonction de la sélection correspondante
+	 * Modifie le statut des boutons et des label en fonction de la sélection correspondante
 	 */
 	private void validateComponentState() {
 		Employe e = this.dbs.getEmpAct();
