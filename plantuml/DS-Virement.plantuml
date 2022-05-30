@@ -1,6 +1,0 @@
-@startuml
-OperationsManagementController -> VirementController : doVirement()
-    VirementController -> OperationEditorPaneController : envoyerVirement()
-    OperationEditorPaneController -> OperationEditorPaneController : doAjouter()
-    OperationsManagementController <-- OperationEditorPaneController
-@enduml
