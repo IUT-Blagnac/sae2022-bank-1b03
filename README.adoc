@@ -35,7 +35,7 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
       ◦ Copies écrans principales de la fonctionnalité (ou renvoi vers doc utilisateur) + maquettes états imprimés (si concerné)
       ◦ Classes impliquées dans chaque package
       ◦  Extraits de code significatifs commentés si nécessaires pour des points particuliers et importants avec spéc. ddées
-      ◦ Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement.
+      ◦ Eléments essentiels à connaître, spécificités, … nécessaires à la mise en œuvre du développement. Pensez à générer et mettre la javadoc.
 |         | Doc User V1    |        |OK
 |         | Recette V1  |                      | Manque le CRUD guchetier. La mise en page n'est pas bonne pour l'employé (tableau). Inspirez vous du cahier exemple donné par Esther Pendaries sur discord.
 |         | Suivi projet|   | 
