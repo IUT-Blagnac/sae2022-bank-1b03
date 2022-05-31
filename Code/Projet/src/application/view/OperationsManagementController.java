@@ -113,6 +113,8 @@ public class OperationsManagementController implements Initializable {
 	private Button btnCredit;
 	@FXML
 	private Button btnVirement;
+	@FXML
+	private Button btnDebitExc;
 
 	/**
 	 * Initialise le controleur
@@ -136,6 +138,18 @@ public class OperationsManagementController implements Initializable {
 	private void doDebit() {
 
 		Operation op = this.om.enregistrerDebit();
+		if (op != null) {
+			this.updateInfoCompteClient();
+			this.validateComponentState();
+		}
+	}
+	
+	/**
+	 * Enregistrement d'une opération de type Débit Exceptionnel
+	 */
+	@FXML
+	private void doDebitExc() {
+		Operation op = this.om.enregistrerDebitExc();
 		if (op != null) {
 			this.updateInfoCompteClient();
 			this.validateComponentState();
@@ -203,6 +217,11 @@ public class OperationsManagementController implements Initializable {
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
 		this.btnVirement.setDisable(false);
+		if(this.dbs.isChefDAgence()) {
+			this.btnDebitExc.setDisable(false);
+		} else {
+			this.btnDebitExc.setDisable(true);
+		}
 	}
 
 	/**
