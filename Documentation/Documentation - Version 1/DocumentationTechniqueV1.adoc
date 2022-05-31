@@ -14,7 +14,7 @@ toc::[]
 .Répartition des tâches et état d'avancement
 [options="header,footer"]
 |=======================
-|version|user     |use case   |cas...                 |   Etudiant 1 | Etudiant 2  |   Etudiant 3 | Etudiant 4
+| Version | User | Use Case | Cas d'utilisation | Etudiant 1 | Etudiant 2  | Etudiant 3 | Etudiant 4
 |1    |Chef d'Agence     |CRUD employé  |C| | | |
 |1    |Chef d'Agence     |CRUD employé  |R| | | |
 |1    |Chef d'Agence     |CRUD employé  |U| | | |
