@@ -8,7 +8,6 @@ toc::[]
 
 :sectnums:
 
-
 == Répartition des tâches et état d'avancement
 [options="header,footer"]
 |=======================
@@ -34,10 +33,7 @@ toc::[]
 
 |=======================
 
-Chaque étudiant doit mettre son nom sur une des colonnes étudiant.
-Dans sa colonne il doit remplir la ligne correspondant à une partie qu'il a développé en indiquant
-
-F pour fonctionnel ou
+F pour Fonctionnel +
 D pour en Développement
 
 == Présentation de l’application
@@ -46,7 +42,9 @@ L’application permet de gérer des comptes bancaires de dépôt pour des clien
 
 === Use Case global de l'application 
 
+.Use Case global de l'application
 image::plantuml/use-case.svg[]
+
 Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux types d'utilisateurs présents dans l'application, le guichetier et le chef d'agence. +
 
 Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
@@ -75,6 +73,7 @@ Lien vers la liendelajavadocdegithub.com[javadoc]
 
 === Diagramme de classe de la base de données
 
+.Diagramme de classe UML de la base de données
 image::images/DiagrammeUML.png[]
 
 * Une agence bancaire est composée de plusieurs employés.
@@ -93,13 +92,46 @@ Pour l'instant l'application ne possède que certaines des fonctionnalités du d
 == Architecture
 
 === Architecture générale (poste client, serveurs, …) et rôle de chaque élément
+.Schéma de l'architecture du fonctionnement de l'application
 image::images/schéma-client-serv.png[]
 Les postes client exécutent l'application faite en javaFX et se connectent à la base de données oracle, permettant de manipuler les données des clients et des employés. 
 
 === Ressources externes (.jar, …) utilisées et rôles
 L'application utilise la librairie JavaFX pour permettre de disposer d'une interface graphique.
 
-Elle utilise également la librairie externe ojdbc6.jar pour interagir avec la base de données du système des agences bancaires et exécuter des instructions SQL avec Java. 
+Elle utilise également la librairie externe ojdbc6.jar pour interagir avec la base de données du système des agences bancaires et exécuter des instructions SQL avec Java.
+
+== Installation de l'application
+
+Pré-requis :
+
+* La version 1.8 de https://www.allwebsoft.fr/ihm2022/logiciels/jdk-8u321-windows-x64.exe[Java]
+* Les deux fichiers suivants : https://www.allwebsoft.fr/ihm2022/fichiers/setenv-cmd.bat[Fichier 1] et https://drive.google.com/uc?export=download&id=1S2rfpdQ6XPKfU-Gt57UkdALyCFiZM8jq[Fichier 2]
+* L'application en .jar : https://drive.google.com/uc?export=download&id=1QGhUSPPWU4erVOsFe6FiBaxiUISYKFLm[lien] +
+__Remarque : les deux éléments ci-dessus doivent se trouver dans le même dossier pour plus de simplicité__
+
+Installation de l'application :
+
+* Ouvrir l'application "Powershell"
+* Vérifier votre version de Java installée à l'aide de la commande suivante :
+_java -version_ +
+Remarque : _Si la version installée est Java 1.8.*, vous devriez pouvoir double cliquer sur le .jar que vous venez de télécharger_
+
+* Se déplacer dans le workspace de l'application avec la commandes suivantes :
+_cd .\Téléchargements\_ +
+Remarque : _Si la version installée est Java 1.8.*, vous pouvez ignorer les trois étapes suivantes._
+
+Sinon :
+
+* Exécuter ensuite la commande suivante : +
+_cd setenv-powershell.ps1 ou cd .\setenv-powershell.ps1_
+* Tapez ensuite la commande : +
+_cmd_
+* Et vérifier maintenant votre version de Java : +
+_java -version_
+
+Vous pouvez maintenant lancer l'application à l'aide de la commande suivante : +
+_java -jar DailyBankV0.jar_
 
 === Structuration en packages de l’application documentée. Principes retenus pour cette structuration
 L'application est structurée en plusieurs packages. Le modèle retenu est le modèle est le modèle MVC (modèle, view, controller). De plus on regroupe les packages en deux catégories: +
@@ -135,6 +167,7 @@ cf. doc. utilisateur "Comment modifier les informations personnelles d’un clie
 
 Diagramme de séquence:
 
+.Diagramme de séquence pour la modification d'un client
 image::images/DS-Modifier-Client.png[]
 
 === Créer un nouveau client
@@ -149,6 +182,7 @@ cf. doc. utilisateur "Comment ajouter un client ?"
 
 Diagramme de séquence :
 
+.Diagramme de séquence pour la création d'un client
 image::images/DS-Creer-Client.png[]
 
 === Consulter un compte
@@ -162,6 +196,7 @@ cf. doc. utilisateur "Comment accéder aux comptes d’un client ?"
 
 Diagramme de séquence : 
 
+.Diagramme de séquence pour la consultation d'un compte
 image::images/DS-Consulter-Comptes.png[]
 
 === Débiter un compte
@@ -176,7 +211,8 @@ cf. doc. utilisateur "Comment enregistrer un débit manuellement ?"
 
 Diagramme de séquence :
 
-Pas de fonctions liés à cette UC.
+.Diagramme de séquence pour le débit d'un compte
+image::images/DS-Débiter-Comptes.png[]
 
 === Rendre inactif un client
 Partie "rendre inactif un client" du diagramme des UC
@@ -188,10 +224,6 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment modifier les informations personelles d’un client ?"
 
-Diagramme de séquence :
-
-image::images/DS-Rendre-Inactif.png[]
-
 === Créditer un compte (Escassut Sean)
 
 Partie "Créditer un compte" du diagramme des UC
@@ -201,12 +233,12 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : Client, Compte Courant, Opération, Type Opération
 * En mise à jour : Opération
 
+cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
+
 Diagramme de séquence:
 
+.Diagramme de séquence pour le crédit d'un compte
 image::images/DS-Crediter.svg[]
-
-
-cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
 
 === Cloturer un compte (Mabille Matthis)
 
@@ -221,6 +253,7 @@ cf. doc. utilisateur "Comment cloturer un compte client déjà existant ?"
 
 Diagramme de séquence : 
 
+.Diagramme de séquence pour la cloturation d'un compte
 image::images/DS-Cloturer-Compte.png[]
 
 === Créer un compte (Mabille Matthis)
@@ -236,6 +269,7 @@ cf. doc. utilisateur "Comment créer un nouveau compte client ?"
 
 Diagramme de séquence : 
 
+.Diagramme de séquence pour la création d'un compte
 image::images/DS-Creer-Comptes.png[]
 
 === Effectuer des virements compte à compte (Wendjaneh Hugo)
@@ -247,11 +281,12 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : Client, Compte Courant, Opération, Type Opération
 * En mise à jour : Opération
 
+cf. doc. utilisateur "Comment effectuer un virement ?"
+
 Diagramme de séquence:
 
+.Diagramme de séquence pour le virement d'un compte à un autre
 image::images/DS-Virement.svg[]
-
-cf. doc. utilisateur "Comment effectuer un virement ?"
 
 === Gérer les employés, ou faire le CRUD (Testa Thomas):
 
