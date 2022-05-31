@@ -8,12 +8,16 @@ toc::[]
 
 :sectnums:
 
+<<<
+
 == Présentation de l’application
 
 === Use Case global de l'application 
 
 image::plantuml/use-case.svg[]
 Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux types d'utilisateurs présents dans l'application, le guichetier et le chef d'agence. +
+
+<<<
 
 Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
 
@@ -39,6 +43,8 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 
 image::images/DiagrammeUML.png[]
 
+<<<
+    
 * Une agence bancaire est composée de plusieurs employés.
 * Un employé peut être chef d'agence d'une ou plusieurs agences.
 * Un employé peut être un chef d'agence ou un guichetier selon les droits d'accès qu'il possède
