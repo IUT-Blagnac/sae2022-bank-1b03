@@ -8,7 +8,43 @@ toc::[]
 
 :sectnums:
 
+
+
+
+.Répartition des tâches et état d'avancement
+[options="header,footer"]
+|=======================
+|version|user     |use case   |cas...                 |   Etudiant 1 | Etudiant 2  |   Etudiant 3 | Etudiant 4
+|1    |Chef de projet    |CRUD employé  |C| | | |
+|1    |chef de projet    |CRUD employé  |R| | | |
+|1    |chef de projet    |CRUD employé  |U| | | |
+|1    |chef de projet    |CRUD employé  |D| | | |
+|1    |Guichetier     | Compte | Créer|| | | 
+|1    |Guichetier     | Compte | Créditer/Débiter|| | | 
+|1    |Guichetier     | Compte | Effectuer un virement|| | | 
+|1    |Guichetier     | Compte | Clôturer|| | | 
+|2    |Chef d’Agence     | Compte | Débit exceptionnel|| | | 
+|2    |Chef d’Agence     | Emprunt | Simuler emprunt|| | | 
+|2    |Chef d’Agence     | Emprunt | Simuler assurance|| | | 
+|2    |Guichetier     | Compte | Relevé PDF|| | | 
+|2    |Guichetier     | CRUD Prélèvement | C|| | | 
+|2    |Guichetier     | CRUD Prélèvement | R|| | | 
+|2    |Guichetier     | CRUD Prélèvement | U|| | | 
+|2    |Guichetier     | CRUD Prélèvement | D|| | | 
+|2    |Bach     | Prélèvements automatiques | || | | 
+|2    |Bach     | Reléves mensuels | || | | 
+
+|=======================
+
+Chaque étudiant doit mettre son nom sur une des colonnes étudiant.
+Dans sa colonne il doit remplir la ligne correspondant à une partie qu'il a développé en indiquant
+
+F pour fonctionnel ou
+D pour en Développement
+
 == Présentation de l’application
+
+L’application permet de gérer des comptes bancaires de dépôt pour des clients. Elle permet de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
 === Use Case global de l'application 
 
@@ -34,6 +70,10 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 ** Consulter un employé
 ** Modifier un employé
 ** Supprimer un employé
+
+=== JavaDoc de l'application
+
+Lien vers la liendelajavadocdegithub.com[javadoc]
 
 === Diagramme de classe de la base de données
 
@@ -154,9 +194,7 @@ Diagramme de séquence :
 
 image::images/DS-Rendre-Inactif.png[]
 
-=== Créditer un compte
-
-__En cours de développement__
+=== Créditer un compte (Escassut Sean)
 
 Partie "Créditer un compte" du diagramme des UC
 
@@ -172,7 +210,7 @@ image::images/DS-Crediter.svg[]
 
 cf. doc. utilisateur "Comment enregistrer un crédit manuellement ?"
 
-=== Cloturer un compte
+=== Cloturer un compte (Mabille Matthis)
 
 Partie "cloturer un compte" du diagramme des UC
 
@@ -187,7 +225,7 @@ Diagramme de séquence :
 
 image::images/DS-Cloturer-Compte.png[]
 
-=== Créer un compte
+=== Créer un compte (Mabille Matthis)
 
 Partie "créer un compte" du diagramme des UC
 
@@ -202,7 +240,7 @@ Diagramme de séquence :
 
 image::images/DS-Creer-Comptes.png[]
 
-=== Effectuer des virements compte à compte
+=== Effectuer des virements compte à compte (Wendjaneh Hugo)
 
 Partie "Virement de compte à compte" du diagramme des UC
 
@@ -217,7 +255,7 @@ image::images/DS-Virement.svg[]
 
 cf. doc. utilisateur "Comment effectuer un virement ?"
 
-=== Gérer les employés, ou faire le CRUD (Create Read Update Delete) :
+=== Gérer les employés, ou faire le CRUD (Testa Thomas):
 
 __En cours de développement__
 
