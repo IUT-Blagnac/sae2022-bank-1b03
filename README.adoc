@@ -40,7 +40,7 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 |         | Recette V1  |                      | Manque le CRUD guchetier. La mise en page n'est pas bonne pour l'employé (tableau). Inspirez vous du cahier exemple donné par Esther Pendaries sur discord.
 |         | Suivi projet|   | 
 | 22/05   | Gantt V2/V3  à jour    | Mise à jour en cours | 
-|         | Doc. Util. V0 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%200/DocumentationUtilisateur.adoc |   
+|         | Doc. Util. V0 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%200/DocumentationUtilisateur.adoc |   Bien pensé dans la doc user à préciser les 2 rôles dans l'appli car un employé n'a pas accès à certaines fonctionnalités. 
 |         | Doc. Tec. V0 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%200/DocumentationTechnique.adoc |     
 |         | Code V1     | En cours d'implémentation                    | 
 |	  | Cahier des tests V2 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%202/Cahier%20de%20tests/cahierDeTest.adoc |
