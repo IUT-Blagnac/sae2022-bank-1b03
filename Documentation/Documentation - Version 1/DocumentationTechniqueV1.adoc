@@ -8,7 +8,6 @@ toc::[]
 
 :sectnums:
 
-=======
 == Répartition des tâches et état d'avancement
 [options="header,footer"]
 |=======================
@@ -48,8 +47,6 @@ image::plantuml/use-case.svg[]
 
 Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux types d'utilisateurs présents dans l'application, le guichetier et le chef d'agence. +
 
-<<<
-
 Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
 
 * Modifier les informations client (adresse, téléphone, …)
@@ -79,8 +76,6 @@ Lien vers la liendelajavadocdegithub.com[javadoc]
 .Diagramme de classe UML de la base de données
 image::images/DiagrammeUML.png[]
 
-<<<
-    
 * Une agence bancaire est composée de plusieurs employés.
 * Un employé peut être chef d'agence d'une ou plusieurs agences.
 * Un employé peut être un chef d'agence ou un guichetier selon les droits d'accès qu'il possède
