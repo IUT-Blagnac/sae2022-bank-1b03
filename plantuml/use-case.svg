@@ -12,7 +12,7 @@ link Guichetier to Modifier infos client--><g id="link_Guichetier_Modifier infos
 link Guichetier to Créditer compte--><g id="link_Guichetier_Créditer compte"><path d="M78.3612,405.623 C93.2827,431.422 116.091,463.746 145,483 C165.249,496.487 190.092,504.926 213.53,510.205 " fill="none" id="Guichetier-to-Créditer compte" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="218.507,511.284,210.5594,505.4672,213.6206,510.2242,208.8636,513.2854,218.507,511.284" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a5e774a1d0ff2163c754a2c83819def2]
 link Guichetier to Virment de compte à compte--><g id="link_Guichetier_Virment de compte à compte"><path d="M66.5477,405.787 C77.2364,448.58 100.2285,515.748 145,555 C158.167,566.544 174.246,575.126 190.87,581.507 " fill="none" id="Guichetier-to-Virment de compte à compte" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="195.571,583.249,188.522,576.3706,190.8826,581.5114,185.7419,583.872,195.571,583.249" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[66d898512ab145c363abd26c647df608]
 link Guichetier to Cloturer un compte--><g id="link_Guichetier_Cloturer un compte"><path d="M60.0258,326.06 C64.4569,268.033 81.3546,160.834 145,101 C160.862,86.088 181.804,76.848 202.874,71.17 " fill="none" id="Guichetier-to-Cloturer un compte" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="207.942,69.872,198.2311,68.2294,203.0983,71.1122,200.2154,75.9794,207.942,69.872" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a7889307f665c0b6be60aba10f76457c]
-link Guichetier to Créer un compte--><g id="link_Guichetier_Créer un compte"><path d="M65.521,326.481 C75.4484,282.442 97.9113,212.278 145,173 C163.214,157.808 186.873,148.859 209.847,143.637 " fill="none" id="Guichetier-to-Créer un compte" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="214.737,142.579,205.0941,140.5755,209.8504,143.6378,206.7881,148.3941,214.737,142.579" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6557c0432bc116371d2e424ccfee728d]
+link Guichetier to Créer un compte--><g id="link_Guichetier_Créer un compte"><path d="M65.521,326.481 C75.4484,282.442 97.9113,212.278 145,173 C163.214,157.808 186.873,148.859 209.847,143.637 " fill="none" id="Guichetier-to-Créer un compte" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="214.737,142.579,205.0941,140.5755,209.8504,143.6378,206.7881,148.3941,214.737,142.579" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[01558d47f6ca695fe548cfa9b8014f26]
 @startuml
 skinparam actorStyle awesome
 :Chef d'agence:
@@ -46,7 +46,7 @@ left to right direction
 (Guichetier) - -> (Créer un compte)
 @enduml
 
-PlantUML version 1.2022.4beta2(Unknown compile time)
+PlantUML version 1.2022.6beta5(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
