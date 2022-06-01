@@ -207,6 +207,8 @@ public class OperationsManagementController implements Initializable {
 			GeneratorPdfController ctrl = loader.getController();
 			
 			ctrl.setOperation(olOperation);
+			ctrl.setCompteConcerne(compteConcerne);
+			ctrl.setClient(clientDuCompte);
 			
 			Scene scene = new Scene(pane);
 			Stage stage = new Stage();
