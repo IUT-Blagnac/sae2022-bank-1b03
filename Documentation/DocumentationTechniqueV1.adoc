@@ -1,12 +1,47 @@
 :toc: macro
 :toclevels: 3
-:toc-title: Sommaire
+:toc-title: Sommaire 
 
-= Documentation Technique V1
+image::images/logo_iut.png[width=171] 
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Documentation Technique V1
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+<<<
 
 toc::[]
 
 :sectnums:
+
+<<<
 
 == Répartition des tâches et état d'avancement
 [options="header,footer"]
@@ -40,12 +75,16 @@ D pour en Développement
 
 L’application permet de gérer des comptes bancaires de dépôt pour des clients. Elle permet de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
+<<<
+
 === Use Case global de l'application 
 
 .Use Case global de l'application
 image::plantuml/use-case.svg[]
 
 Dans le diagramme des Use Case ci-dessus, nous pouvons observer qu'il y a deux types d'utilisateurs présents dans l'application, le guichetier et le chef d'agence. +
+
+<<<
 
 Le guichetier est l'employé "de base" du système. Il peut réaliser certaines opérations:
 
@@ -71,6 +110,8 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 
 Lien vers la liendelajavadocdegithub.com[javadoc]
 
+<<<
+
 === Diagramme de classe de la base de données
 
 .Diagramme de classe UML de la base de données
@@ -88,6 +129,8 @@ image::images/DiagrammeUML.png[]
 * Un emprunt peut être assuré.
 
 Pour l'instant l'application ne possède que certaines des fonctionnalités du diagramme ci-dessus. 
+
+<<<
 
 == Architecture
 
@@ -121,6 +164,8 @@ Remarque : _Si la version installée est Java 1.8.*, vous devriez pouvoir double
 _cd .\Téléchargements\_ +
 Remarque : _Si la version installée est Java 1.8.*, vous pouvez ignorer les trois étapes suivantes._
 
+<<<
+
 Sinon :
 
 * Exécuter ensuite la commande suivante : +
@@ -152,6 +197,8 @@ __Model__ :
 
 Il contient des classes de base de données correpondant à certaines tables de la base de données. Il permet également de manipuler les données de la base de données (classe orm).
 
+<<<
+
 == Fonctionnalités 
 
 === Modifier les informations d'un client
@@ -180,6 +227,8 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment ajouter un client ?"
 
+<<<
+
 Diagramme de séquence :
 
 .Diagramme de séquence pour la création d'un client
@@ -199,6 +248,8 @@ Diagramme de séquence :
 .Diagramme de séquence pour la consultation d'un compte
 image::images/DS-Consulter-Comptes.png[]
 
+<<<
+
 === Débiter un compte
 Partie "Débiter un compte" du diagramme des UC
 
@@ -208,11 +259,6 @@ Partie du diagramme de classes données nécessaires :
 * En mise à jour : Opération
 
 cf. doc. utilisateur "Comment enregistrer un débit manuellement ?"
-
-Diagramme de séquence :
-
-.Diagramme de séquence pour le débit d'un compte
-image::images/DS-Débiter-Comptes.png[]
 
 === Rendre inactif un client
 Partie "rendre inactif un client" du diagramme des UC
@@ -239,6 +285,8 @@ Diagramme de séquence:
 
 .Diagramme de séquence pour le crédit d'un compte
 image::images/DS-Crediter.svg[]
+
+<<<
 
 === Cloturer un compte (Mabille Matthis)
 
@@ -267,6 +315,8 @@ Partie du diagramme de classes données nécessaires :
 
 cf. doc. utilisateur "Comment créer un nouveau compte client ?"
 
+<<<
+
 Diagramme de séquence : 
 
 .Diagramme de séquence pour la création d'un compte
@@ -287,6 +337,8 @@ Diagramme de séquence:
 
 .Diagramme de séquence pour le virement d'un compte à un autre
 image::images/DS-Virement.svg[]
+
+<<<
 
 === Gérer les employés, ou faire le CRUD (Testa Thomas):
 
