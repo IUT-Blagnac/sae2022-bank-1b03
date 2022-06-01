@@ -7,16 +7,25 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Font.FontFamily;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import model.data.Client;
@@ -103,25 +112,63 @@ public class GeneratorPdfController implements Initializable {
 		 if (!Objects.isNull(this.chemin)) {
 			 Document document = new Document();
 			 try {
-				PdfWriter.getInstance(document, new FileOutputStream(this.chemin + "/relevé.pdf"));
+				PdfWriter.getInstance(document, new FileOutputStream(this.chemin + "/Relevé " + this.clientDuCompte.nom + "_" + this.compteConcerne.idNumCompte  + ".pdf"));
 				document.open();
-		        Paragraph preface = new Paragraph();
-		        preface.add(new Paragraph("Client: " + this.clientDuCompte.nom));
-		        preface.add(new Paragraph("Numéro client: " + this.clientDuCompte.idNumCli));
-		        preface.add(new Paragraph("ID du compte: " + this.compteConcerne.idNumCompte));
-		        preface.add(new Paragraph("Operation: "));
-		        for(int i = 0; i < operationList.size(); i++) {
-		        	preface.add(new Paragraph(operationList.get(i).toString()));
-		        }
-		        document.add(preface);
+				Paragraph body = new Paragraph();
+				Paragraph titre = new Paragraph();
+				Paragraph content = new Paragraph();
+				Font bold = new Font(FontFamily.HELVETICA, 25, Font.BOLD);
+				int nbColone = 3;
+				PdfPTable tableau = new PdfPTable(nbColone);
+				
+				
+				titre.setAlignment(Element.ALIGN_CENTER);
+				titre.setFont(bold);
+				titre.add("Relevé mensuel");
+				
+				content.add(new Paragraph("Client: " + this.clientDuCompte.prenom + " " + this.clientDuCompte.nom));
+				content.add(new Paragraph("Numéro client: " + this.clientDuCompte.idNumCli));
+				content.add(new Paragraph("Relevé du compte: " + this.compteConcerne.idNumCompte));
+				
+				
+				tableau.addCell(new PdfPCell(new Paragraph("Date")));
+				tableau.addCell(new PdfPCell(new Paragraph("Type opération")));
+				tableau.addCell(new PdfPCell(new Paragraph("Montant")));
+				
+				for (int i = 0; i < this.operationList.size(); i++) {
+					tableau.addCell(new PdfPCell(new Paragraph(this.operationList.get(i).dateOp.toString())));
+					tableau.addCell(new PdfPCell(new Paragraph(String.format("%25s", this.operationList.get(i).idTypeOp))));
+					tableau.addCell(new PdfPCell(new Paragraph(String.format("%10.02f", this.operationList.get(i).montant))));
+				}
+				
+				body.add(titre);
+				body.add(Chunk.NEWLINE);
+				body.add(content);
+				body.add(Chunk.NEWLINE);
+				body.add(tableau);
+				
+				document.add(body);
 				document.close();
+				
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setHeaderText("PDF");
+				alert.setContentText("PDF généré: " + this.chemin);
+				alert.showAndWait();
+				
 				this.stage.close();
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
+				erreur(e.toString());
 			} catch (DocumentException e) {
-				e.printStackTrace();
+				erreur(e.toString());
 			}
 		 }
+	}
+	
+	private void erreur(String message) {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setHeaderText("Erreur");
+		alert.setContentText(message);
+		alert.showAndWait();
 	}
 
 	/**
