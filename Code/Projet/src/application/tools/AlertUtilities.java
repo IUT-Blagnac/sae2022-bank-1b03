@@ -42,4 +42,11 @@ public class AlertUtilities {
 
 		alert.showAndWait();
 	}
+
+    public static void showAlert(AlertType error, String string, String string2) {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setHeaderText("Erreur");
+		alert.setContentText(string + "\n" + string2);
+		alert.showAndWait();
+    }
 }
