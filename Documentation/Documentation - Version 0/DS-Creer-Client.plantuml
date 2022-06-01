@@ -1,7 +1,0 @@
-@startuml
-ClientsManagementController -> ClientsManagement : doNouveauClient()
-    ClientsManagement -> AccessClient : nouveauClient()
-        AccessClient -> AccessClient : insertClient()
-    AccessClient --> ClientsManagement
-ClientsManagement --> ClientsManagementController
-@enduml
