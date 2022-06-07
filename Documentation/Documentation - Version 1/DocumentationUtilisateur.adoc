@@ -10,11 +10,13 @@ Nom du Projet : **Daily Bank** +
 Date : **29/05/2022** +
 Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
 ****
-
+:sectnums:
 toc::[Sommaire]
 
 == Contexte du projet
-Daily Bank est un réseau français de 100 agences bancaires. Il est nécessaire pour eux de restructurer leur réseau afin de s’intégrer dans une stratégie de différenciation. Ils possèdent plusieurs outils qui deviennent obsolètes et une première version d’application qui nécessite une refonte. Les besoins de la banque ont évolués, tout comme ceux de leurs clients, il faut donc développer plusieurs fonctinnalités pour répondre à ces nouveaux besoins.
+Daily Bank est un réseau français de 100 agences bancaires. Il est nécessaire pour eux de restructurer leur réseau afin de s’intégrer dans une stratégie de différenciation. Ils possèdent plusieurs outils qui deviennent obsolètes et une première version d’application qui nécessite une refonte. Les besoins de la banque ont évolués, tout comme ceux de leurs clients, il faut donc développer plusieurs fonctionnalités pour répondre à ces nouveaux besoins. +
+
+L'application DailyBank permet donc de gérer des comptes clients afin de remplacer plusieurs outils obsolètes. Les besoins de la banque et des clients ayant évolué des fonctionnalités doivent être développés, une première version de l'application doit donc être améliorée afin de répondre aux besoins.
 
 == Objectifs du projet
 Le but est de partir d’une application existante et d’y rajouter des fonctionnalités. Il y a deux types d’utilisateurs dans l’application : le guichetier et le chef d’agence. Les guichetiers pourront créer de nouveaux clients et faire les opérations courantes (CRUD). Les chefs d’agences pourront gérer les employés et les opérations exeptionnelles.
@@ -293,5 +295,7 @@ Vous serez alors redirigé vers les opérations du compte et vous pourrez voir q
 == Fonctionnalités supplémentaires (Chef d'Agence)
 === Clients  
 ==== Comment rendre inactif un client ?
+image::images/gestionnaireCompteClient.PNG[]
+image::images/Rendre_Inactif.PNG[]
 === Employés
 ==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)
