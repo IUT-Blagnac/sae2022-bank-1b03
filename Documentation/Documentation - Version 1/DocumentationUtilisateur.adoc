@@ -51,8 +51,8 @@ _java -version_
 Vous pouvez maintenant lancer l'application à l'aide de la commande suivante : +
 _java -jar DailyBankV0.jar_
 
-== Fonctionnalités de l'application
-=== Comment se connecter ?
+=== Fonctionnalités basiques de l'application
+==== Comment se connecter ?
 Pour se connecter sur l'application vous avez deux possiblités. Avec le bouton de connexion :
 
 image::images/connexion1.png[]
@@ -65,7 +65,7 @@ Un écran d'identification s'affiche. Vous devrez rentrer par la suite vos ident
 
 image::images/identification.png[]
 
-=== Comment se déconnecter ?
+==== Comment se déconnecter ?
 
 Pour se déconnecter, il faut se rendre sur la fenêtre principale, et cliquer sur le bouton "Déconnexion".
 
@@ -75,7 +75,7 @@ Vous pouvez également vous rendre dans le menu déroulant "Utilisateur" et cliq
 
 image::images/deconnexion2.png[]
 
-=== Comment quitter l'application ?
+==== Comment quitter l'application ?
 
 Il existe trois façons de quitter l'application dont une [red]*FORTEMENT DECONSEILLEE*.
 Pour fermer l'application, il faut que toutes les fenêtres soient fermées, sauf la fenêtre principal.
@@ -100,15 +100,15 @@ WARNING: [red]*Cette solution est fortement déconseillée.*
 Vous pouvez appuyer sur ALT+F4 pour fermer l'application.
 Un message de confirmation va quand même s'afficher. Cliquez ensuite sur "Ok" pour fermer l'application.
 
-== Clients
-=== Comment accéder au gestionnaire des clients ?
+=== Clients
+==== Comment accéder au gestionnaire des clients ?
 
 Pour accéder au gestionnaire de clients il faut tout d'abord se connecter. Une fois connecté, cliquez sur le menu déroulant "Gestion", et rendez-vous sur "Clients".
 
 image::images/gestionClients.png[]
 
 
-=== Comment ajouter un client ?
+==== Comment ajouter un client ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
@@ -124,7 +124,7 @@ Pour finir, il ne vous reste plus qu'à appuyer sur le bouton "Ajouter".
 
 image::images/resultatClientAjouter.PNG[]
 
-=== Comment rechercher un client ?
+==== Comment rechercher un client ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
@@ -140,7 +140,7 @@ La recherche peut être effectuée en entrant toutes les informations ou en remp
 
 A noter : Si vous décidez ne pas remplir toutes les cases, il est possible que vous tombiez sur plusieurs clients. De ce fait, si vous souhaitez chercher la famille d'un client, il est plus facile de trouver celle-ci en ne remplissant que la case Nom (à la condition qu'ils aient tous le même nom de famille et qu'il n'y ait pas d'autres clients avec le même nom).
 
-=== Comment modifier les informations personnelles d'un client ?
+==== Comment modifier les informations personnelles d'un client ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
@@ -158,8 +158,8 @@ Il ne vous reste plus qu'à modifier les informations personnelles du client. Qu
 
 A noter : Vous ne pouvez pas modifier le numéro d'identité du client ("ID").
 
-== Compte Client
-=== Comment accéder aux comptes d'un client ?
+=== Compte Client
+==== Comment accéder aux comptes d'un client ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
@@ -173,7 +173,7 @@ Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
 image::images/CompteClient.PNG[]
 
-=== Comment créer un nouveau compte client ?
+==== Comment créer un nouveau compte client ?
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -200,7 +200,7 @@ image::images/CompteClientModifié.png[]
 
 Un nouveau compte a été créé !
 
-=== Comment cloturer un compte client déjà existant ?
+==== Comment cloturer un compte client déjà existant ?
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -227,9 +227,9 @@ image::images/CompteSupprimé.png[]
 
 Le compte est maintenant cloturé ! Il n'est plus possible de le modifier, ni de voir les opérations de celui-ci.
 
-== Opérations
+=== Opérations
 
-=== Comment voir les opérations du compte d'un client ?
+==== Comment voir les opérations du compte d'un client ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
@@ -243,7 +243,7 @@ Cliquez ensuite sur "Voir opérations".
 
 image::images/OpérationCompteVisualisation.PNG[]
 
-=== Comment enregistrer un débit manuellement ?
+==== Comment enregistrer un débit manuellement ?
 
 _Tout d'abord commencez par vous rendre sur la fenêtre du compte d'un client et visionnez les opérations de celui-ci._
 
@@ -257,7 +257,7 @@ Entrez le montant du retrait. Quand vous avez fini, appuyez sur le bouton "Effec
 
 A noter : Si cela ne fonctionne pas, alors vérifiez qu'il soit possible de retirer le montant que vous souhaitez.
 
-=== Comment enregistrer un crédit manuellement ?
+==== Comment enregistrer un crédit manuellement ?
 
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
@@ -273,7 +273,7 @@ image::images/crediter-nouvelle-op.png[]
 
 Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
-=== Comment effectuer un virement ?
+==== Comment effectuer un virement ?
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
 image::images/effectuerVirement.png[]
@@ -291,5 +291,7 @@ image::images/virementFin.png[]
 Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
 == Fonctionnalités supplémentaires (Chef d'Agence)
-== Employés
-=== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)
+=== Clients  
+==== Comment rendre inactif un client ?
+=== Employés
+==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)
