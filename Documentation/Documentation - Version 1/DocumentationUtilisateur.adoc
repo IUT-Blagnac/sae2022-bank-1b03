@@ -295,7 +295,19 @@ Vous serez alors redirigé vers les opérations du compte et vous pourrez voir q
 == Fonctionnalités supplémentaires (Chef d'Agence)
 === Clients  
 ==== Comment rendre inactif un client ?
+_Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
+
+image::images/gestionnaireClientChercher.PNG[]
+
+Vous pouvez cliquer sur un client afin d'accéder aux différentes options à droite de la fenêtre qui vient de s'ouvrir.
+
 image::images/gestionnaireCompteClient.PNG[]
+
+Appuyez sur le bouton "Modifier client".
+
 image::images/Rendre_Inactif.PNG[]
+
+Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
+
 === Employés
 ==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)

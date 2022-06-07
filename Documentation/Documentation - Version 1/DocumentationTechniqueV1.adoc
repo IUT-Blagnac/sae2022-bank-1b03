@@ -60,7 +60,7 @@ Le guichetier est l'employé "de base" du système. Il peut réaliser certaines 
 
 Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effectuer toutes les opérations de celui-ci en plus de:
 
-* rendre inactif un client.
+* Rendre inactif un client.
 * Gérer les employés, ou faire le CRUD (Create Read Update Delete)
 ** Créer un employé
 ** Consulter un employé
@@ -136,12 +136,25 @@ _java -jar DailyBankV0.jar_
 
 === En tant qu'administrateur / développeur de l'application
 
+==== Mise à jour de l'application :
 Récupération des fichiers de l'application :
 __Nous supposons que si vous lisez cette documentation vous avez déjà téléchargé les fichiers de l'application__ +
 Dans le cas où vous n'avez pas téléchargé les fichiers, vous pouvez les récupérer en téléchargeant le fichier .zip suivant : +
 Lien de téléchargement : https://drive.google.com/uc?export=download&id=1ORGMypfTuQehRWY30FYxD1HWBft4G3yh[DailyBankVO.zip]
 
-Dézipper le fichier
+Dézippez le fichier. +
+Importer le projet DailyBankV0.zip dans Eclipse et paramétrez, si ce n'est pas déjà fait, votre IDE avec JAVA FX et Java 1.8. +
+
+Vous pouvez vous aider de la documentation suivante : +
+https://drive.google.com/uc?export=download&id=1XbbbfOMqZqDLiM7JNsxBTqlFxd1TE8U_[Lien vers la documentation]
+
+==== Mise à jour de la base de données :
+
+Pour mettre à jour la base de données, vous devez avoir un accès à une base de données Oracle.
+
+Il faut que les identifiants du compte Oracle que vous possédez soit ceux correspondant dans le code Java au niveau de la classe LogToDataBase.java.
+
+Vous pouvez par exemple utiliser le logiciel SQL Developper pour vous connecter à la base de données avec les logins que vous possédez. Ne pas oublier de modifier le nom d'hôte en "oracle.iut-blagnac.fr" et de modifier le SID en "db11g".
 
 === Structuration en packages de l’application documentée. Principes retenus pour cette structuration
 L'application est structurée en plusieurs packages. Le modèle retenu est le modèle est le modèle MVC (modèle, view, controller). De plus on regroupe les packages en deux catégories: +
