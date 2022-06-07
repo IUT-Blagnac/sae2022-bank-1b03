@@ -119,6 +119,11 @@ public class ComptesManagement {
 		if(compte == null)
 			return compte;
 		
+		if(compte.solde != 0){
+			AlertUtilities.showAlert(AlertType.ERROR, "Impossible de clôturer ce compte", "Le solde du compte est différent de zéro");
+			return null;
+		}
+		
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dbs);
 		CompteCourant nvCompte = cep.doCompteEditorDialog(this.clientDesComptes, compte, EditionMode.SUPPRESSION);
 		
