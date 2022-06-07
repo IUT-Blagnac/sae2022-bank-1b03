@@ -96,7 +96,7 @@ public class ComptesManagement {
 		
 		try {
 			AccessCompteCourant acc = new AccessCompteCourant();				
-			acc.créerCompte(compte);
+			acc.creerCompte(compte);
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 			ed.doExceptionDialog();
