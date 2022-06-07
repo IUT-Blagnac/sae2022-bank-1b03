@@ -1,26 +1,130 @@
 package application.control;
 
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
 import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
 import application.view.EmployesManagementController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.data.Client;
 import model.data.Employe;
 import model.orm.AccessEmploye;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
 public class EmployesManagement {
-
+	
+	private EmployesManagement em;
+	private ObservableList<Employe> ole;
 	private Stage primaryStage;
 	private DailyBankState dbs;
 	private EmployesManagementController emc;
+	
+	
+	@FXML
+	private ListView<Employe> lvEmployes;
+	@FXML
+	private TextField txtNum;
+	@FXML
+	private TextField txtNom;
+	@FXML
+	private TextField txtPrenom;
+	@FXML
+	private Button btnDesactEmploye;
+	@FXML
+	private Button btnModifEmploye;
+	@FXML
+	private Button btnComptesEmploye;
+	
+	public void initContext(Stage _primaryStage, EmployesManagement _em, DailyBankState _dbstate) {
+		this.em = _em;
+		this.primaryStage = _primaryStage;
+		this.dbs = _dbstate;
+		this.configure();
+		this.doRechercher();
+	}
+	
+	private void configure() {
+		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
+		this.ole = FXCollections.observableArrayList();
+		this.lvEmployes.setItems(this.ole);
+		this.lvEmployes.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+		this.lvEmployes.getFocusModel().focus(-1);
+		this.lvEmployes.getSelectionModel().selectedItemProperty().addListener(e -> this.validateComponentState());
+		this.validateComponentState();
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+	}
+	
+	@FXML
+	private void doCancel() {
+		this.primaryStage.close();
+	}
+	
+	@FXML
+	private void doRechercher() {
+		int numCompte;
+		try {
+			String nc = this.txtNum.getText();
+			if (nc.equals("")) {
+				numCompte = -1;
+			} else {
+				numCompte = Integer.parseInt(nc);
+				if (numCompte < 0) {
+					this.txtNum.setText("");
+					numCompte = -1;
+				}
+			}
+		} catch (NumberFormatException nfe) {
+			this.txtNum.setText("");
+			numCompte = -1;
+		}
+
+		String debutNom = this.txtNom.getText();
+		String debutPrenom = this.txtPrenom.getText();
+
+		if (numCompte != -1) {
+			this.txtNom.setText("");
+			this.txtPrenom.setText("");
+		} else {
+			if (debutNom.equals("") && !debutPrenom.equals("")) {
+				this.txtPrenom.setText("");
+			}
+		}
+
+		// Recherche des clients en BD. cf. AccessClient > getClients(.)
+		// numCompte != -1 => recherche sur numCompte
+		// numCompte != -1 et debutNom non vide => recherche nom/prenom
+		// numCompte != -1 et debutNom vide => recherche tous les clients
+		ArrayList<Client> listeCli;
+		listeCli = this.cm.getlisteComptes(numCompte, debutNom, debutPrenom);
+
+		this.olc.clear();
+		for (Client cli : listeCli) {
+			this.olc.add(cli);
+		}
+
+		this.validateComponentState();
+	}
+	
 	/** Constructeur de la classe qui permet de paramétrer la fenêtre
 	 * @param _parentStage la scène parente
 	 * @param _dbstate la session de l'utilisateur
