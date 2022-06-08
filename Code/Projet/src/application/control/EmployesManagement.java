@@ -1,24 +1,24 @@
 package application.control;
 
+import javafx.stage.Stage;
+
 import java.util.ArrayList;
 
 import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
-import application.view.ClientsManagementController;
 import application.view.EmployesManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
-import javafx.stage.Stage;
-import model.data.Client;
 import model.data.Employe;
-import model.orm.AccessClient;
 import model.orm.AccessEmploye;
 import model.orm.exception.ApplicationException;
+import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
+import model.orm.exception.RowNotFoundOrTooManyRowsException;
 
 public class EmployesManagement {
 
@@ -26,14 +26,15 @@ public class EmployesManagement {
 	private DailyBankState dbs;
 	private EmployesManagementController emc;
 
-	/** Constructeur de la classe qui permet de paramétrer la fenêtre
-	 * @param _parentStage la scène parente
-	 * @param _dbstate la session de l'utilisateur
+	/**
+	 * Constructeur de la classe EmployesManagement permettant de charger la vue de gestion des employes
+	 * @param _parentStage Stage parent de la vue
+	 * @param _dbstate Etat actuel de l'application DailyBank
 	 */
 	public EmployesManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
-			FXMLLoader loader = new FXMLLoader(ClientsManagementController.class.getResource("clientsmanagement.fxml"));
+			FXMLLoader loader = new FXMLLoader(EmployesManagementController.class.getResource("employesmanagement.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth()+50, root.getPrefHeight()+10);
@@ -41,10 +42,10 @@ public class EmployesManagement {
 
 			this.primaryStage = new Stage();
 			this.primaryStage.initModality(Modality.WINDOW_MODAL);
-			this.primaryStage.initOwner(_parentStage);
+			this.primaryStage.initOwner(_parentStage); 
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
-			this.primaryStage.setTitle("Gestion des clients");
+			this.primaryStage.setTitle("Gestion des employes");
 			this.primaryStage.setResizable(false);
 
 			this.emc = loader.getController();
@@ -56,24 +57,24 @@ public class EmployesManagement {
 	}
 
 	/**
-	 * Permet d'afficher la scène grâce à l'appel de la fonction du controleur pour la gestion de clients
+	 * Active l'affichage de la vue de gestion des employes
 	 */
 	public void doEmployeManagementDialog() {
 		this.emc.displayDialog();
 	}
 
 	/**
-	 * Permet de modifier les informations d'un client
-	 * @param c	le client sélectionné
-	 * @return le client avec les informations modifiées
+	 * Active l'affichage de la vue de modification d'un employe
+	 * @param e Le employe à modifier
+	 * @return Le employe modifié
 	 */
-	public Employe modifierEmploye(Employe em) {
-		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
-		Employe result = cep.doEmployeEditorDialog(em, EditionMode.MODIFICATION);
+	public Employe modifierEmploye(Employe emp) {
+		EmployeEditorPane eep = new EmployeEditorPane(this.primaryStage, this.dbs);
+		Employe result = eep.doEmployeEditorDialog(emp, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
-				AccessEmploye ac = new AccessEmploye();
-				ac.updateEmploye(result);
+				AccessEmploye ae = new AccessEmploye();
+				ae.updateEmploye(result);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
@@ -88,18 +89,19 @@ public class EmployesManagement {
 		return result;
 	}
 
-	/** Permet de créer un nouveau client
-	 * @return le client créée
+	/**
+	 * Active l'affichage de la vue d'ajout d'un employe
+	 * @return Le nouvel employe créé
 	 */
-	public Employe nouveauEmploye() {
+	public Employe nouvelEmploye() {
 		Employe employe;
-		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
-		employe = cep.doEmployeEditorDialog(null, EditionMode.CREATION);
+		EmployeEditorPane eep = new EmployeEditorPane(this.primaryStage, this.dbs);
+		employe = eep.doEmployeEditorDialog(null, EditionMode.CREATION);
 		if (employe != null) {
 			try {
-				AccessEmploye ac = new AccessEmploye();
+				AccessEmploye ae = new AccessEmploye();
 
-				ac.insertEmploye(employe);
+				ae.insertEmploye(employe);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
@@ -113,23 +115,42 @@ public class EmployesManagement {
 		}
 		return employe;
 	}
+	/**
+	 * Supprime un employé
+	 * @param emp employé à supprimer
+	 */
+	public void supprimerEmploye(Employe emp) {
+		try {
+			AccessEmploye ae = new AccessEmploye();
+			
+			ae.deleteEmploye(emp);
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			this.primaryStage.close();
+		} catch (ApplicationException ae) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+			ed.doExceptionDialog();
+		}
+	}
 
-	/** Permet de rechercher la liste des comptes clients en fonction des paramètres
-	 * @param _numCompte numéro de compte recherché
-	 * @param _debutNom	nom du client recherché
-	 * @param _debutPrenom	prenom du client recherché
-	 * @return une liste de compte client selon les paramètres de recherche
+	/**
+	 * Récupère la liste des employés
+	 * @param _numCompte ID de l'employé à chercher
+	 * @param _debutNom Début du nom de l'employé à chercher
+	 * @param _debutPrenom Début du prénom de l'employé à chercher
+	 * @return Liste la liste des employés trouvés
 	 */
 	public ArrayList<Employe> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
 		ArrayList<Employe> listeEmp = new ArrayList<>();
 		try {
-			// Recherche des clients en BD. cf. AccessClient > getClients(.)
+			// Recherche des employés en BD. cf. AccessEmploye > getEmployes(.)
 			// numCompte != -1 => recherche sur numCompte
 			// numCompte != -1 et debutNom non vide => recherche nom/prenom
-			// numCompte != -1 et debutNom vide => recherche tous les clients
+			// numCompte != -1 et debutNom vide => recherche tous les employés
 
-			AccessEmploye ac = new AccessEmploye();
-			listeEmp = ac.getEmployes(this.dbs.getEmpAct().idAg, _numCompte, _debutNom, _debutPrenom);
+			AccessEmploye ae = new AccessEmploye();
+			listeEmp = ae.getEmployes(this.dbs.getEmpAct().idAg, _numCompte, _debutNom, _debutPrenom);
 
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);

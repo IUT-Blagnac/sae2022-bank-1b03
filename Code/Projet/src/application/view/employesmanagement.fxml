@@ -24,7 +24,7 @@
             </Button>
          </top>
          <bottom>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouveauEmploye" text="Nouveau employé" BorderPane.alignment="CENTER">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouvelEmploye" text="Nouvel employé" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" right="10.0" top="10.0" />
                </BorderPane.margin>
@@ -34,32 +34,24 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
                   <GridPane alignment="CENTER">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
+                    </rowConstraints>
                      <children>
-                        <Button fx:id="btnComptesClient" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doComptesClient" opacity="0.0">
+                        <Button fx:id="btnModifEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierEmploye" text="Modifier employé">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnModifEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierEmploye" text="Modifier employé" GridPane.rowIndex="2">
+                        <Button fx:id="btnSupprEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerEmploye" text="Supprimer employé" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnDesactEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDesactiverEmploye" text="Désactiver employé" GridPane.rowIndex="3">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </Button>
-                        <Button layoutX="10.0" layoutY="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" visible="false" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>

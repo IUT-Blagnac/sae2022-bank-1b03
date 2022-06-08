@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import application.DailyBankState;
-import application.control.ClientsManagement;
 import application.control.EmployesManagement;
+import application.tools.AlertUtilities;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
@@ -30,32 +31,21 @@ public class EmployesManagementController implements Initializable {
 	private Stage primaryStage;
 
 	// Données de la fenêtre
-	private ObservableList<Employe> olc;
+	private ObservableList<Employe> ole;
 
 	// Manipulation de la fenêtre
-	/**
-	 * Initialise la fenêtre de l'application
-	 * 
-	 * @param _primaryStage
-	 * @param _cm
-	 * @param _dbstate
-	 */
 	public void initContext(Stage _primaryStage, EmployesManagement _em, DailyBankState _dbstate) {
 		this.em = _em;
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
-		this.doRechercher();
 	}
 
-	/**
-	 * Configure la fermeture de l'application
-	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
-		this.olc = FXCollections.observableArrayList();
-		this.lvEmployes.setItems(this.olc);;
+		this.ole = FXCollections.observableArrayList();
+		this.lvEmployes.setItems(this.ole);
 		this.lvEmployes.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 		this.lvEmployes.getFocusModel().focus(-1);
 		this.lvEmployes.getSelectionModel().selectedItemProperty().addListener(e -> this.validateComponentState());
@@ -63,19 +53,13 @@ public class EmployesManagementController implements Initializable {
 	}
 
 	/**
-	 * Affiche la fenêtre de l'application
+	 * Affiche la vue de gestion des employes
 	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
 
 	// Gestion du stage
-	/**
-	 * Parametre la fermeture de la fenetre
-	 * 
-	 * @param e	fenetre
-	 * @return	null
-	 */
 	private Object closeWindow(WindowEvent e) {
 		this.doCancel();
 		e.consume();
@@ -89,33 +73,23 @@ public class EmployesManagementController implements Initializable {
 	private TextField txtNom;
 	@FXML
 	private TextField txtPrenom;
+	
 	@FXML
 	private ListView<Employe> lvEmployes;
 	@FXML
-	private Button btnDesactEmploye;
+	private Button btnSupprEmploye;
 	@FXML
 	private Button btnModifEmploye;
 
-	/**
-	 * Initialise le controleur
-	 * @param location		un URL
-	 * @param resources		ressources Bundle
-	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
-	/**
-	 * Quitte le fenetre employe
-	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
-	/**
-	 * Recherche un client dans la base de données
-	 */
 	@FXML
 	private void doRechercher() {
 		int numCompte;
@@ -147,57 +121,64 @@ public class EmployesManagementController implements Initializable {
 			}
 		}
 
-		this.olc.clear();
+		// Recherche des clients en BD. cf. AccessEmploye > getEmploye(.)
+		// numCompte != -1 => recherche sur numCompte
+		// numCompte != -1 et debutNom non vide => recherche nom/prenom
+		// numCompte != -1 et debutNom vide => recherche tous les employes
+		ArrayList<Employe> listeEmp;
+		listeEmp = this.em.getlisteComptes(numCompte, debutNom, debutPrenom);
+
+		this.ole.clear();
+		for (Employe emp : listeEmp) {
+			this.ole.add(emp);
+		}
 
 		this.validateComponentState();
 	}
-
-	/**
-	 * Valide la modification d'un compte client
-	 */
+	
 	@FXML
 	private void doModifierEmploye() {
 
 		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			Employe empMod = (Employe) this.olc;
+			Employe empMod = this.ole.get(selectedIndice);
 			Employe result = this.em.modifierEmploye(empMod);
 			if (result != null) {
-				this.olc.set(selectedIndice, result);
+				this.ole.set(selectedIndice, result);
 			}
 		}
 	}
 
-	/**
-	 * Desactive un client actif 
-	 */
 	@FXML
-	private void doDesactiverEmploye() {
-	}
-
-	/**
-	 * Ajout d'un nouveau client
-	 */
-	@FXML
-	private void doNouveauEmploye() {
-		Employe employe;
-		employe = this.em.nouveauEmploye();
-		if (employe != null) {
-			this.olc.add(employe);
+	private void doSupprimerEmploye() {
+		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			Employe empSup = this.ole.get(selectedIndice);
+			boolean confirmation = AlertUtilities.confirmYesCancel(primaryStage, "Confirmation de suppression", "Voulez-vous vraiment supprimer cet employé ?", empSup.toString(), AlertType.CONFIRMATION);
+			if (confirmation) {
+				this.em.supprimerEmploye(empSup);
+				this.ole.remove(selectedIndice);				
+			}
 		}
 	}
 
-	/**
-	 * Modifie le statut des boutons en fonction de la selection correspondante
-	 */
+	@FXML
+	private void doNouvelEmploye() {
+		Employe employe;
+		employe = this.em.nouvelEmploye();
+		if (employe != null) {
+			this.ole.add(employe);
+		}
+	}
+
 	private void validateComponentState() {
-		// Non implémenté => désactivé
-		this.btnDesactEmploye.setDisable(true);
 		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnModifEmploye.setDisable(false);
+			this.btnSupprEmploye.setDisable(false);
 		} else {
 			this.btnModifEmploye.setDisable(true);
+			this.btnSupprEmploye.setDisable(true);
 		}
 	}
 }

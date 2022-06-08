@@ -1,5 +1,6 @@
 package application.control;
 
+import javafx.stage.Stage;
 import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.EditionMode;
@@ -10,18 +11,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
-import javafx.stage.Stage;
 import model.data.Employe;
 
 public class EmployeEditorPane {
 
 	private Stage primaryStage;
-	private EmployeEditorPaneController cepc;
+	private EmployeEditorPaneController eepc;
 
 	/**
-	 * Constructeur de la classe qui permet de paramétrer la fenêtre
-	 * @param _parentStage la scène parente
-	 * @param _dbstate la session de l'utilisateur
+	 * Constructeur de la classe EmployeEditorPane permettant de charger la vue d'édition d'un employe
+	 * @param _parentStage Stage parent de la vue
+	 * @param _dbstate Etat actuel de l'application DailyBank
 	 */
 	public EmployeEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
@@ -37,11 +37,11 @@ public class EmployeEditorPane {
 			this.primaryStage.initOwner(_parentStage);
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
-			this.primaryStage.setTitle("Gestion d'un employé");
+			this.primaryStage.setTitle("Gestion d'un employe");
 			this.primaryStage.setResizable(false);
 
-			this.cepc = loader.getController();
-			this.cepc.initContext(this.primaryStage, _dbstate);
+			this.eepc = loader.getController();
+			this.eepc.initContext(this.primaryStage, _dbstate);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -49,12 +49,12 @@ public class EmployeEditorPane {
 	}
 
 	/**
-	 * Permet de construire un editeur de dialogue
-	 * @param client Le client en modification
-	 * @param em Mode d'édition actuel
-	 * @return le employe possiblement modifié
+	 * Active l'affichage de la vue d'édition d'un employe
+	 * @param employe L'employe à modifier
+	 * @param em Le mode d'édition
+	 * @return L'employe modifié
 	 */
 	public Employe doEmployeEditorDialog(Employe employe, EditionMode em) {
-		return this.cepc.displayDialog(employe, em);
+		return this.eepc.displayDialog(employe, em);
 	}
 }
