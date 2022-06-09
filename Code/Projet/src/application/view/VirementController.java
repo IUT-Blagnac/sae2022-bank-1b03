@@ -47,12 +47,19 @@ public class VirementController implements Initializable {
 	
 	@FXML
 	private ListView<CompteCourant> listView;
+	
+	@FXML
+	private Button buttonAnnuler;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		buttonEnvoyer.setOnAction(event -> envoyerVirement());
+		buttonAnnuler.setOnAction(event -> annuler());
 	}
 
+	/**
+	 * Permet d'envoyer un virement
+	 */
 	private void envoyerVirement() {
 		int montant, selectedIndice;
 		String montantText = this.textFieldMontant.getText();
@@ -90,17 +97,30 @@ public class VirementController implements Initializable {
 		
 	}
 	
+	/**
+	 * Setter listView
+	 * @param pfList
+	 */
 	public void setDataListView (ObservableList<CompteCourant> pfList) {
 		this.listView.setItems(pfList);
 		this.listComptes = pfList;
 	}
 
+	/**
+	 * Setter compteConcerne
+	 * @param pfCompteConcerne
+	 */
 	public void setCompteConcerne(CompteCourant pfCompteConcerne) {
 		this.compteConcerne = pfCompteConcerne;
 		this.soldeText.setText(Double.toString(pfCompteConcerne.solde));
 	}
 	
-	public static boolean isParsable(String input) {
+	/**
+	 * Permet de savoir si une chaine de caractère peut être transformé en entier
+	 * @param input
+	 * @return vrais si c'est possible
+	 */
+	private static boolean isParsable(String input) {
 	    try {
 	        Integer.parseInt(input);
 	        return true;
@@ -108,15 +128,34 @@ public class VirementController implements Initializable {
 	        return false;
 	    }
 	}
+	
+	/**
+	 * quitte le fenêtre
+	 */
+	private void annuler() {
+		this.stage.close();
+	}
 
+	/**
+	 * Setter primaryStage
+	 * @param pfPrimaryStage
+	 */
 	public void setPrimaryStage(Stage pfPrimaryStage) {
 		this.primaryStage = pfPrimaryStage;
 	}
-
+	
+	/**
+	 * setter dbs
+	 * @param pfDbs
+	 */
 	public void setDataBase(DailyBankState pfDbs) {
 		this.dbs = pfDbs;
 	}
 	
+	/**
+	 * Permet d'afficher une alert
+	 * @param message
+	 */
 	private void alertBox (String message) {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setHeaderText("Erreur");
@@ -124,10 +163,18 @@ public class VirementController implements Initializable {
 		alert.showAndWait();
 	}
 
+	/**
+	 * Setter de stage
+	 * @param pfStage
+	 */
 	public void setStage(Stage pfStage) {
 		this.stage = pfStage;
 	}
 
+	/**
+	 * Setter operationManagement
+	 * @param pfOperationsManagementController
+	 */
 	public void setOperationManagement(OperationsManagementController pfOperationsManagementController) {
 		this.operationManagement = pfOperationsManagementController;
 	}

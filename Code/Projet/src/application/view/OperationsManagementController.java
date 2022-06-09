@@ -113,7 +113,9 @@ public class OperationsManagementController implements Initializable {
 	private Button btnCredit;
 	@FXML
 	private Button btnVirement;
-
+	@FXML
+	private Button btnPdf;
+	
 	/**
 	 * Initialise le controleur
 	 */
@@ -160,13 +162,9 @@ public class OperationsManagementController implements Initializable {
 	 */
 	@FXML
 	private void doVirement() {
-		// affichage
-		ListView<CompteCourant> comptesListView = new ListView<CompteCourant>();
-		comptesListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-		comptesListView.getFocusModel().focus(-1);
 		// compte
 		ObservableList<CompteCourant> comptes;
-		comptes = FXCollections.observableArrayList(this.getAllCompteCourant());
+		comptes = FXCollections.observableArrayList(this.getAllCompteCourant(this.clientDuCompte.idNumCli));
 		
 		// affiche la vue
 		try {
@@ -185,6 +183,7 @@ public class OperationsManagementController implements Initializable {
 			stage.setTitle("Virement");
 			stage.initOwner(this.primaryStage);
 			stage.setScene(scene);
+			
 			ctrl.setStage(stage);
 			
 			stage.showAndWait();
@@ -193,6 +192,37 @@ public class OperationsManagementController implements Initializable {
 			System.out.println("Erreur : " + e);
 		}
 		
+	}
+	
+	/**
+	 * Générer un relevé mensuel d’un compte en PDF
+	 */
+	@FXML
+	private void doPdf() {
+		// affiche la vue
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(this.getClass().getResource("generatorPdfPane.fxml"));
+			BorderPane pane = loader.load();
+			GeneratorPdfController ctrl = loader.getController();
+			
+			ctrl.setOperation(olOperation);
+			ctrl.setCompteConcerne(compteConcerne);
+			ctrl.setClient(clientDuCompte);
+			
+			Scene scene = new Scene(pane);
+			Stage stage = new Stage();
+			stage.setTitle("Générer un relevé mensuel d’un compte");
+			stage.initOwner(this.primaryStage);
+			stage.setScene(scene);
+
+			ctrl.setStage(stage);
+			
+			stage.showAndWait();
+			
+		} catch (IOException e) {
+			System.out.println("Erreur : " + e);
+		}
 	}
 
 	/**
@@ -203,6 +233,11 @@ public class OperationsManagementController implements Initializable {
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
 		this.btnVirement.setDisable(false);
+		if (olOperation.size() != 0) {
+			this.btnPdf.setDisable(false);
+		} else {
+			this.btnPdf.setDisable(true);
+		}
 	}
 
 	/**
@@ -236,14 +271,15 @@ public class OperationsManagementController implements Initializable {
 		this.validateComponentState();
 	}
 	
-	/** Permet d'obtenir la Liste des comptes courants
+	/** Permet d'obtenir la Liste des comptes courants d'un client
+	 * Si la valeur est -1 les comptes de tous les clients seront retourné
 	 * @return	la liste des comptes courants
 	 */
-	private ArrayList<CompteCourant> getAllCompteCourant () {
+	private ArrayList<CompteCourant> getAllCompteCourant (int id) {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 		try {
 			AccessCompteCourant acc = new AccessCompteCourant();
-			listeCpt = acc.getCompteCourants(-1);
+			listeCpt = acc.getCompteCourants(id);
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 			ed.doExceptionDialog();
