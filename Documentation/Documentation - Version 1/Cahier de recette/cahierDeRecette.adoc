@@ -6,17 +6,20 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 Le Guichetier
 
 |===
-| Cas de test
-| Titre
-| Objectif
+| Cas de test |
+| Titre |
+| Objectif |
 | ID | Action | Comportement attendu |Résultat |
 | aa
 |===
 
 |===
-| idTest | nom Test | nom Cas d'utilisation | Conditions de satisfaction | Pré-conditions |
-
+| ID | Action | Comportement attendu | Résultat
 | 1
+| TestCréerCompte
+| Créer un client avec les informations renseignées
+| Le client est créé avec les informations renseignées
+| 2
 | TestCréerCompte
 | Créer un client avec les informations renseignées
 | Le client est créé avec les informations renseignées
