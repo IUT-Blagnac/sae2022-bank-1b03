@@ -6,14 +6,21 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 Le Guichetier
 
 |===
+<<<<<<< Updated upstream
 | Cas de test | Test 01
 | Titre | Création d'un compte Bancaire
 | Objectif | Vérifier que le compte Bancaire est crée avec succès
+=======
+| Cas de test | test 03
+| Titre | Créditer un compte bancaire
+| Objectif | Vérifier que la fonctionnalité créditer un compte bancaire est valide
+>>>>>>> Stashed changes
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
 | 1
+<<<<<<< Updated upstream
 | TestCréerCompteBancaire
 | Créer un compte bancaire client avec les informations renseignées
 | Le compte bancaire est créé avec les informations renseignées
@@ -78,6 +85,11 @@ Le nouveau solde est +50. On a créé une nouvelle opération. Et l’opération
 | Cloturer un compte
 | Cloture un compte bancaire. Le compte n'est plus disponible pour effectuer des opérations.
 
+=======
+| TestCréditerCompte
+| Crédite un client du montant entré et ajoute l'opération au relevé.
+| Le montant est ajouté au solde du compte et l'opération est ajoutée au relevé
+>>>>>>> Stashed changes
 |===
 
 Le Chef d'agence
