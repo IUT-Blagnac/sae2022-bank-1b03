@@ -6,24 +6,33 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 Le Guichetier
 
 |===
-| Cas de test |
-| Titre |
-| Objectif |
-| ID | Action | Comportement attendu |Résultat |
-| aa
+| Cas de test | Test 01
+| Titre | Création d'un compte Bancaire
+| Objectif | Vérifier que le compte Bancaire est crée avec succès
 |===
 
 |===
-| ID | Action | Comportement attendu | Résultat
+| ID | Action | Comportement attendu | Résultat | Pré-condition
 | 1
-| TestCréerCompte
-| Créer un client avec les informations renseignées
-| Le client est créé avec les informations renseignées
+| TestCréerCompteBancaire
+| Créer un compte bancaire client avec les informations renseignées
+| Le compte bancaire est créé avec les informations renseignées
+| Le compte client est actif
+|===
+
+|===
+| Cas de test | Test 02
+| Titre | Cloturation d'un compte Bancaire
+| Objectif | Vérifier que le compte Bancaire est cloturer avec succès
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
 | 2
-| TestCréerCompte
-| Créer un client avec les informations renseignées
-| Le client est créé avec les informations renseignées
-| Le client existe dans la base de données.
+| TestCloturerCompteBancaire
+| Supprimer (cloturer) un compte bancaire client déjà existant
+| Le compte bancaire (existant) doit avoir un solde de 0€ pour le cloturer
+| Le compte client est actif
 |===
 
 |===
