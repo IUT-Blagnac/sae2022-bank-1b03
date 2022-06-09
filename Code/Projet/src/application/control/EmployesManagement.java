@@ -71,20 +71,37 @@ public class EmployesManagement {
 	public Employe modifierEmploye(Employe emp) {
 		EmployeEditorPane eep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		Employe result = eep.doEmployeEditorDialog(emp, EditionMode.MODIFICATION);
-		if (result != null) {
-			try {
-				AccessEmploye ae = new AccessEmploye();
-				ae.updateEmploye(result);
-			} catch (DatabaseConnexionException e) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
-				ed.doExceptionDialog();
-				result = null;
-				this.primaryStage.close();
-			} catch (ApplicationException ae) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
-				ed.doExceptionDialog();
-				result = null;
+		AccessEmploye ae = new AccessEmploye();
+		try {
+			if (result != null && ae.getEmploye(result.login, result.motPasse)==null) {
+				try {
+					ae.updateEmploye(result);
+				} catch (DatabaseConnexionException e) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+					ed.doExceptionDialog();
+					result = null;
+					this.primaryStage.close();
+				} catch (ApplicationException ae1) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae1);
+					ed.doExceptionDialog();
+					result = null;
+				}
 			}
+		} catch (RowNotFoundOrTooManyRowsException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			e.printStackTrace();
+			result = null;
+		} catch (DataAccessException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			e.printStackTrace();
+			result = null;
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			e.printStackTrace();
+			result = null;
 		}
 		return result;
 	}
@@ -97,21 +114,40 @@ public class EmployesManagement {
 		Employe employe;
 		EmployeEditorPane eep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		employe = eep.doEmployeEditorDialog(null, EditionMode.CREATION);
-		if (employe != null) {
-			try {
-				AccessEmploye ae = new AccessEmploye();
-
-				ae.insertEmploye(employe);
-			} catch (DatabaseConnexionException e) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
-				ed.doExceptionDialog();
-				this.primaryStage.close();
-				employe = null;
-			} catch (ApplicationException ae) {
-				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
-				ed.doExceptionDialog();
-				employe = null;
+		AccessEmploye ae = new AccessEmploye();
+		try {
+			if (employe != null && ae.getEmploye(employe.login, employe.motPasse)==null) {
+				try {
+					ae.insertEmploye(employe);
+				} catch (DatabaseConnexionException e) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+					ed.doExceptionDialog();
+					this.primaryStage.close();
+					employe = null;
+				} catch (ApplicationException ae1) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae1);
+					ed.doExceptionDialog();
+					employe = null;
+				}
 			}
+			else {
+				supprimerEmploye(employe);
+			}
+		} catch (RowNotFoundOrTooManyRowsException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			e.printStackTrace();
+			employe = null;
+		} catch (DataAccessException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			e.printStackTrace();
+			employe = null;
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			e.printStackTrace();
+			employe = null;
 		}
 		return employe;
 	}
@@ -122,7 +158,6 @@ public class EmployesManagement {
 	public void supprimerEmploye(Employe emp) {
 		try {
 			AccessEmploye ae = new AccessEmploye();
-			
 			ae.deleteEmploye(emp);
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);

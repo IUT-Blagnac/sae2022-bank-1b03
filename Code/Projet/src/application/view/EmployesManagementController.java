@@ -39,6 +39,7 @@ public class EmployesManagementController implements Initializable {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
+		doRechercher();
 	}
 
 	private void configure() {
