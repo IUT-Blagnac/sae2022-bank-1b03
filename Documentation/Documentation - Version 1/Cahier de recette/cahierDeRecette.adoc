@@ -4,60 +4,66 @@ Date : 28/04/2022 +
 Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 Le Guichetier
-|===
-| idTest | nom Test | nom Cas d'utilisation | Conditions de satisfaction | Pré-conditions |
 
+|===
+| Cas de test | Test 01
+| Titre | Création d'un compte Bancaire
+| Objectif | Vérifier que le compte Bancaire est crée avec succès
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
 | 1
-| TestCréerCompte
-| Créer un client avec les informations renseignées
-| Le client est créé avec les informations renseignées
-| Le client existe dans la base de données.
+| TestCréerCompteBancaire
+| Créer un compte bancaire client avec les informations renseignées
+| Le compte bancaire est créé avec les informations renseignées
+| Le compte client est actif
 |===
 
 |===
+| Cas de test | Test 02
+| Titre | Cloturation d'un compte Bancaire
+| Objectif | Vérifier que le compte Bancaire est cloturer avec succès
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
 | 2
-| TestDébiterOK
-| Débiter un compte
-| Le compte à un solde de +100. On débite 50. +
-Le nouveau solde est +50. On a créé une nouvelle opération. Et l’opération est dans la liste des opérations avec le bon montant et la bonne date.
-| Le client est sélectionné
-
-| 3
-| TestDébiterDécouvertOK
-| Débiter un compte
-| Le client est créé avec les informations renseignées
-| Le compte est sélectionné
-
-| 2
-| TestDébiterOK
-| Débiter un compte
-| Le client est créé avec les informations renseignées
-| Le compte est sélectionné
+| TestCloturerCompteBancaire
+| Supprimer (cloturer) un compte bancaire client déjà existant
+| Le compte bancaire (existant) doit avoir un solde de 0€ pour le cloturer
+| Le compte client est actif
 |===
 
 |===
-
-| 4
-| Créditer un compte
-| La somme saisie est ajoutée à la somme actuelle du compte.
-
-| 5
-| Débiter un compte
-| La somme saisie est soustraite à la somme actuelle du compte.
-
-| 6
-| Modifier les informations
-| Les informations du compte seront mises à jour avec les informations saisies/ supprimées.
-
-| 7
-| Virement de compte à compte
-| Fait un virement d'un compte bancaire à un autre. Le montant du virement est soustrait du compte débiteur et ajouté au compte créditeur.
-
-| 8
-| Cloturer un compte
-| Cloture un compte bancaire. Le compte n'est plus disponible pour effectuer des opérations.
+| Cas de test | test 03
+| Titre | Créditer un compte bancaire
+| Objectif | Vérifier que la fonctionnalité créditer un compte bancaire est valide
+|===
 
 |===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestCréditerCompte
+| Crédite un client du montant entré et ajoute l'opération au relevé.
+| Le montant est ajouté au solde du compte et l'opération est ajoutée au relevé
+| Le compte client est créé et actif
+|===
+
+|===
+| Cas de test | test 04
+| Titre | Débiter un compte bancaire
+| Objectif | Vérifier que la fonctionnalité débiter un compte bancaire est valide
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestDébiterCompte
+| Débite un client du montant entré et ajoute l'opération au relevé.
+| Le montant est retirée du solde du compte et l'opération est ajoutée au relevé
+| Le compte client a un solde positif (retrait <= solde) et a été créé
+|===
+
+
 
 Le Chef d'agence
 |===
