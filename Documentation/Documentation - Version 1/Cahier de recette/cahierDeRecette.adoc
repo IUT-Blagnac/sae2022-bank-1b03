@@ -3,7 +3,7 @@
 Date : 28/04/2022 +
 Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
-Le Guichetier
+== Guichetier
 
 |===
 | Cas de test | Test 01
@@ -36,7 +36,7 @@ Le Guichetier
 |===
 
 |===
-| Cas de test | test 03
+| Cas de test | Test 03
 | Titre | Créditer un compte bancaire
 | Objectif | Vérifier que la fonctionnalité créditer un compte bancaire est valide
 |===
@@ -46,11 +46,11 @@ Le Guichetier
 | TestCréditerCompte
 | Crédite un client du montant entré et ajoute l'opération au relevé.
 | Le montant est ajouté au solde du compte et l'opération est ajoutée au relevé
-| Le compte client est créé et actif
+| Le compte bancaire client est créé et actif
 |===
 
 |===
-| Cas de test | test 04
+| Cas de test | Test 04
 | Titre | Débiter un compte bancaire
 | Objectif | Vérifier que la fonctionnalité débiter un compte bancaire est valide
 |===
@@ -60,21 +60,77 @@ Le Guichetier
 | TestDébiterCompte
 | Débite un client du montant entré et ajoute l'opération au relevé.
 | Le montant est retirée du solde du compte et l'opération est ajoutée au relevé
-| Le compte client a un solde positif (retrait <= solde) et a été créé
+| Le compte bancaire client a un solde positif (retrait <= solde) et a été créé
 |===
 
-
-
-Le Chef d'agence
 |===
-| Numéro de test | Action | Attendus
+| Cas de test | Test 05
+| Titre | Effectuer un virement de compte à compte
+| Objectif | Vérifier que la fonctionnalité d'un virement d'un compte bancaire à un autre est fonctionnelle.
+|===
 
-| 1
-| Rendre inactif un client
-| Rends inactif un client ainsi que son/ses compte(s) bancaires.
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestVirementCompteACompte
+| Effectue un virement d'un compte bancaire client à un autre du montant entré et ajoute l'opération au relevé.
+| Le montant est retirée du solde du compte effectuant le virement et est ajoutée dans l'autre compte. De plus, l'opération est ajoutée au relevé
+| Le compte bancaire client effectuant un virement a un solde positif (retrait <= solde) et a été créé.
+|===
 
-| 2
-| Gérer les employés
-| Peut afficher les informations des différents employés et modifier leurs informations.
+== Chef d'agence :
 
+|===
+| Cas de test | Test 06
+| Titre | Création d'un employé
+| Objectif | Vérifier que la fonctionnalité de création d'un employé est valide et fonctionnelle.
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestCréationEmployé
+| Créé un employé pour l'agence avec les informations renseignées et l'ajoute dans la base de données.
+| L'employé a bien été créé (dans la base de données) et s'affiche sur l'interface.
+| Les informations de l'employé rentrées sont correctes.
+|===
+
+|===
+| Cas de test | Test 07
+| Titre | Suppression d'un employé
+| Objectif | Vérifier que la fonctionnalité de suppression d'un employé est valide et fonctionnelle.
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestCréationEmployé
+| Supprimé un employé de l'agence et l'enlève de la base de données.
+| L'employé a bien été supprimé (de la base de données) et est supprimée de l'interface.
+| L'employé choisi n'est pas le chef d'agence (la personne connectée à l'instant t)
+|===
+
+|===
+| Cas de test | Test 08
+| Titre | Mise à jour des informations d'un employé
+| Objectif | Vérifier que la fonctionnalité de modification d'un employé est valide et fonctionnelle.
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestMAJEmployé
+| Met à jour un employé de l'agence et l'enlève de la base de données.
+| L'employé a bien été mise à jour (dans la base de données) et l'affichage sur l'interface est modifiée.
+| L'employé choisi est déjà existant.
+|===
+
+|===
+| Cas de test | Test 09
+| Titre | Consulter les informations d'un employé
+| Objectif | Vérifier que la fonctionnalité de consultation des informations d'un employé est valide et fonctionnelle.
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestAffichageInformationsEmployé
+| Affiche les infromations de l'employé sélectionné.
+| Les informations de l'employé sélectionné sont affichés sur l'écran.
+| L'employé choisi est déjà existant.
 |===
