@@ -4,6 +4,15 @@ Date : 28/04/2022 +
 Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 Le Guichetier
+
+|===
+| Cas de test
+| Titre
+| Objectif
+| ID | Action | Comportement attendu |Résultat |
+| aa
+|===
+
 |===
 | idTest | nom Test | nom Cas d'utilisation | Conditions de satisfaction | Pré-conditions |
 
