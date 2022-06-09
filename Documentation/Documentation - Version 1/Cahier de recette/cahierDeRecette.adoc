@@ -46,8 +46,24 @@ Le Guichetier
 | TestCréditerCompte
 | Crédite un client du montant entré et ajoute l'opération au relevé.
 | Le montant est ajouté au solde du compte et l'opération est ajoutée au relevé
-| Le compte client a un solde positif (retrait <= solde)
+| Le compte client est créé et actif
 |===
+
+|===
+| Cas de test | test 04
+| Titre | Débiter un compte bancaire
+| Objectif | Vérifier que la fonctionnalité débiter un compte bancaire est valide
+|===
+
+|===
+| ID | Action | Comportement attendu | Résultat | Pré-condition
+| TestDébiterCompte
+| Débite un client du montant entré et ajoute l'opération au relevé.
+| Le montant est retirée du solde du compte et l'opération est ajoutée au relevé
+| Le compte client a un solde positif (retrait <= solde) et a été créé
+|===
+
+
 
 Le Chef d'agence
 |===
