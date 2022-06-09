@@ -311,3 +311,18 @@ Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini,
 
 === Employés
 ==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)
+
+==== Générer un relevé mensuel d’un compte en PDF
+_Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
+Par la suite vous devez cliquer sur "Générer un relevé"
+
+image::images/genererpdfButton.png[]
+
+Maintenant vous devez selectionner un dossier dans le quel vous voulez que votre relevé soit généré.
+Puis cliquer sur le boutton "Générer"
+
+image::images/pdfView.png[]
+
+Un message d'alert va s'afficher pour vous confirmer que le pdf à bien été généré.
+
+image::images/pdfAlert.png[]
