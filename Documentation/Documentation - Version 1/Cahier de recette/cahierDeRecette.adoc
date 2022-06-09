@@ -35,51 +35,6 @@ Le Guichetier
 | Le compte client est actif
 |===
 
-|===
-| 2
-| TestDébiterOK
-| Débiter un compte
-| Le compte à un solde de +100. On débite 50. +
-Le nouveau solde est +50. On a créé une nouvelle opération. Et l’opération est dans la liste des opérations avec le bon montant et la bonne date.
-| Le client est sélectionné
-
-| 3
-| TestDébiterDécouvertOK
-| Débiter un compte
-| Le client est créé avec les informations renseignées
-| Le compte est sélectionné
-
-| 2
-| TestDébiterOK
-| Débiter un compte
-| Le client est créé avec les informations renseignées
-| Le compte est sélectionné
-|===
-
-|===
-
-| 4
-| Créditer un compte
-| La somme saisie est ajoutée à la somme actuelle du compte.
-
-| 5
-| Débiter un compte
-| La somme saisie est soustraite à la somme actuelle du compte.
-
-| 6
-| Modifier les informations
-| Les informations du compte seront mises à jour avec les informations saisies/ supprimées.
-
-| 7
-| Virement de compte à compte
-| Fait un virement d'un compte bancaire à un autre. Le montant du virement est soustrait du compte débiteur et ajouté au compte créditeur.
-
-| 8
-| Cloturer un compte
-| Cloture un compte bancaire. Le compte n'est plus disponible pour effectuer des opérations.
-
-|===
-
 Le Chef d'agence
 |===
 | Numéro de test | Action | Attendus
