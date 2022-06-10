@@ -178,10 +178,18 @@ public class GeneratorPdfController implements Initializable {
 		this.stage.close();
 	}
 
+	/**
+	 * Permet de set le compte sur le controller
+	 * @param pfCompteConcerne
+	 */
 	public void setCompteConcerne(CompteCourant pfCompteConcerne) {
 		this.compteConcerne = pfCompteConcerne;
 	}
 
+	/**
+	 * P=ermet de set le client sur le controller
+	 * @param pfClientDuCompte
+	 */
 	public void setClient(Client pfClientDuCompte) {
 		this.clientDuCompte = pfClientDuCompte;
 	}
