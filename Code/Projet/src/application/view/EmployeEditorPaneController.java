@@ -198,32 +198,23 @@ public class EmployeEditorPaneController implements Initializable {
 		}
 
 		if (this.employeEdite.nom.isEmpty()) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le nom ne doit pas être vide",
-					AlertType.WARNING);
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le nom ne doit pas être vide", AlertType.WARNING);
 			this.txtNom.requestFocus();
 			return false;
 		}
 		if (this.employeEdite.prenom.isEmpty()) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le prénom ne doit pas être vide",
-					AlertType.WARNING);
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le prénom ne doit pas être vide", AlertType.WARNING);
 			this.txtPrenom.requestFocus();
 			return false;
 		}
 		
 		if (this.employeEdite.login.isEmpty()) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le login ne doit pas être vide",
-					AlertType.WARNING);
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le login ne doit pas être vide", AlertType.WARNING);
 			this.txtLogin.requestFocus();
 			return false;
 		}
-		
-		// ANTON - ANCIEN MAIL
-//		String regex = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
-//						+ "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
-//        if (!Pattern.matches(regex, this.employeEdite.motPasse) || this.employeEdite.motPasse.length() > 20) {
 		if (this.employeEdite.motPasse.isEmpty()) {
-            AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mot de passe n'est pas valable",
-                    AlertType.WARNING);
+            AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mot de passe n'est pas valable", AlertType.WARNING);
             this.txtMotPasse.requestFocus();
             return false;
         }

@@ -6,6 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import application.control.EmployesManagement;
+import application.tools.AlertUtilities;
+import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
 import model.data.Employe;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -151,6 +155,54 @@ public class AccessEmploye {
 		}
 	}
 
+	public Employe getEmployeLog(String login)
+			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
+		Employe employeTrouve;
+
+		try {
+			Connection con = LogToDatabase.getConnexion();
+			String query = "SELECT * FROM Employe WHERE" + " login = ?";
+
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setString(1, login);
+
+			ResultSet rs = pst.executeQuery();
+
+			System.err.println(query);
+
+			if (rs.next()) {
+				int idEmployeTrouve = rs.getInt("idEmploye");
+				String nom = rs.getString("nom");
+				String prenom = rs.getString("prenom");
+				String droitsAccess = rs.getString("droitsAccess");
+				String loginTROUVE = rs.getString("login");
+				String motPasseTROUVE = rs.getString("motPasse");
+				int idAgEmploye = rs.getInt("idAg");
+
+				employeTrouve = new Employe(idEmployeTrouve, nom, prenom, droitsAccess, loginTROUVE, motPasseTROUVE,
+						idAgEmploye);
+			} else {
+				rs.close();
+				pst.close();
+				// Non trouvé
+				return null;
+			}
+
+			if (rs.next()) {
+				// Trouvé plus de 1 ... bizarre ...
+				rs.close();
+				pst.close();
+				throw new RowNotFoundOrTooManyRowsException(Table.Employe, Order.SELECT,
+						"Recherche anormale (en trouve au moins 2)", null, 2);
+			}
+			rs.close();
+			pst.close();
+			return employeTrouve;
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Employe, Order.SELECT, "Erreur accès", e);
+		}
+	}
+	
 	/**
 	 * Insertion d'un employé.
 	 *

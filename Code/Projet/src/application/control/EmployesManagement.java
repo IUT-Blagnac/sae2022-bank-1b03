@@ -6,11 +6,14 @@ import java.util.ArrayList;
 
 import application.DailyBankApp;
 import application.DailyBankState;
+import application.tools.AlertUtilities;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
+import application.view.DailyBankMainFrameController;
 import application.view.EmployesManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import model.data.Employe;
@@ -25,6 +28,7 @@ public class EmployesManagement {
 	private Stage primaryStage;
 	private DailyBankState dbs;
 	private EmployesManagementController emc;
+	private DailyBankMainFrameController dbc;
 
 	/**
 	 * Constructeur de la classe EmployesManagement permettant de charger la vue de gestion des employes
@@ -116,7 +120,7 @@ public class EmployesManagement {
 		employe = eep.doEmployeEditorDialog(null, EditionMode.CREATION);
 		AccessEmploye ae = new AccessEmploye();
 		try {
-			if (employe != null && ae.getEmploye(employe.login, employe.motPasse)==null) {
+			if (employe != null && ae.getEmployeLog(employe.login)==null) {
 				try {
 					ae.insertEmploye(employe);
 				} catch (DatabaseConnexionException e) {
@@ -135,9 +139,9 @@ public class EmployesManagement {
 			}
 		} catch (RowNotFoundOrTooManyRowsException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
-			ed.doExceptionDialog();
 			e.printStackTrace();
 			employe = null;
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le login est déjà existant", AlertType.WARNING);
 		} catch (DataAccessException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 			ed.doExceptionDialog();
@@ -157,8 +161,10 @@ public class EmployesManagement {
 	 */
 	public void supprimerEmploye(Employe emp) {
 		try {
-			AccessEmploye ae = new AccessEmploye();
-			ae.deleteEmploye(emp);
+			if(true) {
+				AccessEmploye ae = new AccessEmploye();
+				ae.deleteEmploye(emp);
+			}
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 			ed.doExceptionDialog();
@@ -199,4 +205,24 @@ public class EmployesManagement {
 		}
 		return listeEmp;
 	}
+	
+	public Employe getEmployeLog(String _numLog) {
+		Employe emp = new Employe();
+		try {
+			AccessEmploye ae = new AccessEmploye();
+			emp = ae.getEmployeLog(_numLog);
+
+		} catch (DatabaseConnexionException e) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+			ed.doExceptionDialog();
+			this.primaryStage.close();
+			emp = new Employe();
+		} catch (ApplicationException ae) {
+			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+			ed.doExceptionDialog();
+			emp = new Employe();
+		}
+		return emp;
+	}
+	
 }
