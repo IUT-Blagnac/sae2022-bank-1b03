@@ -175,7 +175,7 @@ Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
 image::images/CompteClient.PNG[]
 
-==== Comment créer un nouveau compte client ?
+==== Comment créer un nouveau compte client ? (développé par Matthis)
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -202,7 +202,7 @@ image::images/CompteClientModifié.png[]
 
 Un nouveau compte a été créé !
 
-==== Comment cloturer un compte client déjà existant ?
+==== Comment cloturer un compte client déjà existant ? (Développé par Matthis)
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -231,7 +231,7 @@ Le compte est maintenant cloturé ! Il n'est plus possible de le modifier, ni de
 
 === Opérations
 
-==== Comment voir les opérations du compte d'un client ?
+==== Comment voir les opérations du compte d'un client ? 
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
@@ -259,7 +259,7 @@ Entrez le montant du retrait. Quand vous avez fini, appuyez sur le bouton "Effec
 
 A noter : Si cela ne fonctionne pas, alors vérifiez qu'il soit possible de retirer le montant que vous souhaitez.
 
-==== Comment enregistrer un crédit manuellement ?
+==== Comment enregistrer un crédit manuellement ? (développé par Sean)
 
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
@@ -275,7 +275,7 @@ image::images/crediter-nouvelle-op.png[]
 
 Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
-==== Comment effectuer un virement ?
+==== Comment effectuer un virement ? (Développé par Hugo)
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
 image::images/effectuerVirement.png[]
@@ -294,7 +294,7 @@ Vous serez alors redirigé vers les opérations du compte et vous pourrez voir q
 
 == Fonctionnalités supplémentaires (Chef d'Agence)
 === Clients  
-==== Comment rendre inactif un client ?
+==== Comment rendre inactif un client ? ()
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des clients._
 
 image::images/gestionnaireClientChercher.PNG[]
@@ -310,4 +310,4 @@ image::images/Rendre_Inactif.PNG[]
 Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
 
 === Employés
-==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)
+==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
