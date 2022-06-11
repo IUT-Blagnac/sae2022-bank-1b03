@@ -3,7 +3,7 @@
 :toc: macro
 :toclevels: 3
 
-= Documentation Utilisateur V1
+= Documentation Utilisateur V2
 
 ****
 Nom du Projet : **Daily Bank** +

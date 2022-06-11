@@ -27,7 +27,7 @@ Pré-requis :
 
 * La version 1.8 de https://www.allwebsoft.fr/ihm2022/logiciels/jdk-8u321-windows-x64.exe[Java]
 * Les deux fichiers suivants : https://www.allwebsoft.fr/ihm2022/fichiers/setenv-cmd.bat[Fichier 1] et https://drive.google.com/uc?export=download&id=1S2rfpdQ6XPKfU-Gt57UkdALyCFiZM8jq[Fichier 2]
-* L'application en .jar : https://drive.google.com/uc?export=download&id=1QGhUSPPWU4erVOsFe6FiBaxiUISYKFLm[lien] +
+* L'application en .jar : https://github.com/IUT-Blagnac/sae2022-bank-1b03/raw/main/Final/DailyBankApp.jar[lien] +
 __Remarque : les deux éléments ci-dessus doivent se trouver dans le même dossier pour plus de simplicité__
 
 Installation de l'application :
@@ -51,7 +51,7 @@ _cmd_
 _java -version_
 
 Vous pouvez maintenant lancer l'application à l'aide de la commande suivante : +
-_java -jar DailyBankV0.jar_
+_java -jar DailyBankApp.jar_
 
 === Fonctionnalités basiques de l'application
 ==== Comment se connecter ?
@@ -108,7 +108,6 @@ Un message de confirmation va quand même s'afficher. Cliquez ensuite sur "Ok" p
 Pour accéder au gestionnaire de clients il faut tout d'abord se connecter. Une fois connecté, cliquez sur le menu déroulant "Gestion", et rendez-vous sur "Clients".
 
 image::images/gestionClients.png[]
-
 
 ==== Comment ajouter un client ?
 

@@ -2,7 +2,7 @@
 :toclevels: 3
 :toc-title: Sommaire
 
-= Documentation Technique V1
+= Documentation Technique V2
 
 toc::[]
 
@@ -12,29 +12,30 @@ toc::[]
 [options="header,footer"]
 |=======================
 | Version | User | Use Case | Cas d'utilisation | Sean Escassut | Matthis Mabille | Hugo Wendjaneh | Thomas Testa
-|1    |Chef d'Agence     |CRUD employé  | Create | | | |
-|1    |Chef d'Agence     |CRUD employé  | Read | | | |
-|1    |Chef d'Agence     |CRUD employé  | Update | | | |
-|1    |Chef d'Agence     |CRUD employé  | Delete | | | |
-|1    |Guichetier     | Compte | Créer || | | 
-|1    |Guichetier     | Compte | Créditer/Débiter || | | 
-|1    |Guichetier     | Compte | Effectuer un virement || | | 
-|1    |Guichetier     | Compte | Clôturer || | | 
-|2    |Chef d’Agence     | Compte | Débit exceptionnel || | | 
-|2    |Chef d’Agence     | Emprunt | Simuler emprunt || | | 
-|2    |Chef d’Agence     | Emprunt | Simuler assurance || | | 
-|2    |Guichetier     | Compte | Relevé PDF || | | 
-|2    |Guichetier     | CRUD Prélèvement | Create || | | 
-|2    |Guichetier     | CRUD Prélèvement | Read || | | 
-|2    |Guichetier     | CRUD Prélèvement | Update || | | 
-|2    |Guichetier     | CRUD Prélèvement | Delete || | | 
-|2    |Batch     | Prélèvements automatiques | || | | 
-|2    |Batch     | Reléves mensuels | || | | 
+|1    |Chef d'Agence     |CRUD employé  | Create | | | | D
+|1    |Chef d'Agence     |CRUD employé  | Read   | | | | D
+|1    |Chef d'Agence     |CRUD employé  | Update | | | | D
+|1    |Chef d'Agence     |CRUD employé  | Delete | | | | D
+|1    |Guichetier     | Compte | Créer                 |  |F |  | 
+|1    |Guichetier     | Compte | Créditer/Débiter      |F |  |  | 
+|1    |Guichetier     | Compte | Effectuer un virement |  |  |F | 
+|1    |Guichetier     | Compte | Clôturer              |  |F |  | 
+|2    |Chef d’Agence     | Compte  | Débit exceptionnel |F |  |  | 
+|2    |Chef d’Agence     | Emprunt | Simuler emprunt    |  |D |  | 
+|2    |Chef d’Agence     | Emprunt | Simuler assurance  |  |D |  | 
+|2    |Guichetier     | Compte | Relevé PDF |  |  |D | 
+|2    |Guichetier     | CRUD Prélèvement | Create |NA |NA |NA |NA 
+|2    |Guichetier     | CRUD Prélèvement | Read   |NA |NA |NA | NA
+|2    |Guichetier     | CRUD Prélèvement | Update |NA |NA |NA | NA
+|2    |Guichetier     | CRUD Prélèvement | Delete |NA |NA |NA | NA
+|2    |Batch     | Prélèvements automatiques |  |NA |NA |NA | NA
+|2    |Batch     | Reléves mensuels          |  |NA |NA |NA | NA
 
 |=======================
 
 F pour Fonctionnel +
-D pour en Développement
+D pour en Développement +
+NA pour non-assigné
 
 == Présentation de l’application
 
