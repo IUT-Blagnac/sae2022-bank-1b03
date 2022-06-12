@@ -25,10 +25,10 @@ toc::[]
 |1    |Guichetier     | Compte | Créditer/Débiter      |F |  |  | 
 |1    |Guichetier     | Compte | Effectuer un virement |  |  |F | 
 |1    |Guichetier     | Compte | Clôturer              |  |F |  | 
-|2    |Chef d’Agence     | Compte  | Débit exceptionnel |F |  |  | 
+|2    |Chef d’Agence     | Compte  | Débit exceptionnel |D |  |  | 
 |2    |Chef d’Agence     | Emprunt | Simuler emprunt    |  |D |  | 
 |2    |Chef d’Agence     | Emprunt | Simuler assurance  |  |D |  | 
-|2    |Guichetier     | Compte | Relevé PDF |  |  |D | 
+|2    |Guichetier     | Compte | Relevé PDF |  |  |F | 
 |2    |Guichetier     | CRUD Prélèvement | Create |NA |NA |NA |NA 
 |2    |Guichetier     | CRUD Prélèvement | Read   |NA |NA |NA | NA
 |2    |Guichetier     | CRUD Prélèvement | Update |NA |NA |NA | NA
@@ -339,8 +339,8 @@ image::images/DS-Creer-Employe.png[]
 
 Partie du diagramme de classes données nécessaires : 
 
-* En lecture : employe
-* En mise à jour : employe
+* En lecture : Employé
+* En mise à jour : Employé
 
 cf. doc. utilisateur "Comment consulter un employé ?"
 
@@ -355,8 +355,8 @@ Partie "Comment modifier un employé" du diagramme des use case
 
 Partie du diagramme de classes données nécessaires : 
 
-* En lecture : employe
-* En mise à jour : employe
+* En lecture : Employé
+* En mise à jour : Employé
 
 cf. doc. utilisateur "Comment modifier un employé ?"
 
@@ -371,8 +371,8 @@ Partie "Comment supprimer un employé" du diagramme des use case
 
 Partie du diagramme de classes données nécessaires : 
 
-* En lecture : employe
-* En mise à jour : employe
+* En lecture : Employé
+* En mise à jour : Employé
 
 cf. doc. utilisateur "Comment supprimer un employé ?"
 

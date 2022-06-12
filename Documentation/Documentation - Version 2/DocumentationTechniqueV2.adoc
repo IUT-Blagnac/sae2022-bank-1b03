@@ -26,10 +26,10 @@ toc::[]
 |1    |Guichetier     | Compte | Créditer/Débiter      |F |  |  | 
 |1    |Guichetier     | Compte | Effectuer un virement |  |  |F | 
 |1    |Guichetier     | Compte | Clôturer              |  |F |  | 
-|3    |Chef d’Agence     | Compte  | Débit exceptionnel |F |  |  | 
+|3    |Chef d’Agence     | Compte  | Débit exceptionnel |D |  |  | 
 |3    |Chef d’Agence     | Emprunt | Simuler emprunt    |  |D |  | 
 |3    |Chef d’Agence     | Emprunt | Simuler assurance  |  |D |  | 
-|2    |Guichetier     | Compte | Relevé PDF |  |  |D | 
+|2    |Guichetier     | Compte | Relevé PDF |  |  |F | 
 |2    |Guichetier     | CRUD Prélèvement | Create |NA |NA |NA |NA 
 |2    |Guichetier     | CRUD Prélèvement | Read   |NA |NA |NA | NA
 |2    |Guichetier     | CRUD Prélèvement | Update |NA |NA |NA | NA
@@ -393,6 +393,8 @@ Partie du diagramme de classes données nécessaires :
 cf. doc. utilisateur "Générer un relevé mensuel d’un compte en PDF"
 
 === Effectuer un Débit exceptionnel (Escassut Sean)
+
+_En cours de développement_
 
 Partie "Effectuer un Débit exceptionnel" du diagramme des UC
 

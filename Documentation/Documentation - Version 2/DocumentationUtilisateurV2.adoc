@@ -327,7 +327,7 @@ Puis cliquer sur le boutton "Générer"
 
 image::images/pdfView.png[]
 
-Un message d'alerte va s'afficher pour vous confirmer que le pdf à bien été généré.
+Un message d'alerte va s'afficher pour vous confirmer que le PDF à bien été généré.
 
 image::images/pdfAlert.png[]
 
@@ -335,12 +335,20 @@ image::images/pdfAlert.png[]
 ==== Simuler un emprunt
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
 
+image::images/EmployeEmprunt.png[]
+
+Cliquez sur "Simuler Emprunt & Assurance".
+
 image::images/SimulationEmprunt.png[]
 
 Remplissez les différentes informations et cliquez sur "Simuler un emprunt"
 
 ==== Simuler une assurance d'emprunt
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
+
+image::images/EmployeEmprunt.png[]
+
+Cliquez sur "Simuler Emprunt & Assurance".
 
 image::images/SimulationEmprunt.png[]
 
