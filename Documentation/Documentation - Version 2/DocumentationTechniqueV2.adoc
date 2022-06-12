@@ -4,15 +4,15 @@
 
 = Documentation Technique V2
 
-toc::[]
-
-:sectnums:
-
 ****
 Nom du Projet : **Daily Bank** +
 Date : **12/06/2022** +
 Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
 ****
+toc::[]
+
+:sectnums:
+
 
 == Répartition des tâches et état d'avancement
 [options="header,footer"]
@@ -76,7 +76,7 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 
 === JavaDoc de l'application
 
-Lien vers la liendelajavadocdegithub.com[javadoc]
+Lien vers la https://github.com/IUT-Blagnac/sae2022-bank-1b03/tree/main/Documentation/Documentation%20-%20Version%202/Javadoc[javadoc]
 
 === Diagramme de classe de la base de données
 
@@ -115,7 +115,7 @@ Pré-requis :
 
 * La version 1.8 de https://www.allwebsoft.fr/ihm2022/logiciels/jdk-8u321-windows-x64.exe[Java]
 * Les deux fichiers suivants : https://www.allwebsoft.fr/ihm2022/fichiers/setenv-cmd.bat[Fichier 1] et https://drive.google.com/uc?export=download&id=1S2rfpdQ6XPKfU-Gt57UkdALyCFiZM8jq[Fichier 2]
-* L'application en .jar : https://drive.google.com/uc?export=download&id=1QGhUSPPWU4erVOsFe6FiBaxiUISYKFLm[lien] +
+* L'application en .jar : https://github.com/IUT-Blagnac/sae2022-bank-1b03/raw/main/Final/DailyBankApp.jar[lien] +
 __Remarque : les deux éléments ci-dessus doivent se trouver dans le même dossier pour plus de simplicité__
 
 Installation de l'application :
@@ -147,7 +147,7 @@ _java -jar DailyBankV0.jar_
 Récupération des fichiers de l'application :
 __Nous supposons que si vous lisez cette documentation vous avez déjà téléchargé les fichiers de l'application__ +
 Dans le cas où vous n'avez pas téléchargé les fichiers, vous pouvez les récupérer en téléchargeant le fichier .zip suivant : +
-Lien de téléchargement : https://drive.google.com/uc?export=download&id=1ORGMypfTuQehRWY30FYxD1HWBft4G3yh[DailyBankVO.zip]
+Lien de téléchargement : https://github.com/IUT-Blagnac/sae2022-bank-1b03/archive/refs/heads/main.zip[DailyBankVO.zip]
 
 Dézippez le fichier. +
 Importer le projet DailyBankV0.zip dans Eclipse et paramétrez, si ce n'est pas déjà fait, votre IDE avec JAVA FX et Java 1.8. +
@@ -343,6 +343,13 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : employe
 * En mise à jour : employe
 
+cf. doc. utilisateur "Comment consulter un employé ?"
+
+Diagramme de séquence :
+
+.Diagramme de séquence pour la consultation d'un employé
+image::images/DS-Consulter-Employe.png[]
+
 ==== Modifier un employé
 
 Partie "Comment modifier un employé" du diagramme des use case
@@ -356,7 +363,7 @@ cf. doc. utilisateur "Comment modifier un employé ?"
 
 Diagramme de séquence:
 
-.Diagramme de séquence pour la modification d'un client
+.Diagramme de séquence pour la modification d'un employé
 image::images/DS-Modifier-Employe.png[]
 
 ==== Supprimer un employé
@@ -369,6 +376,11 @@ Partie du diagramme de classes données nécessaires :
 * En mise à jour : employe
 
 cf. doc. utilisateur "Comment supprimer un employé ?"
+
+Diagramme de séquence:
+
+.Diagramme de séquence pour la suppression d'un employé
+image::images/DS-Supprimer-Employe.png[]
 
 === Générer un relevé mensuel d’un compte en PDF (Wendjaneh Hugo)
 

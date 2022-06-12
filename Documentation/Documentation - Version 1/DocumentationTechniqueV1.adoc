@@ -4,6 +4,11 @@
 
 = Documentation Technique V1
 
+****
+Nom du Projet : **Daily Bank** +
+Date : **12/06/2022** +
+Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
+****
 toc::[]
 
 :sectnums:
@@ -70,7 +75,7 @@ Le chef d'agence est un type d'utilisateur héritant de guichetier, il peut effe
 
 === JavaDoc de l'application
 
-Lien vers la liendelajavadocdegithub.com[javadoc]
+Lien vers la https://github.com/IUT-Blagnac/sae2022-bank-1b03/tree/main/Documentation/Documentation%20-%20Version%202/Javadoc[javadoc]
 
 === Diagramme de classe de la base de données
 
@@ -141,7 +146,7 @@ _java -jar DailyBankApp.jar_
 Récupération des fichiers de l'application :
 __Nous supposons que si vous lisez cette documentation vous avez déjà téléchargé les fichiers de l'application__ +
 Dans le cas où vous n'avez pas téléchargé les fichiers, vous pouvez les récupérer en téléchargeant le fichier .zip suivant : +
-Lien de téléchargement : https://github.com/IUT-Blagnac/sae2022-bank-1b03/raw/main/Final/DailyBankApp.jar[DailyBankApp.zip]
+Lien de téléchargement : https://github.com/IUT-Blagnac/sae2022-bank-1b03/archive/refs/heads/main.zip[DailyBankApp.zip]
 
 Dézippez le fichier. +
 Importer le projet DailyBankApp.zip dans Eclipse et paramétrez, si ce n'est pas déjà fait, votre IDE avec JAVA FX et Java 1.8. +

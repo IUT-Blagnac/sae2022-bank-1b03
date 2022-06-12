@@ -1,4 +1,3 @@
-// documentation utilisateur
 :toc-title: Sommaire
 :toc: macro
 :toclevels: 3
@@ -174,7 +173,7 @@ Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
 image::images/CompteClient.PNG[]
 
-==== Comment créer un nouveau compte client ? (développé par Matthis)
+==== Comment créer un nouveau compte client ? (Développé par Matthis)
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -258,7 +257,7 @@ Entrez le montant du retrait. Quand vous avez fini, appuyez sur le bouton "Effec
 
 A noter : Si cela ne fonctionne pas, alors vérifiez qu'il soit possible de retirer le montant que vous souhaitez.
 
-==== Comment enregistrer un crédit manuellement ? (développé par Sean)
+==== Comment enregistrer un crédit manuellement ? (Développé par Sean)
 
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
@@ -309,7 +308,7 @@ image::images/Rendre_Inactif.PNG[]
 Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
 
 === Employés
-Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
+==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
 ==== Comment accéder au gestionnaire des employés ?
 
 Pour accéder au gestionnaire des employés il faut tout d'abord se connecter en tant que chef d'agence. Une fois connecté, cliquez sur le menu déroulant "Gestion", et rendez-vous sur "Employés".
