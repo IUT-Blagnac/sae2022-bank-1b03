@@ -324,6 +324,19 @@ __En cours de développement__
 
 ==== Modifier un employé
 
+Partie "Comment modifier un employé" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : employe
+* En mise à jour : employe
+
+cf. doc. utilisateur "Comment modifier un employé ?"
+
+Diagramme de séquence:
+
+.Diagramme de séquence pour la modification d'un client
+image::images/DS-Modifier-Employe.png[]
 
 ==== Supprimer un employé
 
