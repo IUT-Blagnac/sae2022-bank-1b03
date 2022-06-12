@@ -12,10 +12,10 @@ toc::[]
 [options="header,footer"]
 |=======================
 | Version | User | Use Case | Cas d'utilisation | Sean Escassut | Matthis Mabille | Hugo Wendjaneh | Thomas Testa
-|1    |Chef d'Agence     |CRUD employé  | Create | | | | D
-|1    |Chef d'Agence     |CRUD employé  | Read   | | | | D
-|1    |Chef d'Agence     |CRUD employé  | Update | | | | D
-|1    |Chef d'Agence     |CRUD employé  | Delete | | | | D
+|1    |Chef d'Agence     |CRUD employé  | Create | | | | F
+|1    |Chef d'Agence     |CRUD employé  | Read   | | | | F
+|1    |Chef d'Agence     |CRUD employé  | Update | | | | F
+|1    |Chef d'Agence     |CRUD employé  | Delete | | | | F
 |1    |Guichetier     | Compte | Créer                 |  |F |  | 
 |1    |Guichetier     | Compte | Créditer/Débiter      |F |  |  | 
 |1    |Guichetier     | Compte | Effectuer un virement |  |  |F | 
@@ -317,6 +317,39 @@ image::images/DS-Virement.svg[]
 __En cours de développement__
 
 ==== Créer un employé
+
+Partie "créer un nouveau employé" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Employé
+* En mise à jour : Employé
+
+cf. doc. utilisateur "Comment ajouter un employé ?"
+
+Diagramme de séquence :
+
+.Diagramme de séquence pour la création d'un employé
+image::images/DS-Creer-Employe.png[]
+
 ==== Consulter un employé
+
+
 ==== Modifier un employé
+
+Partie "Comment modifier un employé" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : employe
+* En mise à jour : employe
+
+cf. doc. utilisateur "Comment modifier un employé ?"
+
+Diagramme de séquence:
+
+.Diagramme de séquence pour la modification d'un client
+image::images/DS-Modifier-Employe.png[]
+
 ==== Supprimer un employé
+
