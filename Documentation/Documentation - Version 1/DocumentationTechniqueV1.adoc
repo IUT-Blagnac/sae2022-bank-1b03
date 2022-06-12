@@ -337,6 +337,13 @@ Partie du diagramme de classes données nécessaires :
 * En lecture : employe
 * En mise à jour : employe
 
+cf. doc. utilisateur "Comment consulter un employé ?"
+
+Diagramme de séquence :
+
+.Diagramme de séquence pour la consultation d'un employé
+image::images/DS-Consulter-Employe.png[]
+
 ==== Modifier un employé
 
 Partie "Comment modifier un employé" du diagramme des use case
