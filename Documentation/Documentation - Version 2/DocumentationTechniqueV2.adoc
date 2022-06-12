@@ -340,8 +340,8 @@ image::images/DS-Creer-Employe.png[]
 
 Partie du diagramme de classes données nécessaires : 
 
-* En lecture : employe
-* En mise à jour : employe
+* En lecture : Employé
+* En mise à jour : Employé
 
 cf. doc. utilisateur "Comment consulter un employé ?"
 
@@ -356,8 +356,8 @@ Partie "Comment modifier un employé" du diagramme des use case
 
 Partie du diagramme de classes données nécessaires : 
 
-* En lecture : employe
-* En mise à jour : employe
+* En lecture : Employé
+* En mise à jour : Employé
 
 cf. doc. utilisateur "Comment modifier un employé ?"
 
@@ -372,8 +372,8 @@ Partie "Comment supprimer un employé" du diagramme des use case
 
 Partie du diagramme de classes données nécessaires : 
 
-* En lecture : employe
-* En mise à jour : employe
+* En lecture : Employé
+* En mise à jour : Employé
 
 cf. doc. utilisateur "Comment supprimer un employé ?"
 
@@ -394,6 +394,37 @@ cf. doc. utilisateur "Générer un relevé mensuel d’un compte en PDF"
 
 === Effectuer un Débit exceptionnel (Escassut Sean)
 
+Partie "Effectuer un Débit exceptionnel" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires :
+
+* En lecture : Client, Compte Courant, Opération, Type Opération
+* En mise à jour : Opération
+
+cf. doc. utilisateur "Effectuer un Débit exceptionnel"
+
 === Simuler un emprunt (Mabille Matthis)
 
+_En cours de développement_
+
+Partie "Comment simuler un emprunt" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : SimulerEmprunt, Compte Courant, Opération, Type Opération
+* En mise à jour : SimulerEmprunt, Opération
+
+cf. doc. utilisateur "Simuler un emprunt"
+
 === Simuler une assurance d'emprunt (Mabille Matthis)
+
+_En cours de développement_
+
+Partie "Comment simuler une assurance d'emprunt" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : SimulerAssuranceEmprunt, SimulerEmprunt, Compte Courant, Opération, Type Opération
+* En mise à jour : SimulerAssuranceEmprunt, SimulerEmprunt, Opération
+
+cf. doc. utilisateur "Simuler une assurance d'emprunt"

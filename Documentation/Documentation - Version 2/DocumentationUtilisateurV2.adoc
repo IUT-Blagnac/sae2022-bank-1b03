@@ -231,7 +231,6 @@ Le compte est maintenant cloturé ! Il n'est plus possible de le modifier, ni de
 
 ==== Générer un relevé mensuel d'un compte en PDF
 
-
 === Opérations
 
 ==== Comment voir les opérations du compte d'un client ?
@@ -323,22 +322,28 @@ Par la suite vous devez cliquer sur "Générer un relevé"
 
 image::images/genererpdfButton.png[]
 
-Maintenant vous devez selectionner un dossier dans le quel vous voulez que votre relevé soit généré.
+Maintenant vous devez selectionner un dossier dans lequel vous voulez que votre relevé soit généré.
 Puis cliquer sur le boutton "Générer"
 
 image::images/pdfView.png[]
 
-Un message d'alert va s'afficher pour vous confirmer que le pdf à bien été généré.
+Un message d'alerte va s'afficher pour vous confirmer que le pdf à bien été généré.
 
 image::images/pdfAlert.png[]
 
 === Comptes
 ==== Simuler un emprunt
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
-Par la suite vous devez cliquer sur "Simuler un emprunt"
+
+image::images/SimulationEmprunt.png[]
+
+Remplissez les différentes informations et cliquez sur "Simuler un emprunt"
 
 ==== Simuler une assurance d'emprunt
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
-Par la suite vous devez cliquer sur "Simuler une assurance d'emprunt"
+
+image::images/SimulationEmprunt.png[]
+
+Remplissez les différentes informations, simulez un emprunt et cliquez sur "Simuler une assurance d'emprunt"
 
 ==== Effectuer un débit exceptionnel
