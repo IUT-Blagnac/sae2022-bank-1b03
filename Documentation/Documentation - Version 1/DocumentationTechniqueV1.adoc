@@ -334,6 +334,10 @@ image::images/DS-Creer-Employe.png[]
 
 ==== Consulter un employé
 
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : employe
+* En mise à jour : employe
 
 ==== Modifier un employé
 
@@ -353,3 +357,11 @@ image::images/DS-Modifier-Employe.png[]
 
 ==== Supprimer un employé
 
+Partie "Comment supprimer un employé" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : employe
+* En mise à jour : employe
+
+cf. doc. utilisateur "Comment supprimer un employé ?"
