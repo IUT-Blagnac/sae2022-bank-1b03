@@ -355,3 +355,17 @@ image::images/SimulationEmprunt.png[]
 Remplissez les différentes informations, simulez un emprunt et cliquez sur "Simuler une assurance d'emprunt"
 
 ==== Effectuer un débit exceptionnel
+
+*Une erreur github étant survenue, la fonctionnalité n'est pas dans le programme principal, elle est dans une version obsolète du programme (lien)*
+
+_Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
+
+image::images/debex1.jpg[]
+
+Cliquez sur "Débit Exceptionnel"
+
+image::images/debex2.jpg[]
+
+entrez les informations et cliquez sur "Effectuer Débit Exceptionnel"
+
+image::images/debex3.jpg[]
