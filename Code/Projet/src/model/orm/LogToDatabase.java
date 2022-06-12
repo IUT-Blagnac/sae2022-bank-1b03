@@ -7,6 +7,8 @@ import java.sql.SQLTimeoutException;
 
 import model.orm.exception.DatabaseConnexionException;
 
+
+
 /*
  * Classe qui gère la connexion à la BD
  *
