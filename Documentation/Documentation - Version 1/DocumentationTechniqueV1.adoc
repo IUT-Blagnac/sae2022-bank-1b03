@@ -314,8 +314,6 @@ image::images/DS-Virement.svg[]
 
 === Gérer les employés, ou faire le CRUD (Testa Thomas):
 
-__En cours de développement__
-
 ==== Créer un employé
 
 Partie "créer un nouveau employé" du diagramme des use case
