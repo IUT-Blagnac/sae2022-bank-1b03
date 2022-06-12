@@ -175,7 +175,7 @@ Il ne vous reste plus qu'à appuyer sur le bouton "Comptes client".
 
 image::images/CompteClient.PNG[]
 
-==== Comment créer un nouveau compte client ?
+==== Comment créer un nouveau compte client ? (Développé par Matthis)
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -202,7 +202,7 @@ image::images/CompteClientModifié.png[]
 
 Un nouveau compte a été créé !
 
-==== Comment cloturer un compte client déjà existant ?
+==== Comment cloturer un compte client déjà existant ? (Développé par Matthis)
 
 _Pour réaliser cette manoeuvre, il est nécessaire de s'être connecté auparavant_
 
@@ -261,7 +261,7 @@ Entrez le montant du retrait. Quand vous avez fini, appuyez sur le bouton "Effec
 
 A noter : Si cela ne fonctionne pas, alors vérifiez qu'il soit possible de retirer le montant que vous souhaitez.
 
-==== Comment enregistrer un crédit manuellement ?
+==== Comment enregistrer un crédit manuellement ? (Développé par Sean)
 
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
@@ -277,7 +277,7 @@ image::images/crediter-nouvelle-op.png[]
 
 Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
-==== Comment effectuer un virement ?
+==== Comment effectuer un virement ? (Développé par Hugo)
 _Comme pour un débit rendez-vous sur la fenêtre du compte d'un client._
 
 image::images/effectuerVirement.png[]
@@ -314,9 +314,9 @@ image::images/Rendre_Inactif.png[]
 Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
 
 === Employés
-==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence)
+==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
 
-==== Générer un relevé mensuel d’un compte en PDF
+==== Générer un relevé mensuel d’un compte en PDF (Développé par Hugo)
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
 Par la suite vous devez cliquer sur "Générer un relevé"
 
@@ -332,7 +332,7 @@ Un message d'alerte va s'afficher pour vous confirmer que le PDF à bien été g
 image::images/pdfAlert.png[]
 
 === Comptes
-==== Simuler un emprunt
+==== Simuler un emprunt (En cours de développement par Matthis)
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
 
 image::images/EmployeEmprunt.png[]
@@ -343,7 +343,7 @@ image::images/SimulationEmprunt.png[]
 
 Remplissez les différentes informations et cliquez sur "Simuler un emprunt"
 
-==== Simuler une assurance d'emprunt
+==== Simuler une assurance d'emprunt (En cours de développement par Matthis)
 _Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
 
 image::images/EmployeEmprunt.png[]
@@ -354,7 +354,7 @@ image::images/SimulationEmprunt.png[]
 
 Remplissez les différentes informations, simulez un emprunt et cliquez sur "Simuler une assurance d'emprunt"
 
-==== Effectuer un débit exceptionnel
+==== Effectuer un débit exceptionnel (Développé par Sean)
 
 *Une erreur github étant survenue, la fonctionnalité n'est pas dans le programme principal, elle est dans une version obsolète du programme (lien)*
 
