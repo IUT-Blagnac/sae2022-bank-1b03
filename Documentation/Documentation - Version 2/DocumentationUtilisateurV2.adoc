@@ -229,6 +229,9 @@ image::images/CompteSupprimé.png[]
 
 Le compte est maintenant cloturé ! Il n'est plus possible de le modifier, ni de voir les opérations de celui-ci.
 
+==== Générer un relevé mensuel d'un compte en PDF
+
+
 === Opérations
 
 ==== Comment voir les opérations du compte d'un client ?
@@ -292,6 +295,8 @@ image::images/virementFin.png[]
 
 Vous serez alors redirigé vers les opérations du compte et vous pourrez voir que la nouvelle opération a été enregistrée.
 
+=== Gérer (faire le CRUD) des prélèvements automatiques
+
 == Fonctionnalités supplémentaires (Chef d'Agence)
 === Clients  
 ==== Comment rendre inactif un client ?
@@ -326,3 +331,14 @@ image::images/pdfView.png[]
 Un message d'alert va s'afficher pour vous confirmer que le pdf à bien été généré.
 
 image::images/pdfAlert.png[]
+
+=== Comptes
+==== Simuler un emprunt
+_Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
+Par la suite vous devez cliquer sur "Simuler un emprunt"
+
+==== Simuler une assurance d'emprunt
+_Comme pour un débit rendez-vous sur la fenêtre du compte d’un client._ +
+Par la suite vous devez cliquer sur "Simuler une assurance d'emprunt"
+
+==== Effectuer un débit exceptionnel

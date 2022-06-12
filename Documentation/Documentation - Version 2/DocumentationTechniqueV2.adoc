@@ -320,3 +320,13 @@ __En cours de développement__
 ==== Consulter un employé
 ==== Modifier un employé
 ==== Supprimer un employé
+
+=== Générer un relevé mensuel d’un compte en PDF (Wendjaneh Hugo)
+
+=== Effectuer un Débit exceptionnel (Escassut Sean)
+
+=== Simuler un emprunt (Mabille Matthis)
+
+=== Simuler une assurance d'emprunt (Mabille Matthis)
+
+=== Gérer (faire le « CRUD ») des prélèvements automatiques (Testa Thomas)
