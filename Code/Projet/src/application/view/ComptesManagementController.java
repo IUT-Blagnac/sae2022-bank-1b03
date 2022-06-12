@@ -131,6 +131,14 @@ public class ComptesManagementController implements Initializable {
 		this.loadList();
 		this.validateComponentState();
 	}
+	
+	/**
+	 * Affiche la fenêtre de simulation d'emprunt et d'assurance d'emprunt
+	 */
+	@FXML
+	private void doAfficherSimulation() {
+		//à faire
+	}
 
 	/**
 	 * Modifie les caractéristiques d'un compte client
