@@ -86,6 +86,24 @@ public class OperationEditorPaneController implements Initializable {
 			this.cbTypeOpe.setItems(list);
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
+		case DEBITEXC:
+
+			String infoExc = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde);
+			this.lblMessage.setText(infoExc);
+
+			this.btnOk.setText("Effectuer Débit Exceptionnel");
+			this.btnCancel.setText("Annuler Débit Exceptionnel");
+
+			ObservableList<String> listExc = FXCollections.observableArrayList();
+
+			for (String tyOp : ConstantesIHM.OPERATIONS_DEBIT_GUICHET) {
+				listExc.add(tyOp);
+			}
+
+			this.cbTypeOpe.setItems(listExc);
+			this.cbTypeOpe.getSelectionModel().select(0);
+			break;	
 		case CREDIT:
 			
 			String infoC = "Cpt. : " + this.compteEdite.idNumCompte + "  "
@@ -166,10 +184,11 @@ public class OperationEditorPaneController implements Initializable {
 	}
 
 	/**
-	 * Ajoute une opération (débit/crédit)
+	 * Ajoute une opération (débit/crédit/débit exceptionnel)
 	 */
 	@FXML
 	private void doAjouter() {
+		System.out.println("ICI");
 		switch (this.categorieOperation) {
 		case DEBIT:
 			// règles de validation d'un débit :
@@ -206,9 +225,52 @@ public class OperationEditorPaneController implements Initializable {
 				this.lblMessage.getStyleClass().add("borderred");
 				this.txtMontant.requestFocus();
 				return;
+				
 			}
 			String typeOp = this.cbTypeOpe.getValue();
 			this.operationResultat = new Operation(-1, montant, null, null, this.compteEdite.idNumCli, typeOp);
+			this.primaryStage.close();
+			break;
+		case DEBITEXC:
+			// règles de validation d'un débit :
+			// - le montant doit être un nombre valide
+			// - et si l'utilisateur n'est pas chef d'agence,
+			// - le débit ne doit pas amener le compte en dessous de son découvert autorisé
+			double montantDEx;
+
+			this.txtMontant.getStyleClass().remove("borderred");
+			this.lblMontant.getStyleClass().remove("borderred");
+			this.lblMessage.getStyleClass().remove("borderred");
+			String infoDEx = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+			this.lblMessage.setText(infoDEx);
+
+			try {
+				montantDEx = Double.parseDouble(this.txtMontant.getText().trim());
+				if (montantDEx <= 0)
+					throw new NumberFormatException();
+			} catch (NumberFormatException nfe) {
+				this.txtMontant.getStyleClass().add("borderred");
+				this.lblMontant.getStyleClass().add("borderred");
+				this.txtMontant.requestFocus();
+				return;
+			}
+			if (this.compteEdite.solde - montantDEx < this.compteEdite.debitAutorise) {
+				if(! dbs.isChefDAgence()){
+					infoDEx = "Dépassement du découvert ! - Cpt. : " + this.compteEdite.idNumCompte + "  "
+							+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+							+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+					this.lblMessage.setText(infoDEx);
+					this.txtMontant.getStyleClass().add("borderred");
+					this.lblMontant.getStyleClass().add("borderred");
+					this.lblMessage.getStyleClass().add("borderred");
+					this.txtMontant.requestFocus();
+					return;
+				}
+			}
+			String typeOpDEx = this.cbTypeOpe.getValue();
+			this.operationResultat = new Operation(-1, montantDEx, null, null, this.compteEdite.idNumCli, typeOpDEx);
 			this.primaryStage.close();
 			break;
 		case CREDIT:
