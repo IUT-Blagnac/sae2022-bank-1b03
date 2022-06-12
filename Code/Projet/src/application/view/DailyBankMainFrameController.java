@@ -83,6 +83,8 @@ public class DailyBankMainFrameController implements Initializable {
 	@FXML
 	private Label lblEmpPrenom;
 	@FXML
+	private Label lblEmpID;
+	@FXML
 	private MenuItem mitemClient;
 	@FXML
 	private MenuItem mitemEmploye;
@@ -157,6 +159,7 @@ public class DailyBankMainFrameController implements Initializable {
 			this.lblAdrAg.setText(a.adressePostaleAg);
 			this.lblEmpNom.setText(e.nom);
 			this.lblEmpPrenom.setText(e.prenom);
+			this.lblEmpID.setText(Integer.toString(e.idEmploye));
 			if (this.dbs.isChefDAgence()) {
 				this.mitemEmploye.setDisable(false);
 			} else {
@@ -172,6 +175,7 @@ public class DailyBankMainFrameController implements Initializable {
 			this.lblAdrAg.setText("");
 			this.lblEmpNom.setText("");
 			this.lblEmpPrenom.setText("");
+			this.lblEmpID.setText("");
 
 			this.mitemClient.setDisable(true);
 			this.mitemEmploye.setDisable(true);
@@ -195,8 +199,7 @@ public class DailyBankMainFrameController implements Initializable {
 	 */
 	@FXML
 	private void doEmployeOption() {
-		AlertUtilities.showAlert(this.primaryStage, "Gestion des Employé", "En cours de développement",
-				"Livraison prévue\nEn juin 2022", AlertType.INFORMATION);
+		this.dbmf.gestionEmployes();
 	}
 
 	/**
