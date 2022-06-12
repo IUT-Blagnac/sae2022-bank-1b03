@@ -314,8 +314,6 @@ image::images/DS-Virement.svg[]
 
 === Gérer les employés, ou faire le CRUD (Testa Thomas):
 
-__En cours de développement__
-
 ==== Créer un employé
 
 Partie "créer un nouveau employé" du diagramme des use case
@@ -352,7 +350,7 @@ cf. doc. utilisateur "Comment modifier un employé ?"
 
 Diagramme de séquence:
 
-.Diagramme de séquence pour la modification d'un client
+.Diagramme de séquence pour la modification d'un employé
 image::images/DS-Modifier-Employe.png[]
 
 ==== Supprimer un employé
@@ -365,3 +363,8 @@ Partie du diagramme de classes données nécessaires :
 * En mise à jour : employe
 
 cf. doc. utilisateur "Comment supprimer un employé ?"
+
+Diagramme de séquence:
+
+.Diagramme de séquence pour la suppression d'un employé
+image::images/DS-Supprimer-Employe.png[]
