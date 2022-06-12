@@ -1,136 +1,150 @@
-= Cahier des Tests - Version 1
+:toc: macro
+:toclevels: 3
+:toc-title: Sommaire
+
+= Cahier des Tests - Version 2
+
+****
+Nom du Projet : **Daily Bank** +
+Date : **12/06/2022** +
+Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
+****
+toc::[]
+
+:sectnums:
 
 Date : 28/04/2022 +
 Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 == Guichetier
 
+=== Génération d'un relevé mensuel d’un compte en PDF
 |===
 | Cas de test | Test 01
-| Titre | Création d'un compte Bancaire
-| Objectif | Vérifier que le compte Bancaire est crée avec succès
+| Titre | Génération d'un relevé mensuel d’un compte en PDF
+| Objectif | Vérifier que le relevé mensuel est créé avec succès
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
 | 1
-| TestCréerCompteBancaire
-| Créer un compte bancaire client avec les informations renseignées
-| Le compte bancaire est créé avec les informations renseignées
-| Le compte client est actif
+| TestGénérationRelevéMensuel
+| Génère un relevé mensuel en PDF avec les différentes opérations pour le compte Bancaire
+| Le relevé mensuel est généré avec succès
+| Le compte doit posséder au moins une opération
 |===
+
+=== Création d'un prélèvement automatique
 
 |===
 | Cas de test | Test 02
-| Titre | Cloturation d'un compte Bancaire
-| Objectif | Vérifier que le compte Bancaire est cloturer avec succès
+| Titre | Création d'un prélèvement automatique
+| Objectif | Vérifier que le prélèvement automatique a été créé avec succès
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
 | 2
-| TestCloturerCompteBancaire
-| Supprimer (cloturer) un compte bancaire client déjà existant
-| Le compte bancaire (existant) doit avoir un solde de 0€ pour le cloturer
-| Le compte client est actif
+| TestCréationPrélèvementAutomatique
+| Création d'un prélèvement automatique avec les différentes opérations pour le compte Bancaire
+| Le prélèvement automatique est créé avec succès
+| Le compte doit posséder au moins une opération
 |===
+
+=== Suppression d'un prélèvement automatique
 
 |===
 | Cas de test | Test 03
-| Titre | Créditer un compte bancaire
-| Objectif | Vérifier que la fonctionnalité créditer un compte bancaire est valide
+| Titre | Suppression d'un prélèvement automatique
+| Objectif | Vérifier que la suppression du prélèvement automatique a été effectuée avec succès
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestCréditerCompte
-| Crédite un client du montant entré et ajoute l'opération au relevé.
-| Le montant est ajouté au solde du compte et l'opération est ajoutée au relevé
-| Le compte bancaire client est créé et actif
+| TestSuppressionPrélèvementAutomatique
+| Suppression d'un prélèvement automatique pour les différentes opérations du compte Bancaire
+| Le prélèvement automatique est supprimé avec succès
+| Le compte doit posséder au moins une opération ayant un prélèvement automatique
 |===
+
+=== Modification d'un prélèvement automatique
 
 |===
 | Cas de test | Test 04
-| Titre | Débiter un compte bancaire
-| Objectif | Vérifier que la fonctionnalité débiter un compte bancaire est valide
+| Titre | Modification d'un prélèvement automatique
+| Objectif | Vérifier que la modification du prélèvement automatique a été effectuée avec succès
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestDébiterCompte
-| Débite un client du montant entré et ajoute l'opération au relevé.
-| Le montant est retirée du solde du compte et l'opération est ajoutée au relevé
-| Le compte bancaire client a un solde positif (retrait <= solde) et a été créé
+| TestModificationPrélèvementAutomatique
+| Modification d'un prélèvement automatique pour les différentes opérations du compte Bancaire
+| Les informations du prélèvement automatique est modifié avec succès
+| Le compte doit posséder Une opération ayant un prélèvement automatique
 |===
+
+=== Consulter les informations d'un prélèvement automatique
 
 |===
 | Cas de test | Test 05
-| Titre | Effectuer un virement de compte à compte
-| Objectif | Vérifier que la fonctionnalité d'un virement d'un compte bancaire à un autre est fonctionnelle.
+| Titre | Consulter les informations d'un prélèvement automatique
+| Objectif | Vérifier que les informations du prélèvement automatique sont correctes
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestVirementCompteACompte
-| Effectue un virement d'un compte bancaire client à un autre du montant entré et ajoute l'opération au relevé.
-| Le montant est retirée du solde du compte effectuant le virement et est ajoutée dans l'autre compte. De plus, l'opération est ajoutée au relevé
-| Le compte bancaire client effectuant un virement a un solde positif (retrait <= solde) et a été créé.
+| TestConsultationPrélèvementAutomatique
+| Consulter les informations d'un prélèvement automatique pour une opération d'un compte Bancaire
+| Les informations du prélèvement automatique sont correctes
+| Le compte doit posséder une opération ayant un prélèvement automatique
 |===
 
 == Chef d'agence :
 
+=== Effectuer un débit exceptionnel
+
 |===
 | Cas de test | Test 06
-| Titre | Création d'un employé
-| Objectif | Vérifier que la fonctionnalité de création d'un employé est valide et fonctionnelle.
+| Titre | Effectuer un débit exceptionnel
+| Objectif | Vérifier que la fonctionnalité de débit exceptionnel est valide et fonctionnelle.
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestCréationEmployé
-| Créé un employé pour l'agence avec les informations renseignées et l'ajoute dans la base de données.
-| L'employé a bien été créé (dans la base de données) et s'affiche sur l'interface.
-| Les informations de l'employé rentrées sont correctes.
+| TestDébitExceptionnel
+| Effectuer un débit exceptionnel sur un compte Bancaire
+| Le débit exceptionnel a bien été effectué avec succès
+| Le compte sur lequel le débit exceptionnel a été effectué ne doit pas être inactif
 |===
+
+=== Simuler un emprunt
 
 |===
 | Cas de test | Test 07
-| Titre | Suppression d'un employé
-| Objectif | Vérifier que la fonctionnalité de suppression d'un employé est valide et fonctionnelle.
+| Titre | Simuler un emprunt
+| Objectif | Vérifier que la fonctionnalité de simulation d'emprunt est valide et fonctionnelle.
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestCréationEmployé
-| Supprimé un employé de l'agence et l'enlève de la base de données.
-| L'employé a bien été supprimé (de la base de données) et est supprimée de l'interface.
-| L'employé choisi n'est pas le chef d'agence (la personne connectée à l'instant t)
+| TestSimulationEmprunt
+| Simuler un emprunt sur un compte Bancaire
+| L' emprunt a bien été simulé avec succès
+| L'emprunt comprend un montant, un taux et une durée.
 |===
+
+=== Simuler une assurance d'emprunt
 
 |===
 | Cas de test | Test 08
-| Titre | Mise à jour des informations d'un employé
-| Objectif | Vérifier que la fonctionnalité de modification d'un employé est valide et fonctionnelle.
+| Titre | Simulation d'un assurance d'emprunt
+| Objectif | Vérifier que la fonctionnalité de simulation d'assurance d'emprunt est valide et fonctionnelle.
 |===
 
 |===
 | ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestMAJEmployé
-| Met à jour un employé de l'agence et l'enlève de la base de données.
-| L'employé a bien été mise à jour (dans la base de données) et l'affichage sur l'interface est modifiée.
-| L'employé choisi est déjà existant.
-|===
-
-|===
-| Cas de test | Test 09
-| Titre | Consulter les informations d'un employé
-| Objectif | Vérifier que la fonctionnalité de consultation des informations d'un employé est valide et fonctionnelle.
-|===
-
-|===
-| ID | Action | Comportement attendu | Résultat | Pré-condition
-| TestAffichageInformationsEmployé
-| Affiche les infromations de l'employé sélectionné.
-| Les informations de l'employé sélectionné sont affichés sur l'écran.
-| L'employé choisi est déjà existant.
+| TestSimulationAssuranceEmprunt
+| Simuler une assurance d'emprunt sur un emprunt d'un compte bancaire
+| L'assurance d'emprunt a bien été simulée avec succès
+| L'emprunt comprend un montant, un taux et une durée et sa simulation a été effectuée.
 |===

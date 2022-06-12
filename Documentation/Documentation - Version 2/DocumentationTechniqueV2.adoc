@@ -8,6 +8,12 @@ toc::[]
 
 :sectnums:
 
+****
+Nom du Projet : **Daily Bank** +
+Date : **12/06/2022** +
+Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
+****
+
 == Répartition des tâches et état d'avancement
 [options="header,footer"]
 |=======================
@@ -20,16 +26,16 @@ toc::[]
 |1    |Guichetier     | Compte | Créditer/Débiter      |F |  |  | 
 |1    |Guichetier     | Compte | Effectuer un virement |  |  |F | 
 |1    |Guichetier     | Compte | Clôturer              |  |F |  | 
-|2    |Chef d’Agence     | Compte  | Débit exceptionnel |F |  |  | 
-|2    |Chef d’Agence     | Emprunt | Simuler emprunt    |  |D |  | 
-|2    |Chef d’Agence     | Emprunt | Simuler assurance  |  |D |  | 
+|3    |Chef d’Agence     | Compte  | Débit exceptionnel |F |  |  | 
+|3    |Chef d’Agence     | Emprunt | Simuler emprunt    |  |D |  | 
+|3    |Chef d’Agence     | Emprunt | Simuler assurance  |  |D |  | 
 |2    |Guichetier     | Compte | Relevé PDF |  |  |D | 
 |2    |Guichetier     | CRUD Prélèvement | Create |NA |NA |NA |NA 
 |2    |Guichetier     | CRUD Prélèvement | Read   |NA |NA |NA | NA
 |2    |Guichetier     | CRUD Prélèvement | Update |NA |NA |NA | NA
 |2    |Guichetier     | CRUD Prélèvement | Delete |NA |NA |NA | NA
-|2    |Batch     | Prélèvements automatiques |  |NA |NA |NA | NA
-|2    |Batch     | Reléves mensuels          |  |NA |NA |NA | NA
+|3    |Batch     | Prélèvements automatiques |  |NA |NA |NA | NA
+|3    |Batch     | Reléves mensuels          |  |NA |NA |NA | NA
 
 |=======================
 

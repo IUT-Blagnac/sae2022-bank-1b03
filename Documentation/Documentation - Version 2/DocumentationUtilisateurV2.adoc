@@ -7,7 +7,7 @@
 
 ****
 Nom du Projet : **Daily Bank** +
-Date : **29/05/2022** +
+Date : **12/06/2022** +
 Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
 ****
 :sectnums:
