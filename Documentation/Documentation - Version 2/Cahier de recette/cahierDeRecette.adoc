@@ -22,7 +22,7 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 |===
 | Cas de test | Test 02
-| Titre | Cloturaton d'un compte Bancaire
+| Titre | Cloturation d'un compte Bancaire
 | Objectif | Vérifier que le compte Bancaire est cloturer avec succès
 |===
 
