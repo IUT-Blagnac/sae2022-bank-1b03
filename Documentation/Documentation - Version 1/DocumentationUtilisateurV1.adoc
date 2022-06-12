@@ -303,7 +303,7 @@ image::images/gestionnaireCompteClient.PNG[]
 
 Appuyez sur le bouton "Modifier client".
 
-image::images/Rendre_Inactif.PNG[]
+image::images/Rendre_Inactif.png[]
 
 Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
 
@@ -311,17 +311,25 @@ Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini,
 ==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
 ==== Comment accéder au gestionnaire des employés ?
 
-Pour accéder au gestionnaire des employés il faut tout d'abord se connecter en tant que chef d'agence. Une fois connecté, cliquez sur le menu déroulant "Gestion", et rendez-vous sur "Employés".
+Pour accéder au gestionnaire de employés il faut tout d'abord se connecter en tant que "Chef d'Agence". Une fois connecté, cliquer sur le menu déroulant "Gestion", et rendez-vous sur "Employe".
+
+image::images/ChefAgence.png[]
 
 ==== Comment ajouter un employé ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
+image::images/ChefAgence.png[]
+
 Appuyez sur le bouton "Nouvel employé"
+
+image::images/EmployeCreer.png[]
 
 Puis rentrer les informations de l'employé dans la fenêtre qui vient de s'ouvrir.
 
 Pour finir, il ne vous reste plus qu'à appuyer sur le bouton "Ajouter".
+
+image::images/NouvelEmploye.png[]
 
 Vous pouvez rechercher un client en fonction de son numéro d'identifiant (Numéro), de son nom (Nom) ou de son prénom (Prénom).
 
@@ -329,7 +337,11 @@ Vous pouvez rechercher un client en fonction de son numéro d'identifiant (Numé
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
+image::images/ChefAgence.png[]
+
 La barre de recherche se trouve en haut de la page.
+
+image::images/EmployeRechercher.png[]
 
 Vous pouvez rechercher un employé en fonction de son numéro d'identifiant (Numéro), de son nom (Nom) ou de son prénom (Prénom).
 
@@ -341,11 +353,17 @@ A noter : Si vous décidez ne pas remplir toutes les cases, il est possible que 
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
+image::images/ChefAgence.png[]
+
 Vous pouvez cliquer sur un employé afin d'accéder aux différentes options à droite de la fenêtre qui vient de s'ouvrir.
 
 Appuyez sur le bouton "Modifier employé".
 
+image::images/EmployeModifier.png[]
+
 Il ne vous reste plus qu'à modifier les informations de l'employé. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
+
+image::images/ModifEmploye.png[]
 
 A noter : Vous ne pouvez pas modifier le numéro d'identité de l'employé ("ID").
 
@@ -353,6 +371,10 @@ A noter : Vous ne pouvez pas modifier le numéro d'identité de l'employé ("ID"
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
+image::images/ChefAgence.png[]
+
 Cliquer sur l'émployé que vous voulez supprimer.
+
+image::images/EmployeSupprimer.png[]
 
 Puis cliquer sur le bouton supprimer à droite dans la fenêtre.
