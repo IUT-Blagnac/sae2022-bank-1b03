@@ -367,14 +367,14 @@ image::images/ModifEmploye.png[]
 
 A noter : Vous ne pouvez pas modifier le numéro d'identité de l'employé ("ID").
 
-==== Comment supprmier un employé ?
+==== Comment supprimer un employé ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
 image::images/ChefAgence.png[]
 
-Cliquer sur l'émployé que vous voulez supprimer.
+Cliquer sur l'employé que vous voulez supprimer.
 
 image::images/EmployeSupprimer.png[]
 
-Puis cliquer sur le bouton supprimer à droite dans la fenêtre.
+Puis cliquez sur le bouton supprimer à droite dans la fenêtre.
