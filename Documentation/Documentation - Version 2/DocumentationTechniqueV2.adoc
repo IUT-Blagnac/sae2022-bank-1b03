@@ -329,6 +329,14 @@ __En cours de développement__
 
 === Générer un relevé mensuel d’un compte en PDF (Wendjaneh Hugo)
 
+Partie "Générer un relevé mensuel d’un compte" du diagramme des UC
+
+Partie du diagramme de classes données nécessaires :
+
+* En lecture : Client, Compte Courant, Opération, Type Opération, Date Opération
+
+cf. doc. utilisateur "Générer un relevé mensuel d’un compte en PDF"
+
 === Effectuer un Débit exceptionnel (Escassut Sean)
 
 === Simuler un emprunt (Mabille Matthis)
