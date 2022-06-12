@@ -310,6 +310,13 @@ Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini,
 
 === Employés
 Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
+
+==== Comment accéder au gestionnaire des employés ?
+
+Pour accéder au gestionnaire de employés il faut tout d'abord se connecter en tant que "Chef d'Agence". Une fois connecté, cliquer sur le menu déroulant "Gestion", et rendez-vous sur "Employe".
+
+image::images/ChefAgence.png[]
+
 ==== Comment accéder au gestionnaire des employés ?
 
 Pour accéder au gestionnaire des employés il faut tout d'abord se connecter en tant que chef d'agence. Une fois connecté, cliquez sur le menu déroulant "Gestion", et rendez-vous sur "Employés".
