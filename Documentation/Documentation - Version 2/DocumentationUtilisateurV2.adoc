@@ -309,7 +309,7 @@ image::images/gestionnaireCompteClient.PNG[]
 
 Appuyez sur le bouton "Modifier client".
 
-image::images/Rendre_Inactif.PNG[]
+image::images/Rendre_Inactif.png[]
 
 Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
 
