@@ -12,10 +12,10 @@ toc::[]
 [options="header,footer"]
 |=======================
 | Version | User | Use Case | Cas d'utilisation | Sean Escassut | Matthis Mabille | Hugo Wendjaneh | Thomas Testa
-|1    |Chef d'Agence     |CRUD employé  | Create | | | | D
-|1    |Chef d'Agence     |CRUD employé  | Read   | | | | D
-|1    |Chef d'Agence     |CRUD employé  | Update | | | | D
-|1    |Chef d'Agence     |CRUD employé  | Delete | | | | D
+|1    |Chef d'Agence     |CRUD employé  | Create | | | | F
+|1    |Chef d'Agence     |CRUD employé  | Read   | | | | F
+|1    |Chef d'Agence     |CRUD employé  | Update | | | | F
+|1    |Chef d'Agence     |CRUD employé  | Delete | | | | F
 |1    |Guichetier     | Compte | Créer                 |  |F |  | 
 |1    |Guichetier     | Compte | Créditer/Débiter      |F |  |  | 
 |1    |Guichetier     | Compte | Effectuer un virement |  |  |F | 
