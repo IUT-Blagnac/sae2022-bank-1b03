@@ -309,12 +309,12 @@ image::images/Rendre_Inactif.PNG[]
 Il ne vous reste plus qu'à cliquer sur le bouton inactif. Quand vous avez fini, appuyez sur le bouton "Modifier" pour enregistrer les modifications.
 
 === Employés
-==== Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
-===== Comment accéder au gestionnaire des employés ?
+Gérer (faire le "CRUD") des employés (guichetier et chef d'agence) (Développé par Thomas)
+==== Comment accéder au gestionnaire des employés ?
 
 Pour accéder au gestionnaire des employés il faut tout d'abord se connecter en tant que chef d'agence. Une fois connecté, cliquez sur le menu déroulant "Gestion", et rendez-vous sur "Employés".
 
-===== Comment ajouter un employé ?
+==== Comment ajouter un employé ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
