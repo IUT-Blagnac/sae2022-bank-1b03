@@ -1,9 +1,21 @@
+:toc: macro
+:toclevels: 3
+:toc-title: Sommaire
+
 = Cahier des Tests - Version 1
 
-Date : 28/04/2022 +
-Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
+****
+Nom du Projet : **Daily Bank** +
+Date : **12/06/2022** +
+Equipe : **ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo**
+****
+toc::[]
+
+:sectnums:
 
 == Guichetier
+
+=== Création d'un compte Bancaire
 
 |===
 | Cas de test | Test 01
@@ -20,6 +32,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | Le compte client est actif
 |===
 
+=== Cloturation d'un compte Bancaire
+
 |===
 | Cas de test | Test 02
 | Titre | Cloturation d'un compte Bancaire
@@ -35,6 +49,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | Le compte client est actif
 |===
 
+=== Créditer un compte bancaire
+
 |===
 | Cas de test | Test 03
 | Titre | Créditer un compte bancaire
@@ -49,6 +65,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | Le compte bancaire client est créé et actif
 |===
 
+=== Débiter un compte bancaire
+
 |===
 | Cas de test | Test 04
 | Titre | Débiter un compte bancaire
@@ -62,6 +80,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | Le montant est retirée du solde du compte et l'opération est ajoutée au relevé
 | Le compte bancaire client a un solde positif (retrait <= solde) et a été créé
 |===
+
+=== Effectuer un virement de compte à compte
 
 |===
 | Cas de test | Test 05
@@ -79,6 +99,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 
 == Chef d'agence :
 
+=== Création d'un employé
+
 |===
 | Cas de test | Test 06
 | Titre | Création d'un employé
@@ -92,6 +114,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | L'employé a bien été créé (dans la base de données) et s'affiche sur l'interface.
 | Les informations de l'employé rentrées sont correctes.
 |===
+
+=== Suppression d'un employé
 
 |===
 | Cas de test | Test 07
@@ -107,6 +131,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | L'employé choisi n'est pas le chef d'agence (la personne connectée à l'instant t)
 |===
 
+=== Mise à jour des informations d'un employé
+
 |===
 | Cas de test | Test 08
 | Titre | Mise à jour des informations d'un employé
@@ -120,6 +146,8 @@ Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
 | L'employé a bien été mise à jour (dans la base de données) et l'affichage sur l'interface est modifiée.
 | L'employé choisi est déjà existant.
 |===
+
+=== Consulter les informations d'un employé
 
 |===
 | Cas de test | Test 09

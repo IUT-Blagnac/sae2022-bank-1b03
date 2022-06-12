@@ -13,9 +13,6 @@ toc::[]
 
 :sectnums:
 
-Date : 28/04/2022 +
-Equipe : ESCASSUT Sean - MABILLE Matthis - TESTA Thomas - WENDJANEH Hugo
-
 == Guichetier
 
 === Génération d'un relevé mensuel d’un compte en PDF
