@@ -338,7 +338,7 @@ La recherche peut être effectuée en entrant toutes les informations ou en remp
 
 A noter : Si vous décidez ne pas remplir toutes les cases, il est possible que vous tombiez sur plusieurs employés.
 
-===== Comment modifier un employé ?
+==== Comment modifier un employé ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
@@ -350,7 +350,7 @@ Il ne vous reste plus qu'à modifier les informations de l'employé. Quand vous 
 
 A noter : Vous ne pouvez pas modifier le numéro d'identité de l'employé ("ID").
 
-===== Comment supprmier un employé ?
+==== Comment supprmier un employé ?
 
 _Tout d'abord commencer par vous rendre sur la fenêtre gestionnaire des employés._
 
