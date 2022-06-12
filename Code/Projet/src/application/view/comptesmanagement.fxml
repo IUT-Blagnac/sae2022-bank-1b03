@@ -58,7 +58,7 @@
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#doAfficherSimulation" prefHeight="31.0" prefWidth="264.0" text="Simuler Emprunt &amp; Assurance" GridPane.rowIndex="1">
+                        <Button disable="true" mnemonicParsing="false" onAction="#doAfficherSimulation" prefHeight="31.0" prefWidth="264.0" text="Simuler Emprunt &amp; Assurance" GridPane.rowIndex="1">
                            <font>
                               <Font size="13.0" />
                            </font>
