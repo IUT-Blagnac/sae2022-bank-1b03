@@ -318,6 +318,19 @@ __En cours de développement__
 
 ==== Créer un employé
 
+Partie "créer un nouveau employé" du diagramme des use case
+
+Partie du diagramme de classes données nécessaires : 
+
+* En lecture : Employé
+* En mise à jour : Employé
+
+cf. doc. utilisateur "Comment ajouter un employé ?"
+
+Diagramme de séquence :
+
+.Diagramme de séquence pour la création d'un employé
+image::images/DS-Creer-Employe.png[]
 
 ==== Consulter un employé
 
