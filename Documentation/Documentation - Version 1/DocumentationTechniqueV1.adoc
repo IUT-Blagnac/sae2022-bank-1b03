@@ -317,6 +317,13 @@ image::images/DS-Virement.svg[]
 __En cours de développement__
 
 ==== Créer un employé
+
+
 ==== Consulter un employé
+
+
 ==== Modifier un employé
+
+
 ==== Supprimer un employé
+
