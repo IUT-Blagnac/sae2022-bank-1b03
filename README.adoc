@@ -71,7 +71,7 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 |	  | Cahier des tests V2 | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%202/Cahier%20de%20tests/cahierDeTest.adoc |
 |         | Recette V1 |                      | 
 |         | Gantt V3 à jour   |                      | 
-|         | `jar` projet | Identique à l'initial car les fonctionnalités ne sont pas encore implémentées    | 
+|         | `jar` projet | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Final/DailyBankApp.jar    | 
 | 05/06   | Gantt V3 à Jour  |    |  
 |         | Doc. Util. V2 |         |           
 |         | Doc. Tec. V2 |    |     
