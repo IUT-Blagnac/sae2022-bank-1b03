@@ -7,6 +7,8 @@ Sa documentation et son code seront actualisés/développés durant les prochain
 
 Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 
+WARNING: Une erreur de commit étant survenue, la fonctionnalité de débit exceptionnel n'est pas dans le programme principal, elle est dans une version obsolète du programme (https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/98151ed11b32916aff912e7a347076e5b87c6bdd/Final/D%C3%A9bit%20exceptionnel/DailyBankApp_Debit_Exceptionnel.jar[lien])
+
 == Répartition des tâches et état d'avancement
 [options="header,footer"]
 |=======================
@@ -84,5 +86,5 @@ Réalisé par Matthis Mabille, Hugo Wendjaneh, Thomas Testa et Sean Escassut
 |         | Code V3     | https://github.com/IUT-Blagnac/sae2022-bank-1b03/tree/main/Code/Projet                      |
 |         | Recette V2  | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Documentation/Documentation%20-%20Version%202/Cahier%20de%20recette/cahierDeRecette.adoc  |
 |         | `jar` projet | https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/main/Final/DailyBankApp.jar    |
-|=== +
-WARNING: Une erreur github étant survenue, la fonctionnalité de débit exceptionnel n'est pas dans le programme principal, elle est dans une version obsolète du programme (https://github.com/IUT-Blagnac/sae2022-bank-1b03/blob/98151ed11b32916aff912e7a347076e5b87c6bdd/Final/D%C3%A9bit%20exceptionnel/DailyBankApp_Debit_Exceptionnel.jar[lien])
+|===
+
